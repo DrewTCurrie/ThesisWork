@@ -1,0 +1,42 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Desjardins et~al.(2013)Desjardins, McCaslin, Owkes, and
+  Brady]{desjardins_direct_2013}
+Olivier Desjardins, Jeremy McCaslin, Mark Owkes, and Peter Brady.
+\newblock Direct numerical and large-eddy simulation of primary atomization in
+  complex geometries.
+\newblock \emph{Atomization and Sprays}, 23\penalty0 (11):\penalty0 1001--1048,
+  2013.
+\newblock ISSN 1044-5110.
+
+\bibitem[Owkes and Desjardins(2013)]{owkes_discontinuous_2013}
+Mark Owkes and Olivier Desjardins.
+\newblock A discontinuous {G}alerkin conservative level set scheme for
+  interface capturing in multiphase flows.
+\newblock \emph{Journal of Computational Physics}, 249\penalty0 (15):\penalty0
+  275--302, September 2013.
+\newblock ISSN 0021-9991.
+
+\bibitem[Owkes and Desjardins(2014)]{owkes_computational_2014}
+Mark Owkes and Olivier Desjardins.
+\newblock A computational framework for conservative, three-dimensional,
+  unsplit, geometric transport with application to the volume-of-fluid ({VOF})
+  method.
+\newblock \emph{Journal of Computational Physics}, 270\penalty0 (1):\penalty0
+  587--612, August 2014.
+\newblock ISSN 0021-9991.
+
+\bibitem[Owkes and Desjardins(2015)]{owkes_mesh-decoupled_2015}
+Mark Owkes and Olivier Desjardins.
+\newblock A mesh-decoupled height function method for computing interface
+  curvature.
+\newblock \emph{Journal of Computational Physics}, 281:\penalty0 285--300,
+  January 2015.
+\newblock ISSN 0021-9991.
+
+\end{thebibliography}

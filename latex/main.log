@@ -1,0 +1,3729 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.8.28)  22 OCT 2026 15:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22>
+(/usr/share/texlive/texmf-dist/tex/latex/latex-lab/documentmetadata-support.ltx
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-
+testphase.sty
+Package: pdfmanagement-testphase 2023-03-09 v0.95x LaTeX PDF management testpha
+se bundle
+ (/usr/share/texlive/texmf-dist/tex/latex/tagpdf/tagpdf-base.sty
+Package: tagpdf-base 2023-03-07 v0.98e part of tagpdf - provide base, no-op ver
+sions of the user commands 
+\c@g__tag_struct_abs_int=\count185
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-
+testphase.ltx
+File: pdfmanagement-testphase.ltx 2023-03-09 v0.95x PDF management code (testph
+ase)
+\g__pdfmanagement_EmbeddedFiles_int=\count186
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3bitset/l3bitset.sty
+Package: l3bitset 2023-01-24 L3 Experimental bitset support
+\l__bitset_internal_int=\count187
+)
+\l__pdfmeta_xmp_indent_int=\count188
+))) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count189
+\l__pdf_internal_box=\box51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/l3backend-test
+phase-pdftex.def
+File: l3backend-testphase-pdftex.def 2023-03-09 LaTeX PDF management testphase 
+bundle backend support:PDFoutput(pdfTeX)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/l3ref-tmp.sty
+Package: l3ref-tmp 2021-06-23 L3 Experimental cross-referencing
+)
+\l__pdf_backend_tmpa_box=\box52
+\l__pdf_backend_tmpb_box=\box53
+\g__pdf_backend_resourceid_int=\count190
+\g__pdf_backend_name_int=\count191
+\g__pdf_backend_page_int=\count192
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latex-lab/phase-II-latex-lab-testphase
+.ltx
+(/usr/share/texlive/texmf-dist/tex/latex/latex-lab/latex-lab-testphase-new-or.s
+ty
+File: latex-lab-new-or.ltx 2022-03-09 v0.1b changes to the output routine
+\@outputbox@depth=\dimen140
+ (/usr/share/texlive/texmf-dist/tex/latex/latex-lab/latex-lab-footnotes.ltx
+File: latex-lab-footnotes.ltx 2022-07-22 v0.6b changes to the footnote interfac
+es
+\footnotemargin=\dimen141
+\c@absfootnote=\count193
+)) (/usr/share/texlive/texmf-dist/tex/latex/tagpdf/tagpdf.sty
+Package: tagpdf 2023-03-07 v0.98e  A package to experiment with pdf tagging 
+\l__tag_tmpa_int=\count194
+\l__tag_tmpa_box=\box54
+\l__tag_tmpb_box=\box55
+\l__tag_loglevel_int=\count195
+\c@g__tag_MCID_abs_int=\count196
+\g__tag_MCID_tmp_bypage_int=\count197
+
+(/usr/share/texlive/texmf-dist/tex/latex/tagpdf/tagpdf-mc-code-generic.sty
+Package: tagpdf-mc-code-generic 2023-03-07 v0.98e part of tagpdf - code related
+ to marking chunks - generic mode
+\g__tag_mc_marks=\marks4
+)
+\g__tag_tree_id_pad_int=\count198
+\c@g__tag_parenttree_obj_int=\count199
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf2.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-latex-inline.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-latex-book.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-latex.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf.def
+
+
+Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf2.def
+
+\g__tag_struct_AFobj_int=\count266
+\g__tag_para_begin_int=\count267
+\g__tag_para_end_int=\count268
+\g__tag_para_main_begin_int=\count269
+\g__tag_para_main_end_int=\count270
+))
+
+LaTeX DocumentMetadata Warning: LaTeX-lab package 'graphic' not found.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/pdfmanagement-
+firstaid.sty
+Package: pdfmanagement-firstaid 2023-03-09 v0.95x LaTeX PDF management testphas
+e bundle / firstaid-patches
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/output-patches
+-tmp-ltx.sty
+Package: output-patches-tmp-ltx 2022-10-29 v0.96 Temporary output patches for t
+agging and better link support
+ (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count271
+)
+Patching header in \@outputpage
+Patching footer in \@outputpage
+)
+
+Package pdfmanagement Info: loading pdfmanagement firstaid code for pgf
+
+) (./MSUstyle.cls
+Document Class: MSUstyle 2017/6/30 2.0 (Montana State Graduate School)
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count272
+\c@chapter=\count273
+\c@section=\count274
+\c@subsection=\count275
+\c@subsubsection=\count276
+\c@paragraph=\count277
+\c@subparagraph=\count278
+\c@figure=\count279
+\c@table=\count280
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen142
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count281
+\calc@Bcount=\count282
+\calc@Adimen=\dimen143
+\calc@Bdimen=\dimen144
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count283
+\calc@Cskip=\skip52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count284
+\float@exts=\toks16
+\float@box=\box56
+\@float@everytoks=\toks17
+\@floatcapt=\box57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks18
+\c@algorithm=\count285
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+\c@ALC@unique=\count286
+\c@ALC@line=\count287
+\c@ALC@rem=\count288
+\c@ALC@depth=\count289
+\ALC@tlm=\skip53
+\algorithmicindent=\skip54
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen145
+\captionmargin=\dimen146
+\caption@leftmargin=\dimen147
+\caption@rightmargin=\dimen148
+\caption@width=\dimen149
+\caption@indent=\dimen150
+\caption@parindent=\dimen151
+\caption@hangindent=\dimen152
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count290
+\c@continuedfloat=\count291
+Package caption Info: float package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count292
+)
+\@linkdim=\dimen153
+\Hy@linkcounter=\count293
+\Hy@pagecounter=\count294
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count295
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count296
+
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen154
+
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count297
+\Field@Width=\dimen155
+\Fld@charsize=\dimen156
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count298
+\c@Item=\count299
+\c@Hfootnote=\count300
+)
+Package hyperref Info: Driver (custom): hgeneric-testphase.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/hgeneric-testp
+hase.def
+File: hgeneric-testphase.def 2023-03-09 v0.95x generic Hyperref driver for the 
+LaTeX PDF management testphase bundle
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/hyperref-color
+schemes.def)
+LaTeX Info: Redefining \href on input line 274.
+LaTeX Info: Redefining \url on input line 360.
+\l__hyp_tmpa_box=\box58
+\l__hyp_tmpa_int=\count301
+\l__hyp_dest_box=\box59
+\HyAnn@Count=\count302
+\Fld@listcount=\count303
+\Hy@SectionHShift=\skip55
+LaTeX Info: Redefining \Hy__hypSectionAnchor on input line 3451.
+) (/usr/share/texlive/texmf-dist/tex/latex/titlecaps/titlecaps.sty
+Package: titlecaps 2022/04/12\ 1.3\ Routines for setting rich-text input into T
+itling Caps
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifnextok/ifnextok.sty
+Package: ifnextok 2011/06/27 v0.3 test next token (UL)
+)
+\c@lcword@index=\count304
+\c@word@count=\count305
+\c@lc@words=\count306
+\c@dia@count=\count307
+\c@arg@@@index=\count308
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count309
+))
+(/usr/share/texlive/texmf-dist/tex/latex/totalcount/totalcount.sty
+Package: totalcount 2018/01/21 v1.0a Total values of counters (AR)
+\c@totalcount@figure=\count310
+\c@totalcount@table=\count311
+\c@totalcount@algorithm=\count312
+)
+\newtop=\skip56
+
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count313
+\Gm@cntv=\count314
+\c@Gm@tempcnt=\count315
+\Gm@bindingoffset=\dimen157
+\Gm@wd@mp=\dimen158
+\Gm@odd@mp=\dimen159
+\Gm@even@mp=\dimen160
+\Gm@layoutwidth=\dimen161
+\Gm@layoutheight=\dimen162
+\Gm@layouthoffset=\dimen163
+\Gm@layoutvoffset=\dimen164
+\Gm@dimlist=\toks20
+)
+\prelheadsep=\skip57
+\preltop=\skip58
+\listheadsep=\skip59
+\listtop=\skip60
+
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+\MT@tocentryskip@value=\skip61
+\MT@beforepartskip@value=\skip62
+\MT@beforechapskip@value=\skip63
+\MT@beforesecskip@value=\skip64
+\MT@beforesubsecskip@value=\skip65
+\MT@beforesubsubsecskip@value=\skip66
+\MT@beforeparaskip@value=\skip67
+\MT@beforesubparaskip@value=\skip68
+\MT@beforefigskip@value=\skip69
+\MT@beforetableskip@value=\skip70
+\c@toc=\count316
+\c@lot=\count317
+\c@lof=\count318
+\c@loa=\count319
+\MT@loftnumwidth=\skip71
+
+Prepended stepcounter to \addcontentsline
+Patched \addcontentsline
+\MT@tmpa=\skip72
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2021/07/05 v2.14 Sectioning titles
+\ttl@box=\box60
+\beforetitleunit=\skip73
+\aftertitleunit=\skip74
+\ttl@plus=\dimen165
+\ttl@minus=\dimen166
+\ttl@toksa=\toks21
+\titlewidth=\dimen167
+\titlewidthlast=\dimen168
+\titlewidthfirst=\dimen169
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box61
+\UL@hyphenbox=\box62
+\UL@skip=\skip75
+\UL@hook=\toks22
+\UL@height=\dimen170
+\UL@pe=\count320
+\UL@pixel=\dimen171
+\ULC@box=\box63
+Package: ulem 2019/11/18
+\ULdepth=\dimen172
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+Package: fmtcount 2020/01/30 v3.07
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+)
+\XKV@depth=\count321
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+Package: fcprefix 2012/09/28
+
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count322
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen173
+)
+\c@padzeroesN=\count323
+\fc@tmpcatcode=\count324
+\@DT@modctr=\count325
+\@ordinalctr=\count326
+\@orgargctr=\count327
+\@strctr=\count328
+\@tmpstrctr=\count329
+\@DT@loopN=\count330
+\@DT@X=\count331
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
+pages
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count332
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count333
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/color-ltx.sty
+Package: color-ltx 2023-03-09 v0.95x Standard LaTeX Color (patched for l3color,
+ part of pdfmanagement-testphase, original version 2022/01/06 v1.3d) (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 165.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/varioref.sty
+Package: varioref 2022/01/09 v1.6f package for extended references (FMi)
+\c@vrcnt=\count334
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count335
+\lst@gtempboxa=\box64
+\lst@token=\toks26
+\lst@length=\count336
+\lst@currlwidth=\dimen176
+\lst@column=\count337
+\lst@pos=\count338
+\lst@lostspace=\dimen177
+\lst@width=\dimen178
+\lst@newlines=\count339
+\lst@lineno=\count340
+\lst@maxwidth=\dimen179
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count341
+\lst@skipnumbers=\count342
+\lst@framebox=\box65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip76
+\bibsep=\skip77
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count343
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip78
+\LTright=\skip79
+\LTpre=\skip80
+\LTpost=\skip81
+\LTchunksize=\count344
+\LTcapwidth=\dimen180
+\LT@head=\box66
+\LT@firsthead=\box67
+\LT@foot=\box68
+\LT@lastfoot=\box69
+\LT@gbox=\box70
+\LT@cols=\count345
+\LT@rows=\count346
+\c@LT@tables=\count347
+\c@LT@chunks=\count348
+\LT@p@ftn=\toks27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks28
+\pgfutil@tempdima=\dimen181
+\pgfutil@tempdimb=\dimen182
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box71
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks29
+\pgfkeys@temptoks=\toks30
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex
+\pgfkeys@tmptoks=\toks31
+))
+\pgf@x=\dimen183
+\pgf@y=\dimen184
+\pgf@xa=\dimen185
+\pgf@ya=\dimen186
+\pgf@xb=\dimen187
+\pgf@yb=\dimen188
+\pgf@xc=\dimen189
+\pgf@yc=\dimen190
+\pgf@xd=\dimen191
+\pgf@yd=\dimen192
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count349
+\c@pgf@countb=\count350
+\c@pgf@countc=\count351
+\c@pgf@countd=\count352
+\t@pgf@toka=\toks32
+\t@pgf@tokb=\toks33
+\t@pgf@tokc=\toks34
+\pgf@sys@id@count=\count353
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count354
+\pgfsyssoftpath@bigbuffer@items=\count355
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+LaTeX Info: Redefining \color on input line 711.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfmanagement-testphase/xcolor-patches
+-tmp-ltx.sty
+Package: xcolor-patches-tmp-ltx 2023-03-09 v0.95x patch xcolor for l3color
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen193
+\pgfmath@count=\count356
+\pgfmath@box=\box72
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count357
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen194
+\pgf@picmaxx=\dimen195
+\pgf@picminy=\dimen196
+\pgf@picmaxy=\dimen197
+\pgf@pathminx=\dimen198
+\pgf@pathmaxx=\dimen199
+\pgf@pathminy=\dimen256
+\pgf@pathmaxy=\dimen257
+\pgf@xx=\dimen258
+\pgf@xy=\dimen259
+\pgf@yx=\dimen260
+\pgf@yy=\dimen261
+\pgf@zx=\dimen262
+\pgf@zy=\dimen263
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen264
+\pgf@path@lasty=\dimen265
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen266
+\pgf@shorten@start@additional=\dimen267
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box73
+\pgf@hbox=\box74
+\pgf@layerbox@main=\box75
+\pgf@picture@serial@count=\count358
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen268
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen269
+\pgf@pt@y=\dimen270
+\pgf@pt@temp=\dimen271
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen272
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen273
+\pgf@sys@shading@range@num=\count359
+\pgf@shadingcount=\count360
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box76
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box77
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen274
+\pgf@nodesepend=\dimen275
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen276
+\pgffor@skip=\dimen277
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count361
+\pgfplotmarksize=\dimen278
+)
+\tikz@lastx=\dimen279
+\tikz@lasty=\dimen280
+\tikz@lastxsaved=\dimen281
+\tikz@lastysaved=\dimen282
+\tikz@lastmovetox=\dimen283
+\tikz@lastmovetoy=\dimen284
+\tikzleveldistance=\dimen285
+\tikzsiblingdistance=\dimen286
+\tikz@figbox=\box78
+\tikz@figbox@bg=\box79
+\tikz@tempbox=\box80
+\tikz@tempbox@bg=\box81
+\tikztreelevel=\count362
+\tikznumberofchildren=\count363
+\tikznumberofcurrentchild=\count364
+\tikz@fig@count=\count365
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count366
+\pgfmatrixcurrentcolumn=\count367
+\pgf@matrix@numberofcolumns=\count368
+)
+\tikz@expandcount=\count369
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.cod
+e.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.markings.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen287
+\pgfdecoratedremainingdistance=\dimen288
+\pgfdecoratedinputsegmentcompleteddistance=\dimen289
+\pgfdecoratedinputsegmentremainingdistance=\dimen290
+\pgf@decorate@distancetomove=\dimen291
+\pgf@decorate@repeatstate=\count370
+\pgfdecorationsegmentamplitude=\dimen292
+\pgfdecorationsegmentlength=\dimen293
+)
+\tikz@lib@dec@box=\box82
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.markings.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen294
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip82
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen295
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count371
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count372
+\leftroot@=\count373
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count374
+\DOTSCASE@=\count375
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box83
+\strutbox@=\box84
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen296
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count376
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count377
+\dotsspace@=\muskip17
+\c@parentequation=\count378
+\dspbrk@lvl=\count379
+\tag@help=\toks40
+\row@=\count380
+\column@=\count381
+\maxfields@=\count382
+\andhelp@=\toks41
+\eqnshift@=\dimen297
+\alignsep@=\dimen298
+\tagshift@=\dimen299
+\tagwidth@=\dimen300
+\totwidth@=\dimen301
+\lineht@=\dimen302
+\@envbody=\toks42
+\multlinegap=\skip83
+\multlinetaggap=\skip84
+\mathdisplay@stack=\toks43
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+)
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count383
+\l__lipsum_a_int=\count384
+\l__lipsum_b_int=\count385
+
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen303
+\lightrulewidth=\dimen304
+\cmidrulewidth=\dimen305
+\belowrulesep=\dimen306
+\belowbottomsep=\dimen307
+\aboverulesep=\dimen308
+\abovetopsep=\dimen309
+\cmidrulesep=\dimen310
+\cmidrulekern=\dimen311
+\defaultaddspace=\dimen312
+\@cmidla=\count386
+\@cmidlb=\count387
+\@aboverulesep=\dimen313
+\@belowrulesep=\dimen314
+\@thisruleclass=\count388
+\@lastruleclass=\count389
+\@thisrulewidth=\dimen315
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2023-03-14 v3.2.3 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen316
+\l__siunitx_angle_marker_box=\box85
+\l__siunitx_angle_unit_box=\box86
+\l__siunitx_compound_count_int=\count390
+
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+\l__siunitx_number_exponent_fixed_int=\count391
+\l__siunitx_number_min_decimal_int=\count392
+\l__siunitx_number_min_integer_int=\count393
+\l__siunitx_number_round_precision_int=\count394
+\l__siunitx_number_lower_threshold_int=\count395
+\l__siunitx_number_upper_threshold_int=\count396
+\l__siunitx_number_group_first_int=\count397
+\l__siunitx_number_group_size_int=\count398
+\l__siunitx_number_group_minimum_int=\count399
+\l__siunitx_table_tmp_box=\box87
+\l__siunitx_table_tmp_dim=\dimen317
+\l__siunitx_table_column_width_dim=\dimen318
+\l__siunitx_table_integer_box=\box88
+\l__siunitx_table_decimal_box=\box89
+\l__siunitx_table_uncert_box=\box90
+\l__siunitx_table_before_box=\box91
+\l__siunitx_table_after_box=\box92
+\l__siunitx_table_before_dim=\dimen319
+\l__siunitx_table_carry_dim=\dimen320
+\l__siunitx_unit_tmp_int=\count400
+\l__siunitx_unit_position_int=\count401
+\l__siunitx_unit_total_int=\count402
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen321
+\ar@mcellbox=\box93
+\extrarowheight=\dimen322
+\NC@list=\toks44
+\extratabsurround=\skip85
+\backup@length=\skip86
+\ar@cellbox=\box94
+))
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 149.
+ (./main.aux
+(./introduction.aux) (./theory.aux) (./manuscript_option.aux) (./conclusion.aux
+) (./appendixa.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 149.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(101.26999pt, 621.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=621.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=14.5pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
+File: fc-english.def 2016/01/12
+)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count403
+\scratchdimen=\dimen323
+\scratchbox=\box95
+\nofMPsegments=\count404
+\nofMParguments=\count405
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count406
+\MPscratchDim=\dimen324
+\MPnumerator=\count407
+\makeMPintoPDFobject=\count408
+\everyMPtoPDFconversion=\toks46
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count409
+
+(/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
+nary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 149.
+LaTeX Info: Redefining \\ on input line 152.
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 4)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 5)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 6)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 7)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 8)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 9)
+
+
+Package tagpdf Warning: there is no mc to end at 4
+
+
+Overfull \hbox (3.91663pt too wide) in paragraph at lines 152--152
+ [][] 
+ []
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 12)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 13)
+
+
+Package tagpdf Warning: nested marked content found - mcid 5
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 14)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 15)
+
+
+Package tagpdf Warning: there is no mc to end at 7
+
+
+Overfull \hbox (3.91663pt too wide) in paragraph at lines 152--152
+ [][][][][][] 
+ []
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 18)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 19)
+
+
+Package tagpdf Warning: nested marked content found - mcid 8
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 20)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 21)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 22)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 23)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 24)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 25)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 26)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 27)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 28)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 29)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 30)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 31)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 32)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 33)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 34)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 35)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 36)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 37)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 38)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 39)
+
+
+Package tagpdf Warning: there is no mc to end at 19
+
+
+Overfull \hbox (3.91663pt too wide) in paragraph at lines 152--152
+ [][][][][][] 
+ []
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 42)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 43)
+
+
+Package tagpdf Warning: nested marked content found - mcid 20
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 44)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 45)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 46)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 47)
+
+
+Package tagpdf Warning: there is no mc to end at 23
+
+
+Overfull \hbox (3.91663pt too wide) in paragraph at lines 152--152
+ [][][][][][] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 50)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 51)
+
+
+Package tagpdf Warning: nested marked content found - mcid 26
+
+
+Package tagpdf Warning: there is no mc to end at 27
+
+
+Overfull \hbox (3.91663pt too wide) in paragraph at lines 152--152
+ [][] 
+ []
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 54)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 55)
+
+
+Package tagpdf Warning: nested marked content found - mcid 28
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 56)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 57)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 58)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 59)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 60)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 61)
+
+
+Package tagpdf Warning: there is no mc to end at 32
+
+
+Overfull \hbox (3.91663pt too wide) in paragraph at lines 152--152
+ [][][][][][] 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \scan_stop: 
+l.152 \begin{preliminary}
+                         
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \scan_stop: 
+l.152 \begin{preliminary}
+                          [1
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+***************** Dedication ******************
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(144.76999pt, 577.93001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=577.93001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=58.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./dedication.tex) [2
+
+
+
+]
+***************** Acknowledgements ******************
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(144.76999pt, 577.93001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=577.93001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=58.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./acknow.tex) [3
+
+
+
+
+]
+***************** Vita ******************
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(144.76999pt, 577.93001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=577.93001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=58.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./vita.tex) [4
+
+
+
+
+]
+***************** Contents ******************
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(144.76999pt, 577.93001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=577.93001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=58.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./main.toc [5
+
+
+
+
+] [6])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [7]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(173.76999pt, 548.93001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=548.93001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=87.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ (./main.lot)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+ [8
+
+
+
+
+]
+***************** Nomenclature ******************
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(144.76999pt, 577.93001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=577.93001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=58.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./nomenclature.tex) [9
+
+
+
+
+]
+***************** Abstract ******************
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(144.76999pt, 577.93001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=577.93001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=2.5pt
+* \headheight=12.0pt
+* \headsep=58.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=18.05254pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(./abstract.tex) [10
+
+
+
+
+]
+\openout2 = `introduction.aux'.
+
+ (./introduction.tex
+*****************  Chapter 1. Introduction  *****************
+[1
+
+
+
+
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
+\openout2 = `theory.aux'.
+
+
+(./theory.tex
+*****************  Chapter 2. Field Oriented Control with Two-Phase Hybrid Step
+per Motor  *****************
+[17
+
+
+
+
+] [18] [19] [20]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 464)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 465)
+
+
+Package tagpdf Warning: nested marked content found - mcid 440
+
+
+Package tagpdf Warning: there is no mc to end at 441
+
+[21] [22] [23]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 497)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 498)
+
+
+Package tagpdf Warning: nested marked content found - mcid 469
+
+
+Package tagpdf Warning: there is no mc to end at 470
+
+[24]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 518)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 519)
+
+
+Package tagpdf Warning: nested marked content found - mcid 484
+
+
+Package tagpdf Warning: there is no mc to end at 485
+
+[25] [26] [27] [28]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 569)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 570)
+
+
+Package tagpdf Warning: nested marked content found - mcid 535
+
+
+Package tagpdf Warning: there is no mc to end at 536
+
+
+Package natbib Warning: Citation `kenjo1994' on page 29 undefined on input line
+ 323.
+
+
+Package natbib Warning: Citation `bodson1993' on page 29 undefined on input lin
+e 323.
+
+[29] [30] [31] [32]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 633)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 634)
+
+
+Package tagpdf Warning: nested marked content found - mcid 611
+
+
+Package tagpdf Warning: there is no mc to end at 612
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 637)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 638)
+
+
+Package tagpdf Warning: nested marked content found - mcid 613
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 639)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 640)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 641)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 642)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 643)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 644)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 645)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 646)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 647)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 648)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 649)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 650)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 651)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 652)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 653)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 654)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 655)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 656)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 657)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 658)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 659)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 660)
+
+
+Package tagpdf Warning: there is no mc to end at 625
+
+[33] [34] [35] [36] [37]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 723)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 724)
+
+
+Package tagpdf Warning: nested marked content found - mcid 694
+
+
+Package tagpdf Warning: there is no mc to end at 695
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 727)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 728)
+
+
+Package tagpdf Warning: nested marked content found - mcid 696
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 729)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 730)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 731)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 732)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 733)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 734)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 735)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 736)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 737)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 738)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 739)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 740)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 741)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 742)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 743)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 744)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 745)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 746)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 747)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 748)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 749)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 750)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 751)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 752)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 753)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 754)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 755)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 756)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 757)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 758)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 759)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 760)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 761)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 762)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 763)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 764)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 765)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 766)
+
+
+Package tagpdf Warning: there is no mc to end at 716
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 769)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 770)
+
+
+Package tagpdf Warning: nested marked content found - mcid 717
+
+
+Package tagpdf Warning: there is no mc to end at 718
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 773)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 774)
+
+
+Package tagpdf Warning: nested marked content found - mcid 719
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 775)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 776)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 777)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 778)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 779)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 780)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 781)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 782)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 783)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 784)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 785)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 786)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 787)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 788)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 789)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 790)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 791)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 792)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 793)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 794)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 795)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 796)
+
+
+Package tagpdf Warning: there is no mc to end at 731
+
+[38] [39] [40]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 831)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 832)
+
+
+Package tagpdf Warning: nested marked content found - mcid 759
+
+
+Package tagpdf Warning: there is no mc to end at 760
+
+[41]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 854)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 855)
+
+
+Package tagpdf Warning: nested marked content found - mcid 778
+
+
+Package tagpdf Warning: there is no mc to end at 779
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 858)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 859)
+
+
+Package tagpdf Warning: nested marked content found - mcid 780
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 860)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 861)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 862)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 863)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 864)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 865)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 866)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 867)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 868)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 869)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 870)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 871)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 872)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 873)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 874)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 875)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 876)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 877)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 878)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 879)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 880)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 881)
+
+
+Package tagpdf Warning: there is no mc to end at 792
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 884)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 885)
+
+
+Package tagpdf Warning: nested marked content found - mcid 793
+
+
+Package tagpdf Warning: there is no mc to end at 794
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 888)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 889)
+
+
+Package tagpdf Warning: nested marked content found - mcid 795
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 890)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 891)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 892)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 893)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 894)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 895)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 896)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 897)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 898)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 899)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 900)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 901)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 902)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 903)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 904)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 905)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 906)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 907)
+
+
+Package tagpdf Warning: there is no mc to end at 805
+
+[42] [43] [44]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 946)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 947)
+
+
+Package tagpdf Warning: nested marked content found - mcid 835
+
+
+Package tagpdf Warning: there is no mc to end at 836
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 950)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 951)
+
+
+Package tagpdf Warning: nested marked content found - mcid 837
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 952)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 953)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 954)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 955)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 956)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 957)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 958)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 959)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 960)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 961)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 962)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 963)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 964)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 965)
+
+
+Package tagpdf Warning: there is no mc to end at 845
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 968)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 969)
+
+
+Package tagpdf Warning: nested marked content found - mcid 846
+
+
+Package tagpdf Warning: there is no mc to end at 847
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 972)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 973)
+
+
+Package tagpdf Warning: nested marked content found - mcid 848
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 974)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 975)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 976)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 977)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 978)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 979)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 980)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 981)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 982)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 983)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 984)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 985)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 986)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 987)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 988)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 989)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 990)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 991)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 992)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 993)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 994)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 995)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 996)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 997)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 998)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 999)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1000)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1001)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1002)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1003)
+
+
+Package tagpdf Warning: there is no mc to end at 864
+
+[45] [46]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1031)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1032)
+
+
+Package tagpdf Warning: nested marked content found - mcid 887
+
+
+Package tagpdf Warning: there is no mc to end at 888
+
+[47] [48] [49] [50]
+
+Package natbib Warning: Citation `han2009' on page 51 undefined on input line 1
+286.
+
+
+Package natbib Warning: Citation `gao2003' on page 51 undefined on input line 1
+286.
+
+[51] [52]
+
+Package natbib Warning: Citation `herbst2023' on page 53 undefined on input lin
+e 1374.
+
+[53] [54]
+
+Package natbib Warning: Citation `gao2003' on page 55 undefined on input line 1
+448.
+
+
+Package natbib Warning: Citation `herbst2013' on page 55 undefined on input lin
+e 1449.
+
+
+Overfull \hbox (7.17096pt too wide) in paragraph at lines 1453--1456
+[][][][] [] []|   []   |   [][] \OT1/cmr/m/n/12 Elim-i-nat-ing the ob-server st
+ates from Equa-tions []
+ []
+
+[55] [56]
+
+Package natbib Warning: Citation `herbst2013' on page 57 undefined on input lin
+e 1553.
+
+[57] [58]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1238)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1239)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1079
+
+
+Package tagpdf Warning: there is no mc to end at 1080
+
+[59] [60]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1277)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1278)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1111
+
+
+Package tagpdf Warning: there is no mc to end at 1112
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1281)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1282)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1113
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1283)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1284)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1285)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1286)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1287)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1288)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1289)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1290)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1291)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1292)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1293)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1294)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1295)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1296)
+
+
+Package tagpdf Warning: there is no mc to end at 1121
+
+[61]) [62]
+\openout2 = `manuscript_option.aux'.
+
+ (./manuscript_option.tex
+*****************  Chapter 3. Title of manuscript you are\\ including as a chap
+ter  *****************
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 4.
+
+[63
+
+
+
+
+]) [64]
+\openout2 = `conclusion.aux'.
+
+ (./conclusion.tex
+*****************  Chapter 4. Conclusion  *****************
+) [65
+
+
+
+
+]
+***************** References Cited******************
+[66
+
+
+
+
+] (./main.bbl) [67
+
+]
+\openout2 = `appendixa.aux'.
+
+ (./appendixa.tex
+pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \scan_stop: 
+l.1 \chapter{Example Code}
+                          \label{appendixa}
+pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \scan_stop: 
+l.1 \chapter{Example Code}
+                          \label{appendixa}
+LaTeX Info: Redefining \\ on input line 1.
+ [68
+
+
+]) [69
+
+]
+
+Package natbib Warning: There were undefined citations.
+
+
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (79 not 80).
+               Rerun to correct this.
+
+(./main.aux (./introduction.aux) (./theory.aux) (./manuscript_option.aux)
+(./conclusion.aux) (./appendixa.aux))
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+
+Package tagpdf Warning: something is wrong with the mcid--rerun
+
+ ) 
+Here is how much of TeX's memory you used:
+ 47197 strings out of 476034
+ 1115109 string characters out of 5792864
+ 1875388 words of memory out of 6000000
+ 66632 multiletter control sequences out of 15000+600000
+ 530963 words of font info for 77 fonts, out of 8000000 for 9000
+ 1137 hyphenation exceptions out of 8191
+ 90i,15n,101p,2530b,3992s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/pdftex/pdftexspace.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+cm-super/sfrm1200.pfb>
+Output written on main.pdf (80 pages, 560885 bytes).
+PDF statistics:
+ 3910 PDF objects out of 4296 (max. 8388607)
+ 3744 compressed objects within 38 object streams
+ 197 named destinations out of 1000 (max. 500000)
+ 11113 words of extra memory for PDF output out of 12000 (max. 10000000)
+
