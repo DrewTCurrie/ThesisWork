@@ -1,6 +1,6 @@
 \chapter{Field Oriented Control with Two-Phase Hybrid Stepper Motor} \label{CH:FOCStepperMotor}
 
-Under FOC a hybrid stepper motor treated as an PMSM, the quadrature current in the motor is directly linear with the load torque with a slope of Kt. Through this relationship, the torque load on the motor can be characterized and estimated. To test this relationship, a Simulink model was constructed using an ADRC based control system and a stepper motor model that matches a Nema 23 stepper motor. The original model was produced as part of a previous thesis focused on the analysis of the resource utilization of different control systems on an FPGA. The model that was produced for that work did not simulate as the focus of that work was on resource usage analysis. This existing model was purely a mathematical representation of ADRC and stepper motor; no logic was present for the handling of real-world signals that would be required to integrate the stepper motor and supporting electronics with the FPGA. The model did not simulate PWM, ADC codes, the loadcell, and encoder pulses. The model relied on providing analog voltages to the stepper motor and receiving feedback in the form of radians and amps. This feedback is not directly accessible on the designed test bench and therefore had to be modified to be compatible with the PCB and mechanical test bench. therefore, a PWM generation model, ADC model, loadcell logic, and encoder logic was built to replicate the work done on the PCB. This included applying the same filters that are present in analog systems on the PCB to the Simulink model, along with modeling the sensors to provide real-world feedback signals. The goal of this work was to accurately model the complete system under test such that the data collected from the simulation would be reflective of real-world data.
+Under FOC a hybrid stepper motor treated as an PMSM, the quadrature current in the motor is directly linear with the load torque with a slope of Kt. Through this relationship, the torque load on the motor can be characterized and estimated. To test this relationship, a Simulink model was constructed using an ADRC based control system and a stepper motor model that matches a NEMA 23 stepper motor. The original model was produced as part of a previous thesis focused on the analysis of the resource utilization of different control systems on an FPGA. The model that was produced for that work did not simulate as the focus of that work was on resource usage analysis. This existing model was purely a mathematical representation of ADRC and stepper motor; no logic was present for the handling of real-world signals that would be required to integrate the stepper motor and supporting electronics with the FPGA. The model did not simulate PWM, ADC codes, the loadcell, and encoder pulses. The model relied on providing analog voltages to the stepper motor and receiving feedback in the form of radians and amps. This feedback is not directly accessible on the designed test bench and therefore had to be modified to be compatible with the PCB and mechanical test bench. therefore, a PWM generation model, ADC model, loadcell logic, and encoder logic was built to replicate the work done on the PCB. This included applying the same filters that are present in analog systems on the PCB to the Simulink model, along with modeling the sensors to provide real-world feedback signals. The goal of this work was to accurately model the complete system under test such that the data collected from the simulation would be reflective of real-world data.
 
 \section{System Architecture}\label{systemArchitecture}
 The Simulink model is split into two primary subsystems, the control system and the stepper motor. The stepper motor model includes the stepper motor and the emulation of loadcell, ADCs, and the rotary encoder. This subsystem is not designed to be synthesized into HDL; this is purely constructed for simulation purposes. The control system model is designed to be synthesized into HDL, this subsystem of the simulation contains the ADRC controllers, and the logic to process the raw data from the ADCs, loadcell, and encoder. To replicate real signals the mdoel was modified to supply a PWM waveform that can be directly output from the FPGA to the PCB, being compatible with the H-Bridge motor drivers on the PCB. This work moved forward with replicating the physical system in the simulation such that the simulation would produce replica of the required signals and physical properties of the physical system. The work was then expanded to include modeling of the ballscrew connected to the stepper motor and to model a spring applying a linear load to the ballscrew creating a torque on the stepper motor. Once this was completed, various spring loads were applied to the simulated system allowing for testing the relationship between the quadrature current and the torque of the motor.
@@ -20,7 +20,7 @@ The original continuous time, double floating point model was created by Dr. Ede
 
 \subsection{Hybrid Stepper Motor Specifications}\label{hybridStepperMotorSpecs}
 (Insert table with values from the Ding’s Motion Datasheet)
-This specific Nema 23 class motor was selected due to the electrical characteristics being similar to the mini-tech CNC Mill in the SE3 lab. This mill has been used for precision machining work within the SE3 lab previously and provides a clear baseline to compare future work related to this system implemented on a mill for performance improvements.
+This specific NEMA 23 class motor was selected due to the electrical characteristics being similar to the mini-tech CNC Mill in the SE3 lab. This mill has been used for precision machining work within the SE3 lab previously and provides a clear baseline to compare future work related to this system implemented on a mill for performance improvements.
 
 \subsection{Testbed}\label{testbed}
 
@@ -44,13 +44,13 @@ With the future goal of applying this work to CNC machining applications, additi
 \section{Motor Parameters and Identification}\label{motorParametersAndIdentification}
 
 \subsection{Parameter Sources}\label{parameterSources}
-The Dings' Motion Nema 23 Stepper Motor 23H2065 was selected for testing due to the electrical parameters of this motor being similar to the Mini-Tech CNC Mill. The reported electrical characteristics of both motors are listed in Table \ref{tab:motor_23H2065}
+The Dings' Motion NEMA 23 Stepper Motor 23H2065 was selected for testing due to the electrical parameters of this motor being similar to the Mini-Tech CNC Mill. The reported electrical characteristics of the Ding's Motion 23H2065 motor is listed in Table \ref{tab:motor_23H2065}
 
 
 
 \begin{table}[htbp]
 	\centering
-	\caption{Electrical and mechanical parameters of the Dings Motion NEMA~23 stepper motor, model 23H2065.}
+	\caption{Electrical and mechanical parameters of the Dings' Motion NEMA~23 stepper motor, model 23H2065.}
 	\label{tab:motor_23H2065}
 	\begin{tabular}{@{}llrl@{}}
 		\toprule
@@ -59,7 +59,7 @@ The Dings' Motion Nema 23 Stepper Motor 23H2065 was selected for testing due to 
 		Rated current (per phase) & $I_{\mathrm{rated}}$ & \SI{3.0}{\ampere} & RMS \\
 		Phase resistance          & $R$                  & \SI{0.9}{\ohm}    & $\pm 10\%$ at \SI{20}{\celsius} \\
 		Phase inductance          & $L$                  & \SI{2.7}{\milli\henry} & $\pm 20\%$ at \SI{1}{\kilo\hertz} \\
-		Holding torque            & $T_{\mathrm{h}}$     & \SI{1.60}{\newton\meter} & \SI{226.6}{oz\cdot in} \\
+		Holding torque            & $T_{\mathrm{h}}$     & \SI{1.60}{\newton\meter} & --- \\
 		Rotor inertia             & $J_{\mathrm{r}}$     & \SI{350}{\gram\centi\meter\squared} & --- \\
 		Step angle                & $\theta_{\mathrm{step}}$ & \SI{1.8}{\degree} & $\pm 5\%$ \\
 		Motor length              & $L_{\mathrm{motor}}$ & \SI{65}{\milli\meter} & Dimension ``L'' \\
@@ -68,14 +68,14 @@ The Dings' Motion Nema 23 Stepper Motor 23H2065 was selected for testing due to 
 	\end{tabular}
 	\vspace{0.5ex}
 	
-	\footnotesize Source: Dings Motion USA, NEMA~23 (size 23 / \SI{57}{\milli\meter}) rotary stepper motor specification table.
+	\footnotesize Source: Dings' Motion USA, NEMA~23 (size 23 / \SI{57}{\milli\meter}) rotary stepper motor specification table.
 \end{table}
 
 
 
 \subsection{Model Parameter Integration}\label{modelParameterIntegration}
 
-Modeling the plant was achieved through use of the Dings Motion 23H2065 datasheet, (Table~\ref{tab:motor_23H2065}) and the THK ballscrew catalog (model BIF1605-5RRGO+710LC5A) with a \SI{16}{\milli\meter} shaft diameter and a \SI{5}{\milli\meter} lead. The load-side inertia is reflected to the motor shaft as a rotational inertia. The additional inertia for the milling surface, workholding, and stock material was not modeled in this plant. The inertia change between a physical mill and the representative Simulink model will result in more inertia on a future system. This is not expected to have substantial impact on the performance of the control system. A test was conducted by increasing the inertia of the plant in Simulink and comparing the results. 
+Modeling the plant was achieved through use of the Dings' Motion 23H2065 datasheet, (Table~\ref{tab:motor_23H2065}) and the THK ballscrew catalog (model BIF1605-5RRG0+710LC5A) with a \SI{16}{\milli\meter} shaft diameter and a \SI{5}{\milli\meter} lead. The load-side inertia is reflected to the motor shaft as a rotational inertia. The additional inertia for the milling surface, workholding, and stock material was not modeled in this plant. The inertia change between a physical mill and the representative Simulink model will result in more inertia on a future system. This is not expected to have substantial impact on the performance of the control system. A test was conducted by increasing the inertia of the plant in Simulink and comparing the results. 
 %TODO: Rework paragraph above, the actual plot should be in the experiments later not here. 
 %TODO: Create plot, and insert plot
 
@@ -83,7 +83,7 @@ Modeling the plant was achieved through use of the Dings Motion 23H2065 datashee
 
 \subsubsection{Torque Constant}
 The torque constant for the plant was found through the datasheet and experimentally by back-EMF method. %TODO Get the methodology from Edens for measuring Kt imperically. 
-To calculate the torque constant from the datasheet, the holding torque and the rated current was used in Equation (~\eqref{eq:Kt}). The provided current limit in the Dings Motion 23H2065 Datasheet is an RMS value which is converted into a peak value in Equation (~\eqref{eq:ipk})
+To calculate the torque constant from the datasheet, the holding torque and the rated current was used in Equation~\eqref{eq:Kt}. The provided current limit in the Dings' Motion 23H2065 Datasheet is an RMS value which is converted into a peak value in Equation ~\eqref{eq:ipk}
 
 
 \begin{equation}
@@ -113,7 +113,7 @@ Therefore the electrical time constant is
 	\label{eq:taue}
 \end{equation}
 
-Simulation work uses the provided datasheet values of $\SI{2.7}{\milli\henry}$ in calculation. The inductance of the actual hybrid stepper motor was measured through a calculation of the impedance driven by a $\SI{1}{\kilo\hertz}$ signal in series with a $\SI{15}{\ohm}$ resistor. The values measured we within the expected expected tolerance range of ${20\%}$ as listed in the datasheet. The values measured are: 
+Simulation work uses the provided datasheet values of $\SI{2.7}{\milli\henry}$ in calculation. The inductance of the actual hybrid stepper motor was measured through a calculation of the impedance driven by a $\SI{1}{\kilo\hertz}$ signal in series with a $\SI{15}{\ohm}$ resistor. The values measured were within the expected expected tolerance range of ${20\%}$ as listed in the datasheet. The values measured are: 
  
  \begin{table}[htbp]
  	\centering
@@ -123,13 +123,13 @@ Simulation work uses the provided datasheet values of $\SI{2.7}{\milli\henry}$ i
  		\toprule
  		Phase & Symbol & Measured & Datasheet nominal & Deviation from nominal \\
  		\midrule
- 		Phase A & $L_{A}$ & \SI{3.205}{\milli\henry} & \SI{2.7}{\milli\henry} & \SI{+18.7}{\percent} \\
- 		Phase B & $L_{B}$ & \SI{3.209}{\milli\henry} & \SI{2.7}{\milli\henry} & \SI{+18.8}{\percent} \\
+ 		Phase A & $L_{A}$ & \SI{3.205}{\milli\henry} & \SI{2.7}{\milli\henry} & \SI[retain-explicit-plus]{+18.7}{\percent} \\
+ 		Phase B & $L_{B}$ & \SI{3.209}{\milli\henry} & \SI{2.7}{\milli\henry} & \SI[retain-explicit-plus]{+18.}{\percent} \\
  		\bottomrule
  	\end{tabular}
  	\vspace{0.5ex}
  	
- 	\footnotesize Source: Experimentally gathered at \SI{1}{\kilo\hertz}, compared against the Dings Motion USA NEMA 23 (Size 23 / \SI{57}{\milli\metre}) rotary stepper motor specifications table.
+ 	\footnotesize Source: Experimentally gathered at \SI{1}{\kilo\hertz}, compared against the Dings' Motion USA NEMA 23 (Size 23 / \SI{57}{\milli\metre}) rotary stepper motor specifications table.
  \end{table}
  
  
@@ -137,10 +137,9 @@ Simulation work uses the provided datasheet values of $\SI{2.7}{\milli\henry}$ i
 
 \subsubsection{Rotor Inertia}
 
-The motor inertia $J_m$ is the rotor inertia provided on the datasheet (Table (~\ref{tab:motor_23H2065})):
+The motor inertia $J_m$ is the rotor inertia provided on the datasheet (Table ~\ref{tab:motor_23H2065}):
 \begin{equation}
 	J_m = \SI{350}{\gram\centi\meter\squared}
-	= \SI{350e-7}{\kilo\gram\meter\squared}
 	= \SI{3.5e-5}{\kilo\gram\meter\squared}.
 	\label{eq:Jm}
 \end{equation}
@@ -173,7 +172,7 @@ For $L_s = \SI{0.71}{\meter}$,
 	= \SI{2.8400e-5}{\kilo\gram\meter\squared}.
 \end{equation}
 
-The nut translates as the screw turns. Its linear mass $m_n$ is reflected to the
+The nut translates as the screw turns. Its translating mass $m_n$ is reflected to the
 screw shaft through the lead $P_h$, so that the kinetic energy of the nut equals that of an equivalent rotating inertia:
 \begin{equation}
 	J_n = m_n \left(\frac{P_h}{2\pi}\right)^{2}
@@ -188,8 +187,8 @@ screw shaft through the lead $P_h$, so that the kinetic energy of the nut equals
 The total inertia seen by the motor is the sum of the three components:
 \begin{equation}
 	J = J_m + J_s + J_n
-	= \SI{3.5e-5}{} + \SI{3.47e-5}{} + \SI{3.6e-7}{}
-	\approx \SI{7.0e-5}{\kilo\gram\meter\squared}. \label{eq:jtot}
+	= \SI{3.5e-5}{} + \SI{2.84e-5}{} + \SI{3.61e-7}{}
+	\approx \SI{6.38e-5}{\kilo\gram\meter\squared}. \label{eq:jtot}
 \end{equation}
 
 
@@ -202,9 +201,9 @@ The total inertia seen by the motor is the sum of the three components:
 		Parameter & Symbol & Source & Value \\
 		\midrule
 		Torque constant    & $K_t$ & $T_{\mathrm{h}}/(\sqrt{2}\,I_{\mathrm{rated}})$ & \SI{0.377}{\newton\meter\per\ampere} \\
-		Resistance         & $R$   & Dings datasheet & \SI{0.9}{\ohm} \\
-		Inductance         & $L$   & Dings datasheet & \SI{2.7}{\milli\henry} \\
-		Motor inertia      & $J_m$ & Dings datasheet & \SI{3.5e-5}{\kilo\gram\meter\squared} \\
+		Resistance         & $R$   & Dings' datasheet & \SI{0.9}{\ohm} \\
+		Inductance         & $L$   & Dings' datasheet & \SI{2.7}{\milli\henry} \\
+		Motor inertia      & $J_m$ & Dings' datasheet & \SI{3.5e-5}{\kilo\gram\meter\squared} \\
 		Viscous damping    & $B_m$ & Estimated & \SI{8e-4}{\newton\meter\second\per\radian} \\
 		Screw inertia      & $J_s$ & THK catalog, Eq.~\eqref{eq:Js} & \SI{3.47e-5}{\kilo\gram\meter\squared} \\
 		Nut inertia        & $J_n$ & THK catalog, Eq.~\eqref{eq:Jn} & \SI{3.61e-7}{\kilo\gram\meter\squared} \\
@@ -216,7 +215,7 @@ The total inertia seen by the motor is the sum of the three components:
 
 \section{Stepper Motor Model}\label{sec:stepperMotorModel}
 
-To properly represent the control system and the expected functionality of the control system on the FPGA with the plant and PCB a detailed model of the plant and PCB were created. These models provided an accurate representation of the expected system combined with the expected data types and analog circuits.
+To properly represent the control system and the expected functionality of the control system on the FPGA with the plant and PCB, a detailed model of the plant and PCB were created. The model is intended to reproduce the behavior of the physical system closely enough that controller performance in simulation is indicative of performance on physical hardware.
 
 \subsection{Electrical Model}\label{stepperMotorElectricalModel}
 The electrical model of the stepper motor converts the logic-level pulse-width modulation (PWM) drive signals produced by the controller into phase voltages, and the phase voltages into phase currents. These phase currents in turn produce the electromagnetic torque acting on the rotor. The Simulink model is split into two levels, the logic circuits that emulate an H-Bridge motor driver and the electrical dynamics of the stepper motor. Figure %TODO: CREATE AND REFERENCE FIGURE
@@ -229,7 +228,7 @@ Each phase of the stepper motor is driven independently with an H-Bridge to allo
 \begin{itemize}
 	\item \textbf{Type conversion.} A Data Type Conversion block casts $u_x$ from Boolean to double precision, so that all subsequent arithmetic is performed in floating point. Under this cast, a logical true maps to $1$ and a logical false maps to $0$. This is done as the stepper motor is not intended for HDL synthesis and is therefore modeled completely in double floating point. 
 	
-	\item \textbf{Voltage scaling.} The control signal is multiplied by the motor source voltage to model the H-Bridge connecting the phase to the motor voltage. This is achieved through a gain block which assumes an ideal H-Bridge with no bouncing, ringing, or latency. 
+	\item \textbf{Voltage scaling.} The control signal is multiplied by the motor source voltage, $K_v$ to model the H-Bridge connecting the phase to the motor voltage. This is achieved through a gain block which assumes an ideal H-Bridge with no propagation delay, ringing, or latency. 
 	
 	\item \textbf{Polarity selection.} A Switch block with the criterion $d_x > 0$ passes the constant $-1$ when the direction signal is set and the constant $+1$ otherwise. This reflects the motor drive direction bit logic used on the physical H-Bridge drivers used to control the stepper motor. 
 \end{itemize}
@@ -252,14 +251,14 @@ When the gate signal $u_x$ is low, Equation~\eqref{eq:vsynth} applies zero volts
 
 Dead time, switch on-resistance, and freewheeling diode drops are omitted from this model, as the model assumes these disturbances will be handled by the Active Disturbance Rejection Control system controlling the quadrature and direct currents during run time. 
 
-The simulation sample time, $T_s$ is restricted to be much less than the PWM period $T_{\mathrm{pwm}}$ so that the model resolves individual PWM pulses. Over one PWM period, \qty{20}{\micro\second}, with duty ratio $D_x$ and constant direction, the average phase voltage is modeled as
+The simulation sample time $T_s = \SI{5}{\nano\second}$ is restricted to be much less than the PWM period $T_{\mathrm{pwm}}$ so that the model resolves individual PWM pulses. Over one PWM period, \qty{20}{\micro\second}, with duty ratio $D_x$ and constant direction, the average phase voltage is modeled as
 
 \begin{equation}
 	\bar{v}_x = \frac{1}{T_{\mathrm{pwm}}} \int_{t}^{t + T_{\mathrm{pwm}}} v_x(\tau) \, \mathrm{d}\tau = K_v \, D_x \, \sigma_x .
 	\label{eq:vavg}
 \end{equation}
 
-Because the electrical time constant of the winding, shown in Equation~\eqref{eq:taue}, is normally much longer than $T_{\mathrm{pwm}}$, the winding behaves as a low-pass filter. The phase current consequently follows $\bar{v}_x$, with a superimposed ripple. Neglecting resistance and back electromotive force (EMF), the peak-to-peak ripple is approximately
+Because the electrical time constant of the winding, shown in Equation~\eqref{eq:taue}, $\tau_e = \SI{3}{\milli\second}$, is 150 times greater than $T_{\mathrm{pwm}}$, the winding behaves as a low-pass filter. The phase current consequently follows $\bar{v}_x$, with a superimposed ripple. Neglecting resistance and back electromotive force (EMF), the peak-to-peak ripple is approximately
 
 \begin{equation}
 	\Delta i_x \approx \frac{K_v \, D_x (1 - D_x) \, T_{\mathrm{pwm}}}{L},
@@ -309,7 +308,7 @@ Each phase winding is modeled as a series resistance and inductance in series wi
 
 where $i_a$ and $i_b$ are the phase currents, $R$ is the winding resistance, $L$ is the winding self-inductance, and $K_{E}$ is the back-EMF gain, equal to the flux linkage $\psi_m$ of Equation~\eqref{eq:psim}. The speed and angle inputs are the electrical quantities $\omega_r = \omega_e$ and $\theta_r = \theta_e$ of Equation~\eqref{eq:elec_angle}. Defining the back-EMF voltages as
 \begin{equation}
-	e_a = -K_{E} \, \omega_r \sin\theta_r, \qquad e_b = K_omega \, \omega_r \cos\theta_r ,
+	e_a = -K_{E} \, \omega_r \sin\theta_r, \qquad e_b = K_{E} \, \omega_r \cos\theta_r ,
 	\label{eq:emf}
 \end{equation}
 both equations take the circuit form $v_x = R \, i_x + L \, \mathrm{d} i_x / \mathrm{d} t + e_x$. The sine and cosine dependence places the two back-EMF waveforms in quadrature, consistent with the $90^\circ$ electrical displacement between the phase windings.
