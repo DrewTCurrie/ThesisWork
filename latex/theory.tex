@@ -19,6 +19,7 @@ During debugging of the model, the stepper motor model was setup to provide the 
 The original continuous time, double floating point model was created by Dr. Edens, which was then revised by Caleb Binfet to include solving in the discrete time and partial work on the fixed point conversion. From here, Caleb shows in [Caleb’s Thesis Reference] that the first order MFP ADRC used XX amount of resources on the AMD KR260 Robotics Starter Kit SoM FPGA. Through this decrease in resource utilization it was an ideal choice to provide the disturbance rejection for parameters of the stepper motor and testing that could not accurately be captured in a simulation. Disturbances such as, friction, bearing imperfections, linear rail imperfections, ball screw imperfections, copper voltage loss. When this model was transferred to begin work on integration with the PCB and mechanical system, the provided model did not simulate. This lead to the work done to fix the model and adapt the model to work with the the PCB. The model was rebuilt in the discrete time system to fix integration issues, the fixed point precision was reworked to use standardized values avoiding conflicts in future work, and additional peripheral simulations were implemented. This system represents the most complete model of the stepper motor created in the SE3 lab and provided a fourth iteration on showing the relationship between the quadrature current and the torque produced. Initial work was based on an Arduino system that provided an initial proof of concept that the stepper motor would rotate with voltage as directed by the FOC algorithm. From here premade 3-phase BLDC FOC compatible motor drivers were tested to seek an off-the-shelf solution to the problem. Ultimately, these boards were not compatible with the stepper motor in the desired configuration and a custom implementation was created on a RaspberryPi. The RaspberryPi system proved that the correlation could be found and the entire algorithm would work end-to-end, however the clock speed of the RaspberryPi provided non-deterministic timing and led to difficulties in recreating data between experiments. From this, the FPGA based approach was determined to be an ideal solution and implementation work began. This required reworking the original Simulink approach that provided a cascaded PID system with continuous time and double floating point precision to a discrete time fixed point precision model. This provided an opportune time to implement the ADRC control approach instead of the PID approach.
 
 \subsection{Hybrid Stepper Motor Specifications}\label{hybridStepperMotorSpecs}
+%TODO: Change this to reference the methodology section talking about the parameters put in the simulation. This section should be short and really introduce that a NEMA 23 class motor was selected to match the mini-tech mill. 
 (Insert table with values from the Ding’s Motion Datasheet)
 This specific NEMA 23 class motor was selected due to the electrical characteristics being similar to the mini-tech CNC Mill in the SE3 lab. This mill has been used for precision machining work within the SE3 lab previously and provides a clear baseline to compare future work related to this system implemented on a mill for performance improvements.
 
@@ -27,15 +28,6 @@ This specific NEMA 23 class motor was selected due to the electrical characteris
 To test the performance of the stepper motor with FOC control, a mechanical test bench was constructed that provides dimensional constraints that match the X-Axis of the mini-tech CNC mill. This was selected to demonstrate the FOC algorithm would work over a full length of displacement for a mill compared to the six inches of displacement present on the RaspberryPi based test bench. This new test bench provides a system designed to isolate some of the friction issues present on the previous system and provide a repeatable method to test different load conditions of the motor. The mechanical test bench features a BIF1605-5RRG0 THK ballscrew and caged nut, and two Transducer Techniques MLP-50-C0 load cells mounted in plane with the ballscrew to minimize the rotation caused by a spring on a single side of the ballscrew. The ballscrew has a \SI{5}{\milli\meter} lead, approximately \SI{90}{\percent} efficiency, with an inertia of \SI{3.47e-5}{\kilogram\meter\squared} with the caged nut adding an inertia of \SI{3.38e-7}{\kilogram\meter\squared}. These parameters were provided by manufacturer of these parts, THK. These parameters were then modeled in the simulation. In the simulation the two MLP-50-C0 load cells are modeled as a single loadcell that fully captures the load.
 
 (Figure: CAD Model of the mechanical test bench, label parts)
-
-\subsection{Controller Sensing and Hardware}
-Selected hardware for this work is the AMD KR260 Robotics Starter Kit SoM FPGA which was selected to be inline with work at Montana State University to move undergraduate courses to the AMD KR260 Robotics Starter Kit SoM FPGA.
-
-→ More thought needed on exactly what to include about the PCB
-→  More thought needed to determine what to say about the encoder and load cell selection reasons.
-→ Expand on the rotary encoder with information from the datasheet
-→ Create a table of all the sensors and important information such as resolution, range, quantity, etc. 
-
 
 
 \subsection{Machining Application Constraints}\label{machineApplicationConstraints}
@@ -96,6 +88,8 @@ To calculate the torque constant from the datasheet, the holding torque and the 
 	= \frac{\SI{1.60}{\newton\meter}}{\sqrt{2}\,(\SI{3.0}{\ampere})}
 	= \SI{0.377}{\newton\meter\per\ampere}.\label{eq:Kt}
 \end{equation}
+
+The factor of $\sqrt{2}$ in Eq.~\eqref{eq:Kt} arises because the datasheet holding torque is specified with both phases carrying the rated current, so the current vector has magnitude $\sqrt{2}\,I_{\mathrm{rated}}$. This vector fully represents $i_q$ when $i_d = 0$.
 
 %TODO: Write about the measured torque constant from BackEMF matching. 
 
@@ -299,16 +293,17 @@ A summary of the relevant electrical input signals is provided in Table~\ref{tab
 \subsubsection{Phase Winding Model}\label{sec:phase}
 
 %TODO Add citation kenjo 1994 and bodson 1993
-Each phase winding is modeled as a series resistance and inductance in series with a speed-dependent back-EMF, which is the standard representation of a two-phase permanent-magnet or hybrid stepper motor~\cite{kenjo1994,bodson1993}. The \texttt{StepperElectrical} subsystem receives the phase voltages $v_a$ and $v_b$, the electrical rotor speed $\omega_r$, and the electrical rotor angle $\theta_r$, and it implements
+Each phase winding is modeled as a series resistance and inductance in series with a speed-dependent back-EMF, which is the standard representation of a two-phase permanent-magnet or hybrid stepper motor~\cite{kenjo1994,bodson1993}. The \texttt{StepperElectrical} subsystem receives the phase voltages $v_a$ and $v_b$, the electrical rotor speed $\omega_r$, and the electrical rotor angle $\theta_e$, and it implements
 
 \begin{align}
-	L \frac{\mathrm{d} i_a}{\mathrm{d} t} &= v_a - R \, i_a + K_{E} \, \omega_r \sin\theta_r , \label{eq:ia} \\
-	L \frac{\mathrm{d} i_b}{\mathrm{d} t} &= v_b - R \, i_b - K_{E} \, \omega_r \cos\theta_r , \label{eq:ib}
+	L \frac{\mathrm{d} i_a}{\mathrm{d} t} &= v_a - R \, i_a + K_{E} \, \omega_r \sin\theta_e , \label{eq:ia} \\
+	L \frac{\mathrm{d} i_b}{\mathrm{d} t} &= v_b - R \, i_b - K_{E} \, \omega_r \cos\theta_e , \label{eq:ib}
 \end{align}
 
+%TODO: Clean up equation math involving theta and omage subscripts
 where $i_a$ and $i_b$ are the phase currents, $R$ is the winding resistance, $L$ is the winding self-inductance, and $K_{E}$ is the back-EMF gain, equal to the flux linkage $\psi_m$ of Equation~\eqref{eq:psim}. The speed and angle inputs are the electrical quantities $\omega_r = \omega_e$ and $\theta_r = \theta_e$ of Equation~\eqref{eq:elec_angle}. Defining the back-EMF voltages as
 \begin{equation}
-	e_a = -K_{E} \, \omega_r \sin\theta_r, \qquad e_b = K_{E} \, \omega_r \cos\theta_r ,
+	e_a = -K_{E} \, \omega_r \sin\theta_e, \qquad e_b = K_{E} \, \omega_r \cos\theta_e ,
 	\label{eq:emf}
 \end{equation}
 both equations take the circuit form $v_x = R \, i_x + L \, \mathrm{d} i_x / \mathrm{d} t + e_x$. The sine and cosine dependence places the two back-EMF waveforms in quadrature, consistent with the $90^\circ$ electrical displacement between the phase windings.
@@ -384,12 +379,13 @@ both stable and accurate with a wide margin.
 
 The forward Euler method is also well suited to the PWM drive. During a single PWM pulse the applied voltage is constant, and when resistance and back-EMF are neglected, as in the derivation of Equation~\eqref{eq:ripple}, the current changes at a constant rate. Forward Euler integrates a constant rate exactly, therefore the simulated phase current reproduces the triangular ripple of Equation~\eqref{eq:ripple}, with the timing of each pulse edge resolved to the nearest sample.
 
-As in the mechanical model, each forward Euler integrator has no direct feedthrough, $i_x[k+1]$ depends only on signals at sample $k$. The back-EMF term uses the rotor speed and angle at sample $k$, which are integrator outputs from the mechanical model, and the electromagnetic torque at sample $k$ uses the phase currents at sample $k$. No signal in the electrical--mechanical loop depends on another signal at the same sample, and no algebraic loop is formed. The complete motor model is an explicit discrete-time update of the state vector $\left[\, i_a,\; i_b,\; \omega_m,\; \theta_m \,\right]^{\mathsf{T}}$, advanced once per sample by Equations~\eqref{eq:current_update}, \eqref{eq:speed_update}, and~\eqref{eq:angle_update}.
+
+All forward Euler integrators have no direct feedthrough, and $i_x[k+1]$ depends only on signals at sample $k$. The back-EMF term uses the rotor speed and angle at sample $k$, which are integrator outputs from the mechanical model, and the electromagnetic torque at sample $k$ uses the phase currents at sample $k$. No signal in the electrical--mechanical loop depends on another signal at the same sample, and no algebraic loop is formed. 
 
 
 \subsubsection{Flux Linkage and Torque Equation}
 
-The flux linkage $\psi_m$ is the peak flux that the rotor magnets link with one stator phase. $\psi_m$ sets the back-EMF, the term $N_r\,\omega_m\,\psi_m$ in Eq.~\eqref{eq:vq}, which opposes the applied voltage and grows linearly with speed. The units of $\psi_m$ are \si{\volt\second}.
+The flux linkage $\psi_m$ is is the peak flux linkage between the rotor magnets and one stator phase. $\psi_m$ sets the back-EMF, the term $N_r\,\omega_m\,\psi_m$ in Eq.~\eqref{eq:vq}, which opposes the applied voltage and grows linearly with speed. The units of $\psi_m$ are \si{\volt\second}.
 
 The electromechanical power is the product of the back-EMF and the
 torque-producing current. Because the two-phase Park transform of Equation~\eqref{eq:park} is solely a rotation, it is both amplitude- and power-invariant, and the power into the back-EMF is $P_e = (N_r\,\omega_m\,\psi_m)\, i_q$, and since $P_e = T_e\,\omega_m$, the torque is
@@ -406,7 +402,8 @@ which defines the motor torque constant
 	\label{eq:psim}
 \end{equation}
 
-Here $K_m$ is the same quantity as $K_t$ in Eq.~\eqref{eq:Kt}. Reluctance torque is absent because $L_d = L_q$, and detent torque is neglected. The direct-axis current $i_d$ produces no torque and is regulated to zero.
+
+The motor model treats $L_A = L_B$ therefore $L_d = L_q$. This assumption is made on the similarity of the phase inductance as measured in Table ~\ref{tab:measured_inductance}. With this simplified model of the motor, reluctance torque and detent torque are omitted and the direct-axis current $i_d$ produces no torque and is regulated to zero.
 
 For the 23H2065 motor, with $K_m = \SI{0.377}{\newton\meter\per\ampere}$ and
 $N_r = 50$,
@@ -414,8 +411,7 @@ $N_r = 50$,
 	\psi_m = \frac{\SI{0.377}{\newton\meter\per\ampere}}{50}
 	= \SI{7.54e-3}{\volt\second}.
 \end{equation}
-The factor of $\sqrt{2}$ in Eq.~\eqref{eq:Kt} arises because the datasheet
-holding torque is specified with both phases carrying the rated current, so the current vector has magnitude $\sqrt{2}\,I_{\mathrm{rated}}$. This vector fully represents $i_q$ when $i_d = 0$.
+
 
 \begin{table}[htbp]
 	\centering
@@ -440,7 +436,7 @@ holding torque is specified with both phases carrying the rated current, so the 
 
 
 The mechanical model of the stepper motor converts the phase currents
-produced by the electrical model into electromagnetic torque and integrates the resulting torque balance to obtain the rotor speed and angle. These mechanical states are returned to the electrical model, where these parameters effect the magnitude and phase of the back-EMF, and are exported from the motor model to compute encoder pulses. The Simulink implementation is divided into three subsystems, shown in Figure: %TODO: Create Stepper Motor Figure and Insert
+produced by the electrical model into electromagnetic torque and integrates the resulting torque balance to obtain the rotor speed and angle. These mechanical states are returned to the electrical model, where these states affect the magnitude and phase of the back-EMF, and are exported from the motor model to compute encoder pulses. The Simulink implementation is divided into three subsystems, shown in Figure: %TODO: Create Stepper Motor Figure and Insert
 the \texttt{Te} subsystem, which computes the electromagnetic torque from the phase currents and rotor angle; the \texttt{StepperMechanical} subsystem, which implements the rotor dynamics of Equation~\eqref{eq:mech}; and the \texttt{rotor angle} subsystem, which integrates the rotor speed to obtain the mechanical and electrical rotor angles. As with the electrical model, all signals are represented in double-precision floating point, as the motor model is not intended for HDL synthesis.
 
 \subsubsection{Electromagnetic Torque}
@@ -454,15 +450,13 @@ The \texttt{Te} subsystem receives the phase currents $i_a$ and $i_b$ from the e
 
 where the electrical angle $\theta_e = N_r \theta_m$ is formed within the subsystem from the supplied mechanical angle.
 
-By driving the stepper motor using the phase currents, additional modeling was able to be done on the stepper motor. To test the stepper motor functions separately from the control system designed in the present work, a separate test model was created that drove the stepper motor like a traditional stepper motor preforming full stepping to confirm proper functionality of the stepper motor. 
-
 Equation~\eqref{eq:phase_torque} follows from the power balance of the
 back-EMF sources. Using the back-EMF voltages of Equation~\eqref{eq:emf},
 the electrical power converted by the two phase windings is
 
 \begin{equation}
 	P_e = e_a i_a + e_b i_b
-	= K_{E} \omega_r \left( -i_a \sin\theta_r + i_b \cos\theta_r \right).
+	= K_{E} \omega_r \left( -i_a \sin\theta_e + i_b \cos\theta_e \right).
 	\label{eq:phase_power}
 \end{equation}
 
@@ -471,25 +465,16 @@ Equation~\eqref{eq:elec_angle} and equating $P_e$ to the mechanical
 power $T_e \omega_m$ gives
 
 \begin{equation}
-	T_e = N_r K_{E} \left( -i_a \sin\theta_r + i_b \cos\theta_r \right).
+	T_e = N_r K_{E} \left( -i_a \sin\theta_e + i_b \cos\theta_e \right).
 	\label{eq:torque_from_power}
 \end{equation}
 
-Identifying the back-EMF gain with the permanent-magnet flux linkage,
-$K_{E} = \psi_m$, the leading factor becomes $N_r \psi_m = K_m$ by
-Equation~\eqref{eq:psim}, which recovers Equation~\eqref{eq:phase_torque}.
+Identifying the back-EMF gain with the permanent-magnet flux linkage, $K_{E} = \psi_m$, the leading factor becomes $N_r \psi_m = K_m$ by Equation~\eqref{eq:psim}, which recovers Equation~\eqref{eq:phase_torque}.
 
-The bracketed term in Equation~\eqref{eq:phase_torque} is the quadrature
-current $i_q$ of the Park transform in Equation~\eqref{eq:park},
-so the phase-frame expression reduces to $T_e = K_m i_q$, consistent with
-Equation~\eqref{eq:Te}. The two formulations are therefore equivalent.
-The phase-frame form is used in simulation so that the torque responds to the
-instantaneous phase currents, including the PWM current ripple estimated in
-Equation~\eqref{eq:rippleValue}, rather than to idealized $d$--$q$ currents. As
-a result, the simulated torque carries a ripple on the order of
-$K_m \Delta i_x \approx \SI{0.034}{\newton\metre}$ at the PWM carrier
-frequency, which the controller must tolerate. Detent torque is neglected,
-consistent with the electromechanical model.
+The bracketed term in Equation~\eqref{eq:phase_torque} is the quadrature current $i_q$ of the Park transform in Equation~\eqref{eq:park}, so the phase-frame expression reduces to $T_e = K_m i_q$, consistent with Equation~\eqref{eq:Te}. The two formulations are therefore equivalent. The phase-frame form is used in simulation so that the torque responds to the instantaneous phase currents, including the PWM current ripple estimated in Equation~\eqref{eq:rippleValue}, rather than to idealized $d$--$q$ currents. As a result, the simulated torque carries a ripple on the order of $K_m \Delta i_x \approx \SI{0.034}{\newton\metre}$ at the PWM carrier frequency, which the controller must tolerate. Detent torque is neglected, consistent with the electromechanical model.
+
+
+By driving the stepper motor using the phase currents, additional modeling was able to be done on the stepper motor. To test the stepper motor functions separately from the control system designed in the present work, a separate test model was created that drove the stepper motor like a traditional stepper motor preforming full stepping to confirm proper functionality of the stepper motor. 
 
 \subsubsection{Rotor Dynamics}
 
@@ -516,7 +501,9 @@ Combining these operations, the rotor speed at sample $k+1$ is
 	+ \frac{T_s}{J}\Big( T_e[k] - B_m \omega_m[k] - T_L[k] \Big),
 	\label{eq:speed_update}
 \end{equation}
+
 which is the forward Euler discretization of Equation~\eqref{eq:mech}. Collecting terms in $\omega_m$ yields the discrete transfer function from net driving torque to rotor speed,
+
 \begin{equation}
 	\frac{\omega_m(z)}{T_e(z) - T_L(z)}
 	= \frac{T_s / J}{z - \left( 1 - T_s / \tau_m \right)},
@@ -524,11 +511,13 @@ which is the forward Euler discretization of Equation~\eqref{eq:mech}. Collectin
 	\label{eq:speed_tf}
 \end{equation}
 
-where $\tau_m$ is the mechanical time constant of the rotor. This is the forward Euler of the continuous-time plant, $1/(Js + B_m)$, with pole at $s = -1/\tau_m$ is mapped to $z = 1 - T_s/\tau_m$. The discretization is stable for $\left|1 - T_s/\tau_m\right| < 1$, which requires $T_s < 2\tau_m$. Sample time is chosen much shorter than the PWM period in order to resolve individual pulses, and the mechanical time constant is much longer than the PWM period, therefore this condition is satisfied and the discretization error of the forward Euler method is negligible.
+%TODO: Give the numbers behind the time constants of the system, Ts is many orders of magnitude less than tau_m
+
+where $\tau_m$ is the mechanical time constant of the rotor. This is the forward Euler discretization of the continuous-time plant, $1/(Js + B_m)$, with its pole at $s = -1/\tau_m$ is mapped to $z = 1 - T_s/\tau_m$. The discretization is stable for $\left|1 - T_s/\tau_m\right| < 1$, which requires $T_s < 2\tau_m$. Sample time is chosen much shorter than the PWM period in order to resolve individual pulses, and the mechanical time constant is much longer than the PWM period, therefore this condition is satisfied and the discretization error of the forward Euler method is negligible.
 
 The forward Euler method was selected because it has no direct feedthrough, the integrator output at sample $k$ depends only on inputs up to sample $k-1$. This prevents the damping feedback path through $B_m$ from forming an algebraic loop with the Sum block. The same one-sample delay decouples the electrical and mechanical models, since a change in $T_e$ at sample $k$ affects $\omega_m$ only at sample $k+1$. Given that $T_s \ll \tau_m$, this delay has no meaningful effect on the simulated dynamics.
 
-The load torque $T_L$ is supplied externally of the motor model, which allows step or time-varying load disturbances to be applied during simulation such as a spring modeled as an increasing linear load. Given that $T_L$ enters the torque balance directly and is not measured by the controller, it appears to the Active Disturbance Rejection Control system as part of the total disturbance to be estimated and rejected. The rotor speed $\omega_m$ is routed to out of the motor model, to the \texttt{rotor angle} subsystem, and through a gain of $N_r$ to form the electrical speed $\omega_r$ which is supplied to the \texttt{StepperElectrical} subsystem.
+The load torque $T_L$ is supplied externally of the motor model, which allows step or time-varying load disturbances to be applied during simulation such as a spring modeled as an increasing linear load. Given that $T_L$ enters the torque balance directly and is not measured by the controller, it appears to the Active Disturbance Rejection Control system as part of the total disturbance to be estimated and rejected. The measurement of the applied $T_L$ through the use of the loadcells is intended only for verification of system functionality. The rotor speed $\omega_m$ is routed out of the motor model, to the \texttt{rotor angle} subsystem, and through a gain of $N_r$ to form the electrical speed $\omega_r$ which is supplied to the \texttt{StepperElectrical} subsystem.
 
 \subsubsection{Rotor Angle}
 
@@ -536,16 +525,19 @@ The \texttt{rotor angle} subsystem, shown in Figure, %TODO See figure note below
 integrates the rotor speed to obtain the rotor position. A second forward Euler Discrete-Time Integrator produces the mechanical angle, and a gain of $N_r$, labeled \texttt{RT} in the model, converts it to the electrical angle:
 \begin{equation}
 	\theta_m[k+1] = \theta_m[k] + T_s\,\omega_m[k], \qquad
-	\theta_r[k] = N_r\,\theta_m[k].
+	\theta_e[k] = N_r\,\theta_m[k].
 	\label{eq:angle_update}
 \end{equation}
 
 %TODO Figure of just the rotor angle calculation subsystem block from simulink. 
 
 
-The mechanical angle $\theta_m$ is supplied to the \texttt{Te} subsystem for the torque calculation of Equation~\eqref{eq:phase_torque} and is exported through output port 5 of the motor model for the encoder emulation. The electrical angle $\theta_r$ is supplied to the \texttt{StepperElectrical} subsystem, where it sets the phase of the back-EMF terms in Equations~\eqref{eq:ia} and~\eqref{eq:ib}, and is exported through output port 3. The angle is not wrapped to a single revolution. Accumulating $\theta_m$ without bound preserves the multi-turn rotor position required by the encoder emulation, and wrapping is unnecessary for the torque and back-EMF calculations because the sine and cosine functions are periodic.
+The mechanical angle $\theta_m$ is supplied to the \texttt{Te} subsystem for the torque calculation of Equation~\eqref{eq:phase_torque} and is exported through output port 5 of the motor model for the encoder emulation. The electrical angle $\theta_e$ is supplied to the \texttt{StepperElectrical} subsystem, where it sets the phase of the back-EMF terms in Equations~\eqref{eq:ia} and~\eqref{eq:ib}. The angle is not wrapped to a single revolution. Accumulating $\theta_m$ without bound preserves the multi-turn rotor position required by the encoder emulation, and wrapping is unnecessary for the torque and back-EMF calculations because the sine and cosine functions are periodic.
 
-Together, the \texttt{StepperMechanical} and \texttt{rotor angle} subsystems form a cascade of two discrete integrators from net torque to rotor position. The mechanical and electrical systems combined model the complete stepper motor is described by the state vector $\left[\, i_a,\; i_b,\; \omega_m,\; \theta_m \,\right]^{\mathsf{T}}$. The signals of the mechanical model are summarized in Table~\ref{tab:mech_signals}, and its parameters in Table~\ref{tab:mech_params}.
+Together, the \texttt{StepperMechanical} and \texttt{rotor angle} subsystems form a cascade of two discrete integrators from net torque to rotor position. Combined, the mechanical and electrical models describe the complete stepper motor by the state vector $\left[\, i_a,\; i_b,\; \omega_m,\; \theta_m \,\right]^{\mathsf{T}}$. The state vector advances once per sample by Equations~\eqref{eq:current_update}, \eqref{eq:speed_update}, and~\eqref{eq:angle_update}.
+
+
+ The signals of the mechanical model are summarized in Table~\ref{tab:mech_signals}, and its parameters in Table~\ref{tab:mech_params}.
 
 \begin{table}[htbp]
 	\centering
@@ -564,7 +556,7 @@ Together, the \texttt{StepperMechanical} and \texttt{rotor angle} subsystems for
 		& $\omega_m$   & Output & Rotor speed, motor output port 4 (\si{\radian\per\second}) \\
 		\texttt{rotor angle}       & $\omega_m$   & Input  & Rotor speed (\si{\radian\per\second}) \\
 		& $\theta_m$   & Output & Mechanical angle, motor output port 5 (\si{\radian}) \\
-		& $\theta_r$   & Output & Electrical angle, motor output port 3 (\si{\radian}) \\
+		& $\theta_e$   & Output & Electrical angle, motor output port 3 (\si{\radian}) \\
 		\hline
 	\end{tabular}
 \end{table}
@@ -591,6 +583,7 @@ Together, the \texttt{StepperMechanical} and \texttt{rotor angle} subsystems for
 \section{PCB Model}\label{pcbModel}
 
 The PCB model emulates the measurement interface between the stepper motor and the FPGA. The stepper motor model produces the rotor angle and phase currents as double-precision signals, while the physical controller receives these quantities only through the sensors and converters on the PCB: a quadrature encoder for rotor position, shunt amplifiers sampled by ADCs for the phase currents, and an ADC for the loadcell. The PCB model converts the motor outputs into the same digital signals, with the same data types, resolution, and offsets, that the FPGA receives from the board. This allows the decoding logic, fixed-point data types, and measurement quantization of the controller to be exercised in simulation with the same form of inputs it will process in hardware, while following the constraints in Simulink to be HDL compatible. 
+%TODO: In the above paragrpah reword the HDL constraints, the PCB is not constrained to HDL compatible blocks but rather needs to provide interface in a standard that the HDL compatible blocks can understand while emulatign the physical circuits. 
 
 \subsection{Encoder Emulation}\label{sec:encoderEmulation}
 
@@ -607,7 +600,7 @@ counts. The \texttt{Convert Mechanical Angle to Encoder Pulses} subsystem, shown
 \begin{itemize}
 	\item \textbf{Angle scaling.} A gain block converts the mechanical angle from radians to encoder counts by multiplying by $N_c / 2\pi$.
 	
-	\item \textbf{Integer conversion.} A Data Type Conversion block casts the scaled angle from double precision to a signed 32-bit integer, quantizing the continuous mechanical angle to a whole number of encoder counts. This count models an ideal encoder accumulation. All three output channels are derived from this count, handling appropriate roll-over logic at full mechanical rotation.
+	\item \textbf{Integer conversion.} A Data Type Conversion block casts the scaled angle from double precision to a signed 32-bit integer, quantizing the continuous mechanical angle to a whole number of encoder counts. This count models an ideal encoder accumulation. All three output channels are derived from this count. 
 	
 	\item \textbf{Quadrature generation.} Bitwise AND blocks with the masks \texttt{0x1} and \texttt{0x2} extract the two least significant bits of the count. Channel B is taken directly from the second bit, and channel A is formed as the exclusive OR of the first and second bits.
 	
@@ -617,15 +610,13 @@ counts. The \texttt{Convert Mechanical Angle to Encoder Pulses} subsystem, shown
 Combining these operations, the encoder count at sample $k$ is
 %TODO: Include a timing diagram of the encoder wavefroms
 %TODO Include a logic diagram of the encoder logic
-% TODO: Confirm the rounding mode of the int32 Data Type Conversion block.
-% Floor gives the same count width on both sides of zero; Zero (truncation)
-% makes the count at n = 0 twice as wide as every other count.
+
 \begin{equation}
 	n[k] = \mathcal{Q}\!\left( \frac{N_c}{2\pi}\, \theta_m[k] \right),
 	\label{eq:enc_count}
 \end{equation}
 
-where $\mathcal{Q}$ denotes the integer conversion of the Data Type Conversion block. Writing $b_0[k]$ and $b_1[k]$ for the first and second bits of $n[k]$, the encoder channels are
+where $\mathcal{Q}$ denotes the integer conversion of the Data Type Conversion block, rounding towards $-\infty$. Writing $b_0[k]$ and $b_1[k]$ for the first and second bits of $n[k]$, the encoder channels are
 
 \begin{equation}
 	B[k] = b_1[k], \qquad
@@ -657,7 +648,7 @@ Equation~\eqref{eq:quadrature} converts the two low bits of the binary count int
 	\end{tabular}
 \end{table}
 
-The index channel is asserted for a single count whenever the rotor is at the reference zero position or a whole number of revolutions from it, which matches the once-per-revolution index pulse of the physical encoder. With the mechanical angle not being wrapped to a single revolution, the count accumulates the multi-turn position of the rotor. The signed 32-bit count can represent approximately $2^{31}/N_c \approx 107{,}000$ revolutions before overflow, which is far beyond the travel of any simulation, or practical physical system.
+The index channel is asserted for a single count whenever the rotor is at the reference zero position or a whole number of revolutions from it, which matches the once-per-revolution index pulse of the physical encoder. With the mechanical angle not being wrapped to a single revolution, the count accumulates the multi-turn position of the rotor. The signed 32-bit count can represent approximately $2^{31}/N_c \approx 107{,}000$ revolutions before overflow, which is far beyond the travel of any simulation, or practical physical system. The physical system is restricted to at most $ \approx \SI{142}{}$ revolutions. 
 
 The resolution of the encoder is one count, or
 
@@ -670,16 +661,17 @@ The resolution of the encoder is one count, or
 
 The emulated encoder also places an upper limit on the rotor speed that can be represented without loss of counts. From Equation~\eqref{eq:angle_update}, the mechanical angle advances by $T_s\,\omega_m$ each sample, so the count advances by approximately $N_c T_s \omega_m / 2\pi$ counts per sample. If the count advances by two or more in a single sample, both channels change together and the direction of motion cannot be determined from the channel states. The emulated channels therefore remain valid only while
 
-% TODO: Confirm the rate at which theta_m is updated in the multi-rate model.
-% The value below uses Ts = 20 us from runFirstOrderADRCMultiRateClock.m.
+% Confirmed the encoder updates at Ts = 5ns
 \begin{equation}
 	\left| \omega_m \right| < \frac{2\pi}{N_c T_s}
 	= \frac{2\pi}{20000 \times \SI{5}{\nano\second}}
-	\approx \SI{6.2832e4}{\radian\per\second} \quad (\SI{600,000}{rpm}).
+	\approx \SI{6.2832e4}{\radian\per\second} \quad (\SI{600000}{rpm}).
 	\label{eq:enc_speed_limit}
 \end{equation}
 
-This limit is an artifact of updating the rotor angle in discrete steps. The physical encoder produces continuous edges, and the FPGA samples them at its system clock, which is many times faster than the maximum count rate of the motor. However, the sample time of the simulation is significantly faster than the encoder as the simulation time step is determined by the PWM generation logic. 
+This limit is an artifact of updating the rotor angle in discrete steps. The physical encoder produces continuous edges, and the FPGA samples them at its system clock, which is many times faster than the maximum count rate of the motor.
+The simulation sample time is fixed at $T_s = \SI{5}{\nano\second}$ which is significantly faster than the motor rotor is able to generate a direction pulse. Therefore the timing condition is met by $ T_s \ll \tau_{encoder} \ll \tau_e  \ll \tau_m$, therefore the motor state vector cannot update faster than the encoder. 
+
 
 \begin{table}[htbp]
 	\centering
@@ -717,6 +709,7 @@ This limit is an artifact of updating the rotor angle in discrete steps. The phy
 \end{table}
 
 \subsection{Current Sensing}\label{sec:currentSensing}
+% TODO: Reference the ADC by part number and cite the specifications. 
 
 The phase currents are measured on the physical system with a shunt resistor in series with each winding. The voltage across the shunt resistor is amplified by an INA241 current-sense amplifier and digitized by a 16-bit ADC. To account for the winding current direction reversals, the amplifier output is offset to half of the ADC reference voltage, so that both current polarities fall within the input range of the ADC. One \texttt{ADC Emulator} subsystem, shown in Figure %TODO: Create and reference figure of the ADC Emulator subsystem
 , is used for each phase. It receives the phase current $i_x$ from the stepper motor model and produces the 16-bit ADC reading through four operations.
@@ -724,17 +717,16 @@ The phase currents are measured on the physical system with a shunt resistor in 
 \begin{itemize}
 	\item \textbf{Shunt and amplifier gain.} A gain block multiplies the phase current by the product of the shunt resistance and the amplifier gain, $K_{cs} = R_{sh}\,G_{cs}$, converting current into the amplifier output voltage. The shunt resistor and amplifier are modeled as an ideal gain with no bandwidth limit, gain error, or offset error.
 	
-	\item \textbf{Amplifier offset.} A Sum block adds the constant offset $V_{\mathrm{off}} = V_{\mathrm{ref}}/2$, which models the reference voltage applied to the amplifier output as specified in the INA241 datasheet.
+	\item \textbf{Amplifier offset.} A Sum block adds the constant offset $V_{\mathrm{off}} = V_{\mathrm{ref}}/2$, which models the reference voltage applied to the amplifier output as specified in the INA241 datasheet. On the PCB $V_{off}$ is referenced off of the $V_{ref}$, keeping the INA241 and ADC voltage linked. 
+	%TODO: Reference ADC part number specifically. 
 	
 	\item \textbf{Voltage to ADC scaling.} A gain block converts the amplifier output voltage into ADC counts by multiplying by $K_{\mathrm{adc}} = 2^{N}/V_{\mathrm{ref}}$, where $N = 16$, the ADC resolution in bits.
 	
-	\item \textbf{Quantization.} A Data Type Conversion block casts the result from double precision to the unsigned 16-bit type \texttt{fixdt(0,16,0)}, producing the integer reading the ADC reports to the FPGA.
+	\item \textbf{Quantization.} A Data Type Conversion block casts the result from double precision to the unsigned 16-bit type \texttt{fixdt(0,16,0)}, producing the integer reading the ADC reports to the FPGA. The ADC quantization simulation clips at the same voltage level as the physical ADC. Through quantization there is a $-\SI{38}{\micro\ampere}$ quantization error produced by the floor rounding bias. 
 \end{itemize}
 
 Combining these operations, the amplifier output voltage and ADC reading for phase $x$ at sample $k$ are
 
-% TODO: Confirm that the uint16 Data Type Conversion block is set to
-% saturate on integer overflow, matching the clipping of the physical ADC.
 \begin{equation}
 	v_{cs,x}[k] = K_{cs}\, i_x[k] + V_{\mathrm{off}},
 	\qquad
@@ -760,7 +752,9 @@ positive current maps above mid-point, and negative current maps below it. The i
 	\label{eq:adc_range}
 \end{equation}
 
-Currents outside this range drive the amplifier and INA241 output beyond the input range of the ADC, and the reading clips at 0 or $2^{N}-1$. The resolution is more fine than the PWM current ripple of approximately \SI{89}{\milli\ampere} from Equation~\eqref{eq:rippleValue}, which spans roughly 1170 ADC counts. The ADC therefore resolves the ripple itself, and the measured current depends on the point in the PWM period at which the sample is taken. The quantization error of at most one count is negligible by comparison.
+Currents outside this range drive the amplifier and INA241 output beyond the input range of the ADC, and the reading clips at 0 or $2^{N}-1$. The resolution is more fine than the PWM current ripple of approximately \SI{89}{\milli\ampere} from Equation~\eqref{eq:rippleValue}, which spans roughly 1170 ADC counts. The ADC therefore resolves the ripple itself, and the measured current depends on the point in the PWM period at which the sample is taken.  To minimize the effect of the PWM ripple current, the ADC samples are aligned with the center point of the PWM output. The quantization error of at most one count is negligible in comparison to the ADC sample timing. 
+
+The physical PCB was designed with a current limit of $\SI{2.5}{\ampere}$, however the current Dings' Motion 23H065 stepper motor has an $i_q$ current limit of $\SI{4.243}{\ampere}$. This limitation is expanded upon in. %TODO Reference future works in conclusion chapter. 
 
 The controller recovers the phase current by inverting Equation~\eqref{eq:adc_combined},
 
@@ -769,7 +763,6 @@ The controller recovers the phase current by inverting Equation~\eqref{eq:adc_co
 	\label{eq:adc_decode}
 \end{equation}
 
-Because the mid-scale offset $2^{N-1}$ is a power of two, it is removed in the FPGA with a subtraction of an unsigned integer constant, and because $K_{cs} = \SI{1}{\volt\per\ampere}$, the remaining conversion is a single multiplication by $1/K_{\mathrm{adc}}$.
 
 The amplifier and ADC are modeled as ideal. Amplifier bandwidth, common-mode transients at the PWM switching edges, the input filters, and ADC noise, nonlinearity, and conversion latency are omitted. Unlike the motor-side disturbances, errors in the current measurement are not rejected by the Active Disturbance Rejection Control system. The current loop regulates the measured current, so a gain or offset error in the measurement becomes an error in the actual phase current. For this reason, the shunt resistance and amplifier offset used in the final system should be calibrated values measured on the PCB rather than nominal values.
 
@@ -809,11 +802,12 @@ The amplifier and ADC are modeled as ideal. Amplifier bandwidth, common-mode tra
 	\end{tabular}
 \end{table}
 \subsubsection{Load Cell Emulation}
+%TODO Write section!
 
 \section{Control System}\label{sec:controlSystem}
 
 The control system regulates the position of the stepper motor through
-field-oriented control, in which the phase currents are measured, transformed into the rotor-fixed $d$--$q$ frame, and regulated so that the motor produces torque only through the quadrature current. The controller is implemented in Simulink in fixed-point arithmetic to allow HDL code for the FPGA to be synthesized. Every input provided is in the form produced by the PCB model of Section~\ref{pcbModel}: unsigned 16-bit ADC readings for the phase currents and Boolean quadrature channels from the encoder. Every output is a Boolean PWM and direction signal for each H-Bridge, as described in Section~\ref{stepperMotorElectricalModel}.
+field-oriented control, in which the phase currents are measured, transformed into the rotor-fixed $d$--$q$ frame, and regulated so that the motor produces torque only through the quadrature current. The controller is implemented in Simulink in fixed-point arithmetic to allow HDL code for the FPGA to be synthesized. Every input provided is in the form produced by the PCB model in Section \nameref{pcbModel}: unsigned 16-bit ADC readings for the phase currents and Boolean quadrature channels from the encoder. Every output is a Boolean PWM and direction signal for each H-Bridge, as described in Section~\ref{stepperMotorElectricalModel}.
 
 \subsection{Control Architecture}\label{sec:ctrlArchitecture}
 
@@ -822,7 +816,7 @@ The motor is controlled by a cascade of three loops, shown in Figure %TODO: Crea
 %TODO: Reference machine control textbook for general control system architecture. 
 
 \begin{itemize}
-	\item \textbf{Feedback processing.} The ADC readings are decoded into phase currents in amps, and the encoder channels are decoded into the mechanical position which is the converted to the electrical angle, and the rotor velocity.
+	\item \textbf{Feedback processing.} The ADC readings are decoded into phase currents in amps, and the encoder channels are decoded into the mechanical position which is then converted to the electrical angle, and the rotor velocity.
 	
 	\item \textbf{Position loop.} The position error is multiplied by $K_{P\theta}$ to form the velocity reference $\omega_m^{*}$.
 	
@@ -835,7 +829,7 @@ The motor is controlled by a cascade of three loops, shown in Figure %TODO: Crea
 \end{itemize}
 
 All three loops are executed at the controller sample time
-$T_s = \SI{20}{\micro\second}$, which equals the PWM period, so that each loop is updated once per PWM cycle. The closed-loop and observer bandwidths are summarized in Table~\ref{tab:loop_bandwidths}. Each control loop is slower than the loop it commands, the current loop is 13.3 times faster than the velocity loop, and the velocity loop is 5 times faster than the position loop. This separation allows each inner loop to be treated as an ideal actuator by the loop around it, with the residual inner-loop dynamics absorbed by the observer of the outer ADRC.
+$T_s = \SI{20}{\micro\second}$, which equals the PWM period, so that each loop is updated once per PWM cycle. The closed-loop and observer bandwidths are summarized in Table~\ref{tab:loop_bandwidths}. Each control loop is slower than the loop it commands, the current loop is 13.3 times faster than the velocity loop, and the velocity loop is 5 times faster than the position loop. This separation allows each inner current loop to be treated as an ideal actuator by the loop around it, with the residual inner-loop dynamics absorbed by the observer of the outer ADRC. The position controller is 5 times faster than the inner velocity loop, which allows for the velocity loop to be treated as an ideal controller. 
 
 \begin{table}[htbp]
 	\centering
@@ -853,13 +847,13 @@ $T_s = \SI{20}{\micro\second}$, which equals the PWM period, so that each loop i
 	\end{tabular}
 \end{table}
 
-The controller gains and ADRC coefficients are supplied to the controller subsystem as inputs rather than as internal constants, this is done so that on the FPGA implementation these inputs can be held in registers and configured at run time. The controller can be re-tuned without regenerating or re-synthesizing the HDL. This allows for different motors to be used withe ease. 
+The controller gains and ADRC coefficients are supplied to the controller subsystem as inputs rather than as internal constants, this is done so that on the FPGA implementation these inputs can be held in registers and configured at run time. The controller can be re-tuned without regenerating or re-synthesizing the HDL. This allows for the control system to be retuned for different motors without restructuring the entire system. 
 
 \subsection{Feedback Signal Processing}\label{sec:feedback}
 
 \subsubsection{Current Decoding}
 %TODO Get better reference to the current sensing section
-The \texttt{adc\_phase\_a\_decoder} and \texttt{adc\_phase\_b\_decoder} subsystems invert the current sensing chain of Section~\ref{sec:currentSensing}. Each decoder receives the unsigned 16-bit ADC reading $N_x$, passes it through a Rate Transition block onto the controller rate, converts it to a signed type, subtracts the mid-scale offset $N_{\mathrm{off}} = 2^{15} = 32768$, and scales the result to amperes:
+The \texttt{adc\_phase\_a\_decoder} and \texttt{adc\_phase\_b\_decoder} subsystems invert the current sensing chain of Section~\nameref{sec:currentSensing}. Each decoder receives the unsigned 16-bit ADC reading $N_x$, passes it through a Rate Transition block onto the controller rate, converts it to a signed type, subtracts the mid-scale offset $N_{\mathrm{off}} = 2^{15} = 32768$, and scales the result to amperes:
 
 % TODO: Confirm the value of the decoder gain. If it is convert_adc_to_integer
 % = 1/13107, keep the sentence on the 1.5e-5 gain error below; if it is
@@ -877,7 +871,7 @@ which is Equation~\eqref{eq:adc_decode} with $K_{\mathrm{dec}}$ expressed as amp
 \subsubsection{Encoder Decoding}\label{sec:encoderDecoding}
 
 The \texttt{Encoder Decoder} subsystem, shown in Figure %TODO: Create and reference figure of the Encoder Decoder subsystem
-, reconstructs the rotor position from the quadrature channels $A$ and $B$ of Equation~\eqref{eq:quadrature}. It is the inverse of the encoder emulation of Section~\ref{sec:encoderEmulation} and is built entirely from Boolean logic, comparisons, and integer additions so that it maps directly to FPGA logic. The decoder operates in five stages.
+, reconstructs the rotor position from the quadrature channels $A$ and $B$ of Equation~\eqref{eq:quadrature}. It is the inverse of the encoder emulation of Section~\nameref{sec:encoderEmulation} and is built entirely from Boolean logic, comparisons, and integer additions so that it maps directly to FPGA logic. The decoder logic runs at $T_s = \SI{5}{\nano\second}$ to match the encoder logic. The decoder operates in five stages.
 
 \begin{itemize}
 	\item \textbf{Edge detection.} Each channel is compared with its value at the previous sample through a unit delay and an exclusive OR, producing the edge flags $e_A[k] = A[k] \oplus A[k-1]$ and $e_B[k] = B[k] \oplus B[k-1]$.
@@ -920,7 +914,7 @@ where the modulo operation is implemented by the comparison and rollover logic r
 	\hat{\theta}_e[k] = \frac{2\pi}{N_c / N_r}\, \hat{n}_e[k],
 	\label{eq:enc_angles}
 \end{equation}
-
+%TODO: Clarify the zeroing process of the motor 
 with $N_c = 20000$ counts per mechanical revolution from Equation~\eqref{eq:enc_counts} and $N_c / N_r = 400$ counts per electrical revolution. Tracking the electrical count separately keeps the electrical angle within a single revolution without a modulo operation on the full position count, and is consistent with Equation~\eqref{eq:elec_angle} because $N_r \hat{\theta}_m$ and $\hat{\theta}_e$ differ only by whole electrical revolutions when both counters are zeroed together. The radians-per-count constants are stored with 64 fractional bits so that the conversion adds no error beyond the encoder resolution.
 
 The electrical angle is meaningful only if $\hat{n}_e = 0$ coincides with the alignment of the rotor $d$-axis with phase A as this is set as the zero position for the system to start from. An electrical angle off-set is applied to adjust the zero position such that phase A is always aligned with the $d$-axis to start. On the physical system the rotor is first aligned by energizing phase A, after which the zeroing input sets $\hat{n}_e = 0$.
@@ -930,6 +924,7 @@ The electrical angle is meaningful only if $\hat{n}_e = 0$ coincides with the al
 \subsubsection{Velocity Estimation}\label{sec:velocityEstimation}
 
 % TODO: Describe how the raw velocity estimate hat{omega}_m is formed.
+% Explain the raw velocity is calculated through dividing the difference in position by the fixed time constant T_s = 5ns
 
 The velocity estimate is smoothed by a first-order low-pass filter before it is used by the velocity ADRC,
 
@@ -992,12 +987,12 @@ Comparing with Equation~\eqref{eq:adrc_plant}, with $y = \omega_m$ and $u = i_q^
 	\label{eq:b0}
 \end{equation}
 
-Using $K_m = \SI{0.3771}{\newton\meter\per\ampere}$ and $J = \SI{7.002e-5}{\kilo\gram\meter\squared}$,
+Using $K_m = \SI{0.3771}{\newton\meter\per\ampere}$ and $J = \SI{6.38e-5}{\kilo\gram\meter\squared}$,
 
 \begin{equation}
 	b_0 = \frac{\SI{0.3771}{\newton\meter\per\ampere}}
-	{\SI{7.002e-5}{\kilo\gram\meter\squared}}
-	= \SI{5385}{\radian\per\second\squared\per\ampere}.
+	{\SI{6.38e-5}{\kilo\gram\meter\squared}}
+	= \SI{5909.1}{\radian\per\second\squared\per\ampere}.
 	\label{eq:b0_value}
 \end{equation}
 
@@ -1009,7 +1004,7 @@ The damping and load terms are not included in $b_0$, they are instead absorbed 
 	\label{eq:f_omega}
 \end{equation}
 
-where the second term is the tracking error of the current loop and $\Delta_\omega$ collects unmodeled effects such as friction, detent torque, and the ball screw load. This keeps $b_0$ dependent only on the torque constant and the inertia, which are the best known parameters of the system.
+where the second term is the tracking error of the current loop and $\Delta_\omega$ collects unmodeled effects on the physical system such as friction, detent torque, and the ball screw efficiency. This keeps $b_0$ dependent only on the torque constant and the inertia, which are the best known parameters of the system.
 
 \subsubsection{Current Loop Input Gain}
 
@@ -1125,7 +1120,7 @@ with the coefficients
 		\beta_0 &= \frac{z_{CL} z_{ESO}^{2} - 2 z_{ESO} - z_{CL} + 2}{T_s b_0}, \\
 		\beta_1 &= \frac{2 z_{CL} z_{ESO} - 2 z_{CL} z_{ESO}^{2} + z_{ESO}^{2} - 1}{T_s b_0}, \\
 		\gamma_0 &= z_{CL} z_{ESO}^{2} - 2 z_{ESO} + 1, \qquad
-		\gamma_1 = z_{ESO}^{2} \big( 1 - z_{CL} \big),
+		\gamma_1 = z_{ESO}^{2} \big( 1 - z_{CL} \big).
 	\end{aligned}
 	\label{eq:mfp_coeffs}
 \end{equation}
@@ -1184,21 +1179,20 @@ The \texttt{Position} subsystem implements a proportional controller on the mech
 	\label{eq:position_loop}
 \end{equation}
 
-% TODO: Confirm the velocity reference saturation limit omega_max.
-where $\theta_m^{*}$ is the position target and the velocity reference is limited to $\pm\omega_{\max}$. Because the velocity loop is much faster than the position loop, it can be approximated as a unity gain, and the position loop reduces to $\dot{\theta}_m = K_{P\theta} (\theta_m^{*} - \theta_m)$, a first-order response with bandwidth $K_{P\theta} = \SI{150}{\radian\per\second}$. A proportional controller is sufficient for the position loop because the velocity loop provides the integrating plant, the position is the integral of the regulated velocity, so a constant position error cannot persist. Load torque on the axis is rejected by the velocity ADRC before it can produce a steady-state position error.
+
+where $\theta_m^{*}$ is the position target and the velocity reference is limited to $\pm\omega_{\max}$ which can be during run time, allowing for a dynamic $\omega_{\max}$ based on current system parameters. Because the velocity loop is much faster than the position loop, it can be approximated as a unity gain, and the position loop reduces to $\dot{\theta}_m = K_{P\theta} (\theta_m^{*} - \theta_m)$, a first-order response with bandwidth $K_{P\theta} = \SI{150}{\radian\per\second}$. A proportional controller is sufficient for the position loop because the velocity loop provides the integrating plant, the position is the integral of the regulated velocity, so a constant position error cannot persist. Load torque on the axis is rejected by the velocity ADRC before it can produce a steady-state position error.
 
 \subsection{Velocity Loop}\label{sec:velocityLoop}
 
-The velocity loop applies the controller of Section~\ref{sec:mfpAdrc} with $y = \hat{\omega}_{f}$, $r = \omega_m^{*}$, and $u = i_q^{*}$. The input gain is $b_0$ from Equation~\eqref{eq:b0_value}, the closed-loop bandwidth is $\omega_{CL} = \SI{750}{\radian\per\second}$, and the observer bandwidth is $k_{ESO} = 8$ times the closed-loop bandwidth, or \SI{6000}{\radian\per\second}. The resulting coefficients are listed in Table~\ref{tab:adrc_params}.
+The velocity loop applies the controller of Section~\nameref{sec:mfpAdrc} with $y = \hat{\omega}_{f}$, $r = \omega_m^{*}$, and $u = i_q^{*}$. The input gain is $b_0$ from Equation~\eqref{eq:b0_value}, the closed-loop bandwidth is $\omega_{CL} = \SI{750}{\radian\per\second}$, and the observer bandwidth is $k_{ESO} = 8$ times the closed-loop bandwidth, or \SI{6000}{\radian\per\second}. The resulting coefficients are listed in Table~\ref{tab:adrc_params}.
 
-% TODO: Confirm the current command saturation limit and that the saturated
-% current command is the u_lim fed back to the velocity ADRC.
-The output of the velocity ADRC is limited to $\pm I_{pk}$ before it is used as the current command, and the limited command is fed back to the controller as $u_{\mathrm{lim}}$. The limit protects the motor windings and keeps the phase currents within the $\pm$\SI{2.5}{\ampere} measurement range of Equation~\eqref{eq:adc_range}.
+
+The output of the velocity ADRC is limited to $\pm I_{pk}$ before it is used as the current command, and the limited command is fed back to the controller as $u_{\mathrm{lim}}$. The limit protects the motor windings and keeps the phase currents within the $\pm$\SI{3}{\ampere} measurement range of Equation~\eqref{eq:adc_range}.
 
 \subsection{Current Loops}\label{sec:currentLoops}
 
 The \texttt{current error} subsystem contains two instances of the
-controller of Section~\ref{sec:mfpAdrc}, one for each axis. The direct-axis loop uses $y = \hat{\imath}_d$, $r = i_d^{*} = 0$, and $u = v_d^{*}$. The quadrature-axis loop uses $y = \hat{\imath}_q$, $r = i_q^{*}$, and $u = v_q^{*}$. Both loops use the input gain $b_i$ of Equation~\eqref{eq:bi}, a closed-loop bandwidth of $\omega_{CL} = \SI{10000}{\radian\per\second}$, and an observer bandwidth of $k_{ESO} = 1.5$ times the closed-loop bandwidth, or \SI{15000}{\radian\per\second}. The two axes have identical models, and share one set of coefficients, listed in Table~\ref{tab:adrc_params}. Each controller output is saturated before leaving the subsystem, and the actual voltage applied on each axis is returned to the controller as $u_{\mathrm{lim}}$.
+controller of Section~\nameref{sec:mfpAdrc}, one for each axis. The direct-axis loop uses $y = \hat{\imath}_d$, $r = i_d^{*} = 0$, and $u = v_d^{*}$. The quadrature-axis loop uses $y = \hat{\imath}_q$, $r = i_q^{*}$, and $u = v_q^{*}$. Both loops use the input gain $b_i$ of Equation~\eqref{eq:bi}, a closed-loop bandwidth of $\omega_{CL} = \SI{10000}{\radian\per\second}$, and an observer bandwidth of $k_{ESO} = 1.5$ times the closed-loop bandwidth, or \SI{15000}{\radian\per\second}. The two axes have identical models, and share one set of coefficients, listed in Table~\ref{tab:adrc_params}. Each controller output is saturated before leaving the subsystem, and the actual voltage applied on each axis is returned to the controller as $u_{\mathrm{lim}}$.
 
 At the current-loop bandwidth, $\omega_{CL} T_s = 0.2$ and $\omega_{ESO} T_s = 0.3$, so the discrete poles $z_{CL} = 0.819$ and $z_{ESO} = 0.741$ remain well inside the unit circle and away from the origin. The \SI{20}{\micro\second} sample time is therefore fast enough for the chosen bandwidths without the discretization dominating the response.
 
@@ -1249,7 +1243,7 @@ and each phase voltage command is passed to an instance of the
 direction signals of Equation~\eqref{eq:vsynth} through four operations.
 
 \begin{itemize}
-	\item \textbf{Saturation.} The voltage command is limited to the supply voltage, $V_s = \pm\SI{48}{\volt}$.
+	\item \textbf{Saturation.} The voltage command is limited to $\pm V_s$, the supply voltage, where $V_s =\SI{48}{\volt}$.
 	
 	\item \textbf{Direction.} The direction signal is set when the limited command is less than or equal to zero selects the negative polarity of the H-Bridge.
 	
@@ -1292,7 +1286,7 @@ The controller is implemented in fixed-point arithmetic so that it can be synthe
 		\hline
 		\texttt{ParamType}       & \texttt{fixdt(1,32,20)}  & $\pm 2048$            & \num{9.5e-7}  & Controller parameters \\
 		\texttt{PosType}         & \texttt{fixdt(1,32,16)}  & $\pm 32768$           & \num{1.5e-5}  & Position \\
-		\texttt{CountType}       & \texttt{fixdt(1,32,0)}   & $\pm 2^{31}$          & 1             & Encoder counts, ADC values \\
+		\texttt{CountType}       & \texttt{fixdt(1,32,0)}   & $\pm 2^{31}$          & 1             & Encoder counts \\
 		\texttt{SpeedLoopType}   & \texttt{fixdt(1,32,16)}  & $\pm 32768$           & \num{1.5e-5}  & Velocity ADRC \\
 		\texttt{CurrLoopType}    & \texttt{fixdt(1,32,20)}  & $\pm 2048$            & \num{9.5e-7}  & Current ADRC \\
 		\texttt{bitwiseOperator} & \texttt{fixdt(0,32,0)}   & $0$ to $2^{32}-1$     & 1             & Bitwise logic \\
@@ -1303,10 +1297,14 @@ The controller is implemented in fixed-point arithmetic so that it can be synthe
 
 Quantizing the ADRC coefficients moves the controller and observer poles slightly from their design values. With the velocity coefficients quantized to 16 fractional bits, the largest relative coefficient error is 0.7\%, in $\gamma_0$. The observer poles split from the designed double pole at \SI{6000}{\radian\per\second} to \SI{5948}{\radian\per\second} and \SI{6053}{\radian\per\second}, and the controller pole is unchanged to four significant figures. With the current coefficients quantized to 20 fractional bits, every coefficient is within a relative error of \num{5e-6} of its design value. In both cases the closed-loop behavior is indistinguishable from the design.
 
-The integral condition of Equation~\eqref{eq:integral_condition} is more sensitive than the pole locations, because the zero at $z = 1$ exists only if it holds exactly. When each coefficient is rounded independently, the velocity coefficients still satisfy it exactly, but the current coefficients do not, due to truncation, it is off by one least significant bit. Therefore $C_u(1) = 0.999986$ and the resulting steady-state current error is approximately \SI{2}{\micro\ampere} for the back-EMF at \SI{10}{\radian\per\second}, which is negligible as the ADC resolution is only \SI{76}{\micro\ampere}. If an exact value was needed, the integral action can be made exact for any data type by computing $\gamma_1$ after quantization as $\gamma_1 = 1 + \alpha_1 + \alpha_2 - \gamma_0$, using the quantized values of $\alpha_1$, $\alpha_2$, and $\gamma_0$.
+The integral condition of Equation~\eqref{eq:integral_condition} is more sensitive than the pole locations, because the zero at $z = 1$ exists only if it holds exactly. With rounding the quantization is one bit higher than exactly 1, with $C_u(1) = 1.000014$. This has a negligible effect on the performance of the system.  
 
+%TODO: 
+% Create section going over the experiments run 
+% Show how the experiments show the load increasing and current reference increasing 
+% Show the derivative linear relationship between the load and the Iq_Ref
+% Show multiple spring constants and how those can be back calculated to determine torque and then linear load of the system. 
+% Add a random torque distabance IE an impulse of torque during operation and see if the current reference can detect this and change appropriately. 
+% Include plots of the data from Simulink 
+% Wrap up the final analysis showing that from iq_ref the estimated torque on the system can be calculated
 
-
-%TODO: Place the below section in a better spot
-The controller recovers the mechanical angle as $\hat{\theta}_m = 2\pi n / N_c$, and the electrical angle used in the Park transform of
-Equation~\eqref{eq:park} as $\hat{\theta}_e = N_r \hat{\theta}_m$, following Equation~\eqref{eq:elec_angle}. One electrical revolution therefore spans $N_c / N_r = 400$ counts, and the electrical angle resolution is \ang{0.9}. An error of $\delta$ in the electrical angle rotates the measured current vector by $\delta$. When the controller regulates the measured $d$-axis current to zero, the actual $d$-axis current is approximately $\sin\delta \approx 1.6\%$ of the current magnitude for a one-count error, and the torque-producing current is reduced by the factor $\cos\delta > 0.9998$. Both effects are negligible.
