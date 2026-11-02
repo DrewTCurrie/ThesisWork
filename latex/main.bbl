@@ -1,42 +1,272 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Desjardins et~al.(2013)Desjardins, McCaslin, Owkes, and
-  Brady]{desjardins_direct_2013}
-Olivier Desjardins, Jeremy McCaslin, Mark Owkes, and Peter Brady.
-\newblock Direct numerical and large-eddy simulation of primary atomization in
-  complex geometries.
-\newblock \emph{Atomization and Sprays}, 23\penalty0 (11):\penalty0 1001--1048,
+\bibitem[Altintas(2012)]{altintas_manufacturing_2012}
+Yusuf Altintas.
+\newblock \emph{Manufacturing Automation: Metal Cutting Mechanics, Machine Tool
+  Vibrations, and {CNC} Design}.
+\newblock Cambridge University Press, Cambridge, UK, 2nd edition, 2012.
+\newblock ISBN 978-1-107-00148-0.
+
+\bibitem[{Analog Devices (Maxim Integrated)}(2017)]{adi_max11162_2017}
+{Analog Devices (Maxim Integrated)}.
+\newblock \emph{{MAX11162}: 16-Bit, 500ksps, +5{V} Unipolar Input, {SAR} {ADC},
+  in Tiny 10-Pin {$\mu$MAX}}, March 2017.
+\newblock URL
+  \url{https://www.analog.com/media/en/technical-documentation/data-sheets/MAX11162.pdf}.
+\newblock Datasheet, Rev. 2.
+
+\bibitem[{Analog Devices (Trinamic)}(2023)]{adi_tmc2209_2023}
+{Analog Devices (Trinamic)}.
+\newblock \emph{{TMC2209} Datasheet: Power Driver for Stepper Motors}, 2023.
+\newblock URL
+  \url{https://www.analog.com/media/en/technical-documentation/data-sheets/TMC2209_datasheet_rev1.09.pdf}.
+\newblock Rev. 1.09.
+
+\bibitem[Armstrong-H{\'e}louvry et~al.(1994)Armstrong-H{\'e}louvry, Dupont, and
+  Canudas~de Wit]{armstrong_survey_1994}
+Brian Armstrong-H{\'e}louvry, Pierre Dupont, and Carlos Canudas~de Wit.
+\newblock A survey of models, analysis tools and compensation methods for the
+  control of machines with friction.
+\newblock \emph{Automatica}, 30\penalty0 (7):\penalty0 1083--1138, 1994.
+\newblock \doi{10.1016/0005-1098(94)90209-7}.
+
+\bibitem[{\AA}str{\"o}m and Murray(2021)]{astrom_feedback_2021}
+Karl~Johan {\AA}str{\"o}m and Richard~M. Murray.
+\newblock \emph{Feedback Systems: An Introduction for Scientists and
+  Engineers}.
+\newblock Princeton University Press, Princeton, NJ, 2nd edition, 2021.
+\newblock ISBN 978-0-691-19398-4.
+
+\bibitem[Benchaib et~al.(2003)Benchaib, Poullain, Thomas, and
+  Alacoque]{benchaib_discrete-time_2003}
+A.~Benchaib, S.~Poullain, J.~L. Thomas, and J.~C. Alacoque.
+\newblock Discrete-time field-oriented control for {SM-PMSM} including voltage
+  and current constraints.
+\newblock In \emph{Proceedings of the {IEEE} International Electric Machines
+  and Drives Conference ({IEMDC'03})}, volume~2, pages 999--1005, Madison, WI,
+  2003. IEEE.
+\newblock \doi{10.1109/IEMDC.2003.1210357}.
+
+\bibitem[Bernardi et~al.(2022)Bernardi, Carfagna, Migliazza, Buticchi,
+  Immovilli, and Lorenzani]{bernardi_performance_2022}
+Fabio Bernardi, Emilio Carfagna, Giovanni Migliazza, Giampaolo Buticchi, Fabio
+  Immovilli, and Emilio Lorenzani.
+\newblock Performance analysis of current control strategies for hybrid stepper
+  motors.
+\newblock \emph{IEEE Open Journal of the Industrial Electronics Society},
+  3:\penalty0 460--472, 2022.
+\newblock \doi{10.1109/OJIES.2022.3185659}.
+
+\bibitem[Binfet(2026)]{binfet_implementation_2026}
+Caleb~Alexander Binfet.
+\newblock Implementation and resource analysis of {FPGA}-based multiphase motor
+  control architectures.
+\newblock Master's thesis, Montana State University, Bozeman, MT, May 2026.
+
+\bibitem[Blasko et~al.(1998)Blasko, Kaura, and
+  Niewiadomski]{blasko_sampling_1998}
+Vladimir Blasko, Vikram Kaura, and Walter Niewiadomski.
+\newblock Sampling of discontinuous voltage and current signals in electrical
+  drives: a system approach.
+\newblock \emph{IEEE Transactions on Industry Applications}, 34\penalty0
+  (5):\penalty0 1123--1130, 1998.
+\newblock \doi{10.1109/28.720453}.
+
+\bibitem[Briz et~al.(2000)Briz, Degner, and Lorenz]{briz_analysis_2000}
+Fernando Briz, Michael~W. Degner, and Robert~D. Lorenz.
+\newblock Analysis and design of current regulators using complex vectors.
+\newblock \emph{IEEE Transactions on Industry Applications}, 36\penalty0
+  (3):\penalty0 817--825, 2000.
+\newblock \doi{10.1109/28.845057}.
+
+\bibitem[{Caron Engineering}(n.d.)]{caron_tmac}
+{Caron Engineering}.
+\newblock {TMAC} -- machine tool monitoring system.
+\newblock \url{https://www.caroneng.com/products/tmac/}, n.d.
+\newblock Accessed: Nov. 1, 2026.
+
+\bibitem[Cho et~al.(2016)Cho, Han, Chi, and Yoo]{cho_tool_2016}
+Hyeon~Sung Cho, Ji~Hyeong Han, Su~Young Chi, and Kwan~Hee Yoo.
+\newblock A tool breakage detection system using load signals of spindle motors
+  in {CNC} machines.
+\newblock In \emph{Proceedings of the 8th International Conference on
+  Ubiquitous and Future Networks ({ICUFN})}, pages 160--163, Vienna, Austria,
+  July 2016. IEEE.
+\newblock \doi{10.1109/ICUFN.2016.7537007}.
+
+\bibitem[Civello(2026)]{civiello_characterization_2026}
+Samuel Civello.
+\newblock Something manufacturing.
+\newblock Master's thesis, Montana State University, Bozeman, MT, August 2026.
+
+\bibitem[{Cutting Tool Engineering}(2020)]{cte_tmac_2020}
+{Cutting Tool Engineering}.
+\newblock Tool monitoring adaptive control system, {TMAC} version 3.0.
+\newblock \url{https://ctemag.com/?p=102899}, September 2020.
+\newblock Accessed: Nov. 1, 2026.
+
+\bibitem[Derammelaere et~al.(2010)Derammelaere, Vervisch, De~Belie, Cottyn,
+  Van~den Abeele, Cox, Stockman, and Vandevelde]{derammelaere_linear_2010}
+Stijn Derammelaere, Bram Vervisch, Frederik De~Belie, Johannes Cottyn, Griet
+  Van~den Abeele, Peter Cox, Kurt Stockman, and Lieven Vandevelde.
+\newblock A linear time-invariant model for a vector-controlled two-phase
+  stepping motor.
+\newblock In \emph{Proceedings of the 5th {IET} International Conference on
+  Power Electronics, Machines and Drives ({PEMD} 2010)}, pages 1--5, Brighton,
+  UK, April 2010. IET.
+\newblock \doi{10.1049/cp.2010.0149}.
+
+\bibitem[{DINGS' Motion USA}(2026{\natexlab{a}})]{dings_ek2_2026}
+{DINGS' Motion USA}.
+\newblock {EK2} encoder -- rotary stepper {NEMA} 23 motor options.
+\newblock \url{https://www.dingsmotionusa.com/rotary-stepper-nema-23},
+  2026{\natexlab{a}}.
+\newblock Incremental encoder option for size 23 stepper motors, single-ended
+  and differential output. Accessed: Nov. 1, 2026.
+
+\bibitem[{DINGS' Motion USA}(2026{\natexlab{b}})]{dings_nema23_2026}
+{DINGS' Motion USA}.
+\newblock Rotary stepper {NEMA} 23 motors -- standard \& custom.
+\newblock \url{https://www.dingsmotionusa.com/rotary-stepper-nema-23},
+  2026{\natexlab{b}}.
+\newblock Specifications for model 23H2065. Accessed: Nov. 1, 2026.
+
+\bibitem[Groover(2010)]{groover_fundamentals_2010}
+Mikell~P. Groover.
+\newblock \emph{Fundamentals of Modern Manufacturing: Materials, Processes, and
+  Systems}.
+\newblock John Wiley \& Sons, Hoboken, NJ, 4th edition, 2010.
+\newblock ISBN 978-0-470-46700-8.
+
+\bibitem[Henke et~al.(2013)Henke, Sawodny, Schmidt, and
+  Neumann]{henke_modeling_2013}
+B.~Henke, O.~Sawodny, S.~Schmidt, and R.~Neumann.
+\newblock Modeling of hybrid stepper motors for closed loop operation.
+\newblock \emph{IFAC Proceedings Volumes}, 46\penalty0 (5):\penalty0 177--183,
   2013.
-\newblock ISSN 1044-5110.
+\newblock \doi{10.3182/20130410-3-CN-2034.00042}.
+\newblock 6th IFAC Symposium on Mechatronic Systems, Hangzhou, China.
 
-\bibitem[Owkes and Desjardins(2013)]{owkes_discontinuous_2013}
-Mark Owkes and Olivier Desjardins.
-\newblock A discontinuous {G}alerkin conservative level set scheme for
-  interface capturing in multiphase flows.
-\newblock \emph{Journal of Computational Physics}, 249\penalty0 (15):\penalty0
-  275--302, September 2013.
-\newblock ISSN 0021-9991.
+\bibitem[Herbst and Madonski(2023)]{herbst_tuning_2023}
+Gernot Herbst and Rafal Madonski.
+\newblock Tuning and implementation variants of discrete-time {ADRC}.
+\newblock \emph{Control Theory and Technology}, 21\penalty0 (1):\penalty0
+  72--88, 2023.
+\newblock \doi{10.1007/s11768-023-00127-0}.
 
-\bibitem[Owkes and Desjardins(2014)]{owkes_computational_2014}
-Mark Owkes and Olivier Desjardins.
-\newblock A computational framework for conservative, three-dimensional,
-  unsplit, geometric transport with application to the volume-of-fluid ({VOF})
-  method.
-\newblock \emph{Journal of Computational Physics}, 270\penalty0 (1):\penalty0
-  587--612, August 2014.
-\newblock ISSN 0021-9991.
+\bibitem[Lai et~al.(2018)Lai, Ciou, and Tsai]{lai_modelling_2018}
+Chiu-Keng Lai, Jhang-Shan Ciou, and Chia-Che Tsai.
+\newblock The modelling, simulation and {FPGA}-based implementation for stepper
+  motor wide range speed closed-loop drive system design.
+\newblock \emph{Machines}, 6\penalty0 (4):\penalty0 56, November 2018.
+\newblock \doi{10.3390/machines6040056}.
 
-\bibitem[Owkes and Desjardins(2015)]{owkes_mesh-decoupled_2015}
-Mark Owkes and Olivier Desjardins.
-\newblock A mesh-decoupled height function method for computing interface
-  curvature.
-\newblock \emph{Journal of Computational Physics}, 281:\penalty0 285--300,
-  January 2015.
-\newblock ISSN 0021-9991.
+\bibitem[Moriwaki(2008)]{moriwaki_multi-functional_2008}
+Toshimichi Moriwaki.
+\newblock Multi-functional machine tool.
+\newblock \emph{CIRP Annals -- Manufacturing Technology}, 57\penalty0
+  (2):\penalty0 736--749, 2008.
+\newblock \doi{10.1016/j.cirp.2008.09.004}.
+
+\bibitem[Nagaraj and Diaz-Elsayed(2025)]{nagaraj_tool_2025}
+Sohan Nagaraj and Nancy Diaz-Elsayed.
+\newblock Tool condition monitoring in the milling of low- to
+  high-yield-strength materials.
+\newblock \emph{Machines}, 13\penalty0 (4):\penalty0 276, March 2025.
+\newblock \doi{10.3390/machines13040276}.
+
+\bibitem[Nilsson and Modrack(2013)]{nilsson_universal_2013}
+Christoffer Nilsson and Daniel Modrack.
+\newblock Universal embedded motor control.
+\newblock Master's thesis, Chalmers University of Technology, G{\"o}teborg,
+  Sweden, September 2013.
+
+\bibitem[Oberg et~al.(2020)Oberg, Jones, Horton, Ryffel, and
+  McCauley]{oberg_machinerys_2020}
+Erik Oberg, Franklin~D. Jones, Holbrook~L. Horton, Henry~H. Ryffel, and
+  Christopher~J. McCauley.
+\newblock \emph{Machinery's Handbook}.
+\newblock Industrial Press, South Norwalk, CT, 32nd edition, 2020.
+\newblock Edited by Laura Brengelman.
+
+\bibitem[{Okuma America Corporation}(n.d.)]{okuma_caron}
+{Okuma America Corporation}.
+\newblock Partners in technology: {Caron Engineering}.
+\newblock \url{https://www.okuma.com/partners/caron-engineering}, n.d.
+\newblock Accessed: Nov. 1, 2026.
+
+\bibitem[Reintjes(1991)]{reintjes_numerical_1991}
+J.~Francis Reintjes.
+\newblock \emph{Numerical Control: Making a New Technology}.
+\newblock Oxford University Press, New York, NY, 1991.
+\newblock ISBN 978-0-19-506772-9.
+
+\bibitem[Ricci and Meacci(2018)]{ricci_simple_2018}
+Stefano Ricci and Valentino Meacci.
+\newblock Simple torque control method for hybrid stepper motors implemented in
+  {FPGA}.
+\newblock \emph{Electronics}, 7\penalty0 (10):\penalty0 242, October 2018.
+\newblock \doi{10.3390/electronics7100242}.
+
+\bibitem[Sheng et~al.(2026)Sheng, Zhu, and Liu]{sheng_review_2026}
+Xuexiang Sheng, Zhanchen Zhu, and Changlin Liu.
+\newblock A review of the machining mechanisms in field-assisted cutting of
+  brittle materials.
+\newblock \emph{Micromachines}, 17\penalty0 (3):\penalty0 361, March 2026.
+\newblock \doi{10.3390/mi17030361}.
+
+\bibitem[Tao et~al.(2018)Tao, Qi, Liu, and Kusiak]{tao_data-driven_2018}
+Fei Tao, Qinglin Qi, Ang Liu, and Andrew Kusiak.
+\newblock Data-driven smart manufacturing.
+\newblock \emph{Journal of Manufacturing Systems}, 48:\penalty0 157--169, 2018.
+\newblock \doi{10.1016/j.jmsy.2018.01.006}.
+
+\bibitem[Teti et~al.(2010)Teti, Jemielniak, O'Donnell, and
+  Dornfeld]{teti_advanced_2010}
+Roberto Teti, Krzysztof Jemielniak, Garret O'Donnell, and David Dornfeld.
+\newblock Advanced monitoring of machining operations.
+\newblock \emph{CIRP Annals -- Manufacturing Technology}, 59\penalty0
+  (2):\penalty0 717--739, 2010.
+\newblock \doi{10.1016/j.cirp.2010.05.010}.
+
+\bibitem[{Texas Instruments}(2023)]{ti_ina241_2023}
+{Texas Instruments}.
+\newblock \emph{{INA241x} --5 {V} to 110 {V}, Bidirectional, Ultra-Precise
+  Current Sense Amplifier With Enhanced {PWM} Rejection}.
+\newblock Dallas, TX, October 2023.
+\newblock URL \url{https://www.ti.com/lit/ds/symlink/ina241a.pdf}.
+\newblock Datasheet SBOSA30C, Mar. 2022, revised Oct. 2023.
+
+\bibitem[{THK Co., Ltd.}(n.d.)]{thk_ball_screw}
+{THK Co., Ltd.}
+\newblock \emph{Ball Screw General Catalog ({MDK/MBF/BIF/BNF})}.
+\newblock Tokyo, Japan, n.d.
+\newblock Model BIF precision ball screw, unfinished shaft ends. Accessed: Nov.
+  1, 2026.
+
+\bibitem[{Voron Design}(n.d.)]{voron_sensorless}
+{Voron Design}.
+\newblock Configuring sensorless homing.
+\newblock \url{https://docs.vorondesign.com/tuning/sensorless.html}, n.d.
+\newblock Voron Documentation. Accessed: Nov. 1, 2026.
+
+\bibitem[Wong et~al.(2020)Wong, Chuah, and Yap]{wong_technical_2020}
+Shi~Yuen Wong, Joon~Huang Chuah, and Hwa~Jen Yap.
+\newblock Technical data-driven tool condition monitoring challenges for {CNC}
+  milling: a review.
+\newblock \emph{The International Journal of Advanced Manufacturing
+  Technology}, 107\penalty0 (11):\penalty0 4837--4857, April 2020.
+\newblock \doi{10.1007/s00170-020-05303-z}.
+
+\bibitem[Woodrum(2017)]{woodrum_developing_2017}
+Randall~Brock Woodrum.
+\newblock Developing lathing parameters for {PBX} 9501.
+\newblock Master's thesis, Texas Tech University, Lubbock, TX, August 2017.
+\newblock URL \url{https://www.osti.gov/servlets/purl/1410981}.
 
 \end{thebibliography}

@@ -1,6 +1,6 @@
 \chapter{Field Oriented Control with Two-Phase Hybrid Stepper Motor} \label{CH:FOCStepperMotor}
 
-Under FOC a hybrid stepper motor treated as an PMSM, the quadrature current in the motor is directly linear with the load torque with a slope of Kt. Through this relationship, the torque load on the motor can be characterized and estimated. To test this relationship, a Simulink model was constructed using an ADRC based control system and a stepper motor model that matches a NEMA 23 stepper motor. The original model was produced as part of a previous thesis focused on the analysis of the resource utilization of different control systems on an FPGA. The model that was produced for that work did not simulate as the focus of that work was on resource usage analysis. This existing model was purely a mathematical representation of ADRC and stepper motor; no logic was present for the handling of real-world signals that would be required to integrate the stepper motor and supporting electronics with the FPGA. The model did not simulate PWM, ADC codes, the loadcell, and encoder pulses. The model relied on providing analog voltages to the stepper motor and receiving feedback in the form of radians and amps. This feedback is not directly accessible on the designed test bench and therefore had to be modified to be compatible with the PCB and mechanical test bench. therefore, a PWM generation model, ADC model, loadcell logic, and encoder logic was built to replicate the work done on the PCB. This included applying the same filters that are present in analog systems on the PCB to the Simulink model, along with modeling the sensors to provide real-world feedback signals. The goal of this work was to accurately model the complete system under test such that the data collected from the simulation would be reflective of real-world data.
+Under FOC a hybrid stepper motor treated as an PMSM, the quadrature current in the motor is directly linear with the load torque with a slope of Kt \cite{derammelaere_linear_2010,bernardi_performance_2022}. Through this relationship, the torque load on the motor can be characterized and estimated. To test this relationship, a Simulink model was constructed using an ADRC based control system and a stepper motor model that matches a NEMA 23 stepper motor. The original model was produced as part of a previous thesis focused on the analysis of the resource utilization of different control systems on an FPGA. The model that was produced for that work did not simulate as the focus of that work was on resource usage analysis \cite{binfet_implementation_2026}. This existing model was purely a mathematical representation of ADRC and stepper motor; no logic was present for the handling of real-world signals that would be required to integrate the stepper motor and supporting electronics with the FPGA. The model did not simulate PWM, ADC codes, the loadcell, and encoder pulses. The model relied on providing analog voltages to the stepper motor and receiving feedback in the form of radians and amps. This feedback is not directly accessible on the designed test bench and therefore had to be modified to be compatible with the PCB and mechanical test bench. therefore, a PWM generation model, ADC model, loadcell logic, and encoder logic was built to replicate the work done on the PCB. This included applying the same filters that are present in analog systems on the PCB to the Simulink model, along with modeling the sensors to provide real-world feedback signals. The goal of this work was to accurately model the complete system under test such that the data collected from the simulation would be reflective of real-world data.
 
 \section{System Architecture}\label{systemArchitecture}
 The Simulink model is split into two primary subsystems, the control system and the stepper motor. The stepper motor model includes the stepper motor and the emulation of loadcell, ADCs, and the rotary encoder. This subsystem is not designed to be synthesized into HDL; this is purely constructed for simulation purposes. The control system model is designed to be synthesized into HDL, this subsystem of the simulation contains the ADRC controllers, and the logic to process the raw data from the ADCs, loadcell, and encoder. To replicate real signals the mdoel was modified to supply a PWM waveform that can be directly output from the FPGA to the PCB, being compatible with the H-Bridge motor drivers on the PCB. This work moved forward with replicating the physical system in the simulation such that the simulation would produce replica of the required signals and physical properties of the physical system. The work was then expanded to include modeling of the ballscrew connected to the stepper motor and to model a spring applying a linear load to the ballscrew creating a torque on the stepper motor. Once this was completed, various spring loads were applied to the simulated system allowing for testing the relationship between the quadrature current and the torque of the motor.
@@ -16,22 +16,42 @@ During debugging of the model, the stepper motor model was setup to provide the 
 (Figure of screenshot of the simulink model at the highest level)
 
 \subsection{Prior Work and Contributions}\label{priorWorkAndContributions}
-The original continuous time, double floating point model was created by Dr. Edens, which was then revised by Caleb Binfet to include solving in the discrete time and partial work on the fixed point conversion. From here, Caleb shows in [Caleb’s Thesis Reference] that the first order MFP ADRC used XX amount of resources on the AMD KR260 Robotics Starter Kit SoM FPGA. Through this decrease in resource utilization it was an ideal choice to provide the disturbance rejection for parameters of the stepper motor and testing that could not accurately be captured in a simulation. Disturbances such as, friction, bearing imperfections, linear rail imperfections, ball screw imperfections, copper voltage loss. When this model was transferred to begin work on integration with the PCB and mechanical system, the provided model did not simulate. This lead to the work done to fix the model and adapt the model to work with the the PCB. The model was rebuilt in the discrete time system to fix integration issues, the fixed point precision was reworked to use standardized values avoiding conflicts in future work, and additional peripheral simulations were implemented. This system represents the most complete model of the stepper motor created in the SE3 lab and provided a fourth iteration on showing the relationship between the quadrature current and the torque produced. Initial work was based on an Arduino system that provided an initial proof of concept that the stepper motor would rotate with voltage as directed by the FOC algorithm. From here premade 3-phase BLDC FOC compatible motor drivers were tested to seek an off-the-shelf solution to the problem. Ultimately, these boards were not compatible with the stepper motor in the desired configuration and a custom implementation was created on a RaspberryPi. The RaspberryPi system proved that the correlation could be found and the entire algorithm would work end-to-end, however the clock speed of the RaspberryPi provided non-deterministic timing and led to difficulties in recreating data between experiments. From this, the FPGA based approach was determined to be an ideal solution and implementation work began. This required reworking the original Simulink approach that provided a cascaded PID system with continuous time and double floating point precision to a discrete time fixed point precision model. This provided an opportune time to implement the ADRC control approach instead of the PID approach.
+The original continuous time, double floating point model was created by Dr. Edens, which was then revised by Caleb Binfet to include solving in the discrete time and partial work on the fixed point conversion. From here, \cite{binfet_implementation_2026} shows the resource utilization of the MFP First Order ADRC design implemented on the AMD KR260 Robotics Starter Kit SoM in table~\ref{tab:first_order_adrc_resources}.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Resource utilization for the first order ADRC \cite{binfet_implementation_2026}}
+	\label{tab:first_order_adrc_resources}
+	\begin{tabular}{lc}
+		\hline
+		\textbf{Resource} & \textbf{First Order ADRC} \\
+		\hline
+		Multipliers             & 65  \\
+		Adders/Subtractors      & 69  \\
+		Registers               & 18  \\
+		Total 1-bit Registers   & 240 \\
+		Multiplexers            & 79  \\
+		\hline
+	\end{tabular}
+		\vspace{0.5ex}
+	\footnotesize Source: \cite{binfet_implementation_2026}.
+\end{table}
+
+Through this decrease in resource utilization it was an ideal choice to provide the disturbance rejection for parameters of the stepper motor and testing that could not accurately be captured in a simulation. Disturbances such as, friction, bearing imperfections, linear rail imperfections, ball screw imperfections, copper voltage loss. When this model was transferred to begin work on integration with the PCB and mechanical system, the provided model did not simulate. This lead to the work done to fix the model and adapt the model to work with the the PCB. The model was rebuilt in the discrete time system to fix integration issues, the fixed point precision was reworked to use standardized values avoiding conflicts in future work, and additional peripheral simulations were implemented. This system represents the most complete model of the stepper motor created in the SE3 lab and provided a fourth iteration on showing the relationship between the quadrature current and the torque produced. Initial work was based on an Arduino system that provided an initial proof of concept that the stepper motor would rotate with voltage as directed by the FOC algorithm. From here premade 3-phase BLDC FOC compatible motor drivers were tested to seek an off-the-shelf solution to the problem. Ultimately, these boards were not compatible with the stepper motor in the desired configuration and a custom implementation was created on a RaspberryPi. The RaspberryPi system proved that the correlation could be found and the entire algorithm would work end-to-end, however the clock speed of the RaspberryPi provided non-deterministic timing and led to difficulties in recreating data between experiments. From this, the FPGA based approach was determined to be an ideal solution and implementation work began. This required reworking the original Simulink approach that provided a cascaded PID system with continuous time and double floating point precision to a discrete time fixed point precision model. This provided an opportune time to implement the ADRC control approach instead of the PID approach.
 
 \subsection{Hybrid Stepper Motor Specifications}\label{hybridStepperMotorSpecs}
-%TODO: Change this to reference the methodology section talking about the parameters put in the simulation. This section should be short and really introduce that a NEMA 23 class motor was selected to match the mini-tech mill. 
-(Insert table with values from the Ding’s Motion Datasheet)
-This specific NEMA 23 class motor was selected due to the electrical characteristics being similar to the mini-tech CNC Mill in the SE3 lab. This mill has been used for precision machining work within the SE3 lab previously and provides a clear baseline to compare future work related to this system implemented on a mill for performance improvements.
+
+This specific NEMA 23 class motor was selected due to the electrical characteristics being similar to the mini-tech CNC Mill in the SE3 lab. This mill has been used for precision machining work within the SE3 lab previously and provides a clear baseline to compare future work related to this system implemented on a mill for performance improvements. Electrical specifications for the selected NEMA 23 class motor is provided in Table~\ref{tab:motor_23H2065} in Section~\nameref{parameterSources}.
 
 \subsection{Testbed}\label{testbed}
 
-To test the performance of the stepper motor with FOC control, a mechanical test bench was constructed that provides dimensional constraints that match the X-Axis of the mini-tech CNC mill. This was selected to demonstrate the FOC algorithm would work over a full length of displacement for a mill compared to the six inches of displacement present on the RaspberryPi based test bench. This new test bench provides a system designed to isolate some of the friction issues present on the previous system and provide a repeatable method to test different load conditions of the motor. The mechanical test bench features a BIF1605-5RRG0 THK ballscrew and caged nut, and two Transducer Techniques MLP-50-C0 load cells mounted in plane with the ballscrew to minimize the rotation caused by a spring on a single side of the ballscrew. The ballscrew has a \SI{5}{\milli\meter} lead, approximately \SI{90}{\percent} efficiency, with an inertia of \SI{3.47e-5}{\kilogram\meter\squared} with the caged nut adding an inertia of \SI{3.38e-7}{\kilogram\meter\squared}. These parameters were provided by manufacturer of these parts, THK. These parameters were then modeled in the simulation. In the simulation the two MLP-50-C0 load cells are modeled as a single loadcell that fully captures the load.
+To test the performance of the stepper motor with FOC control, a mechanical test bench was constructed that provides dimensional constraints that match the X-Axis of the mini-tech CNC mill. This was selected to demonstrate the FOC algorithm would work over a full length of displacement for a mill compared to the six inches of displacement present on the RaspberryPi based test bench. This new test bench provides a system designed to isolate some of the friction issues present on the previous system and provide a repeatable method to test different load conditions of the motor. The mechanical test bench features a BIF1605-5RRG0 THK ballscrew and caged nut, and two Transducer Techniques MLP-50-C0 load cells mounted in plane with the ballscrew to minimize the rotation caused by a spring on a single side of the ballscrew. The ballscrew has a \SI{5}{\milli\meter} lead, approximately \SI{90}{\percent} efficiency, with an inertia of \SI{2.84e-5}{\kilogram\meter\squared} with the caged nut adding an inertia of \SI{3.61e-7}{\kilogram\meter\squared}. These parameters were provided by manufacturer of these parts, THK \cite{thk_ball_screw}. These parameters were then modeled in the simulation. In the simulation the two MLP-50-C0 load cells are modeled as a single loadcell that fully captures the load.
 
 (Figure: CAD Model of the mechanical test bench, label parts)
 
 
 \subsection{Machining Application Constraints}\label{machineApplicationConstraints}
-With the future goal of applying this work to CNC machining applications, additional constraints are imposed with the goal of maintaining parameters that are indicative of real world machining loads. As such, the velocity is limited to \SI{35.5}{\radian\per\second}; which in this model corresponds to approximately \SI{339}{\rpm} which is \SI{66}{\inch\per\min}. In a machining application this is a high feedrate for machining 6061 aluminum. Through this limit, the relationship between torque and current can be determined. This limit, provides a starting point for future work that implements FOC control in machining applications. With the imposed constraint of a nema 23 stepper motor to match the existing mini-tech mill, the current limit and voltage limit were imposed of \SI{3}{\ampererms} maximum continuous load and \SI{48}{\volt} limit. These constraints were modeled in the simulation to model an accurate system.
+With the future goal of applying this work to CNC machining applications, additional constraints are imposed with the goal of maintaining parameters that are indicative of real world machining loads. As such, the velocity is limited to \SI{35.5}{\radian\per\second}; which in this model corresponds to approximately \SI{339}{\rpm} which is \SI{66}{\inch\per\min}. In a machining application this is a high feedrate for machining 6061 aluminum \cite{oberg_machinerys_2020}. Through this limit, the relationship between torque and current can be determined. This limit, provides a starting point for future work that implements FOC control in machining applications. With the imposed constraint of a nema 23 stepper motor to match the existing mini-tech mill, the current limit and voltage limit were imposed of \SI{3}{\ampererms} maximum continuous load and \SI{48}{\volt} limit. These constraints were modeled in the simulation to model an accurate system.
 
 \section{Motor Parameters and Identification}\label{motorParametersAndIdentification}
 
@@ -42,7 +62,7 @@ The Dings' Motion NEMA 23 Stepper Motor 23H2065 was selected for testing due to 
 
 \begin{table}[htbp]
 	\centering
-	\caption{Electrical and mechanical parameters of the Dings' Motion NEMA~23 stepper motor, model 23H2065.}
+	\caption{Electrical and mechanical parameters of the Dings' Motion NEMA~23 stepper motor, model 23H2065. \cite{dings_nema23_2026}}
 	\label{tab:motor_23H2065}
 	\begin{tabular}{@{}llrl@{}}
 		\toprule
@@ -60,16 +80,16 @@ The Dings' Motion NEMA 23 Stepper Motor 23H2065 was selected for testing due to 
 	\end{tabular}
 	\vspace{0.5ex}
 	
-	\footnotesize Source: Dings' Motion USA, NEMA~23 (size 23 / \SI{57}{\milli\meter}) rotary stepper motor specification table.
+	\footnotesize Source: Dings' Motion USA, NEMA~23 (size 23 / \SI{57}{\milli\meter}) rotary stepper motor specifications \cite{dings_nema23_2026}.
 \end{table}
 
 
 
 \subsection{Model Parameter Integration}\label{modelParameterIntegration}
 
-Modeling the plant was achieved through use of the Dings' Motion 23H2065 datasheet, (Table~\ref{tab:motor_23H2065}) and the THK ballscrew catalog (model BIF1605-5RRG0+710LC5A) with a \SI{16}{\milli\meter} shaft diameter and a \SI{5}{\milli\meter} lead. The load-side inertia is reflected to the motor shaft as a rotational inertia. The additional inertia for the milling surface, workholding, and stock material was not modeled in this plant. The inertia change between a physical mill and the representative Simulink model will result in more inertia on a future system. This is not expected to have substantial impact on the performance of the control system. A test was conducted by increasing the inertia of the plant in Simulink and comparing the results. 
-%TODO: Rework paragraph above, the actual plot should be in the experiments later not here. 
-%TODO: Create plot, and insert plot
+Modeling the plant was achieved through use of the Dings' Motion 23H2065 datasheet, (Table~\ref{tab:motor_23H2065}) and the THK ballscrew catalog (model BIF1605-5RRG0+710LC5A) with a \SI{16}{\milli\meter} shaft diameter and a \SI{5}{\milli\meter} lead \cite{thk_ball_screw}. The load-side inertia is reflected to the motor shaft as a rotational inertia. The additional inertia for the milling surface, workholding, and stock material was not modeled in this plant. The inertia change between a physical mill and the representative Simulink model will result in more inertia on a future system. This is not expected to have substantial impact on the performance of the control system. A test was conducted by increasing the inertia of the plant in Simulink and comparing the results, shown in Figure.   
+%TODO Get figure into work and add reference to figure here. 
+
 
 
 
@@ -89,7 +109,7 @@ To calculate the torque constant from the datasheet, the holding torque and the 
 	= \SI{0.377}{\newton\meter\per\ampere}.\label{eq:Kt}
 \end{equation}
 
-The factor of $\sqrt{2}$ in Eq.~\eqref{eq:Kt} arises because the datasheet holding torque is specified with both phases carrying the rated current, so the current vector has magnitude $\sqrt{2}\,I_{\mathrm{rated}}$. This vector fully represents $i_q$ when $i_d = 0$.
+The factor of $\sqrt{2}$ in Eq.~\eqref{eq:Kt} arises because the datasheet holding torque is specified as rms current, so the current vector has magnitude $\sqrt{2}\,I_{\mathrm{rated}}$ \cite{dings_nema23_2026}. This vector fully represents $i_q$ when $i_d = 0$.
 
 %TODO: Write about the measured torque constant from BackEMF matching. 
 
@@ -123,7 +143,7 @@ Simulation work uses the provided datasheet values of $\SI{2.7}{\milli\henry}$ i
  	\end{tabular}
  	\vspace{0.5ex}
  	
- 	\footnotesize Source: Experimentally gathered at \SI{1}{\kilo\hertz}, compared against the Dings' Motion USA NEMA 23 (Size 23 / \SI{57}{\milli\metre}) rotary stepper motor specifications table.
+ 	\footnotesize Source: Experimentally gathered at \SI{1}{\kilo\hertz}, compared against the Dings' Motion USA NEMA 23 (Size 23 / \SI{57}{\milli\metre}) rotary stepper motor specifications \cite{dings_nema23_2026}.
  \end{table}
  
  
@@ -152,7 +172,7 @@ The viscous damping coefficient $B_m$ is not provided on the datasheet for the 2
 The screw shaft is modeled as a solid cylinder of outer diameter $d$ and
 length $L_s$. With the catalog shaft mass per unit length
 $\lambda_s = \SI{1.25}{\kilo\gram\per\meter}$ for the $d=\SI{16}{\milli\meter}$
-shaft, the shaft mass is $m_s = \lambda_s L_s$ and
+shaft, the shaft mass is $m_s = \lambda_s L_s$ \cite{thk_ball_screw} and
 \begin{equation}
 	J_s = \frac{1}{2}\, m_s \left(\frac{d}{2}\right)^{2}
 	= \frac{1}{2}\, \lambda_s L_s \left(\frac{d}{2}\right)^{2}.
@@ -165,6 +185,8 @@ For $L_s = \SI{0.71}{\meter}$,
 	(\SI{0.008}{\meter})^{2}
 	= \SI{2.8400e-5}{\kilo\gram\meter\squared}.
 \end{equation}
+
+
 
 The nut translates as the screw turns. Its translating mass $m_n$ is reflected to the
 screw shaft through the lead $P_h$, so that the kinetic energy of the nut equals that of an equivalent rotating inertia:
@@ -199,7 +221,7 @@ The total inertia seen by the motor is the sum of the three components:
 		Inductance         & $L$   & Dings' datasheet & \SI{2.7}{\milli\henry} \\
 		Motor inertia      & $J_m$ & Dings' datasheet & \SI{3.5e-5}{\kilo\gram\meter\squared} \\
 		Viscous damping    & $B_m$ & Estimated & \SI{8e-4}{\newton\meter\second\per\radian} \\
-		Screw inertia      & $J_s$ & THK catalog, Eq.~\eqref{eq:Js} & \SI{3.47e-5}{\kilo\gram\meter\squared} \\
+		Screw inertia      & $J_s$ & THK catalog, Eq.~\eqref{eq:Js} & \SI{2.84e-5}{\kilo\gram\meter\squared} \\
 		Nut inertia        & $J_n$ & THK catalog, Eq.~\eqref{eq:Jn} & \SI{3.61e-7}{\kilo\gram\meter\squared} \\
 		\bottomrule
 	\end{tabular}
@@ -292,8 +314,8 @@ A summary of the relevant electrical input signals is provided in Table~\ref{tab
 
 \subsubsection{Phase Winding Model}\label{sec:phase}
 
-%TODO Add citation kenjo 1994 and bodson 1993
-Each phase winding is modeled as a series resistance and inductance in series with a speed-dependent back-EMF, which is the standard representation of a two-phase permanent-magnet or hybrid stepper motor~\cite{kenjo1994,bodson1993}. The \texttt{StepperElectrical} subsystem receives the phase voltages $v_a$ and $v_b$, the electrical rotor speed $\omega_r$, and the electrical rotor angle $\theta_e$, and it implements
+
+Each phase winding is modeled as a series resistance and inductance in series with a speed-dependent back-EMF, which is the standard representation of a two-phase permanent-magnet or hybrid stepper motor\cite{henke_modeling_2013,derammelaere_linear_2010,bernardi_performance_2022}. The \texttt{StepperElectrical} subsystem receives the phase voltages $v_a$ and $v_b$, the electrical rotor speed $\omega_r$, and the electrical rotor angle $\theta_e$, and it implements
 
 \begin{align}
 	L \frac{\mathrm{d} i_a}{\mathrm{d} t} &= v_a - R \, i_a + K_{E} \, \omega_r \sin\theta_e , \label{eq:ia} \\
@@ -310,12 +332,12 @@ both equations take the circuit form $v_x = R \, i_x + L \, \mathrm{d} i_x / \ma
 
 \subsection{Electromechanical Model}
 
-Although the simulation is implemented in the stationary phase frame of Equations~\eqref{eq:ia} and~\eqref{eq:ib}, the controller regulates the direct and quadrature currents, so the stepper motor is also described as a two-phase permanent-magnet machine in the rotor-fixed $d$--$q$ frame. The motor has $N_r = 50$ rotor teeth, therefore one mechanical revolution corresponds to $N_r$ electrical periods, and the electrical angle and speed are
+Although the simulation is implemented in the stationary phase frame of Equations~\eqref{eq:ia} and~\eqref{eq:ib}, the controller regulates the direct and quadrature currents, so the stepper motor is also described as a two-phase permanent-magnet machine in the rotor-fixed $d$--$q$ frame \cite{derammelaere_linear_2010,bernardi_performance_2022}. The motor has $N_r = 50$ rotor teeth, therefore one mechanical revolution corresponds to $N_r$ electrical periods, and the electrical angle and speed are
 \begin{equation}
 	\theta_e = N_r\,\theta_m, \qquad \omega_e = N_r\,\omega_m,
 	\label{eq:elec_angle}
 \end{equation}
-where $\theta_m$ and $\omega_m$ are the mechanical angle and angular velocity of the rotor. The phase currents are mapped into the rotor frame by the Park transform, which for a two-phase machine is a rotation about the electrical angle,
+where $\theta_m$ and $\omega_m$ are the mechanical angle and angular velocity of the rotor. The phase currents are mapped into the rotor frame by the Park transform, which for a two-phase machine is a rotation about the electrical angle \cite{bernardi_performance_2022,lai_modelling_2018},
 
 \begin{equation}
 	i_d = i_a \cos\theta_e + i_b \sin\theta_e, \qquad
@@ -403,7 +425,7 @@ which defines the motor torque constant
 \end{equation}
 
 
-The motor model treats $L_A = L_B$ therefore $L_d = L_q$. This assumption is made on the similarity of the phase inductance as measured in Table ~\ref{tab:measured_inductance}. With this simplified model of the motor, reluctance torque and detent torque are omitted and the direct-axis current $i_d$ produces no torque and is regulated to zero.
+The motor model treats $L_A = L_B$ therefore $L_d = L_q$. This assumption is made on the similarity of the phase inductance as measured in Table ~\ref{tab:measured_inductance}. With this simplified model of the motor, reluctance torque and detent torque are omitted and the direct-axis current $i_d$ produces no torque and is regulated to zero \cite{henke_modeling_2013}.
 
 For the 23H2065 motor, with $K_m = \SI{0.377}{\newton\meter\per\ampere}$ and
 $N_r = 50$,
@@ -587,7 +609,7 @@ The PCB model emulates the measurement interface between the stepper motor and t
 
 \subsection{Encoder Emulation}\label{sec:encoderEmulation}
 
-Rotor position is measured on the physical system with a 5000-line incremental quadrature encoder mounted to the motor shaft. The encoder produces two square-wave channels, A and B, offset by a quarter cycle, and an index channel, Z, that pulses once per revolution. Processing every edge of both channels yields four counts per line, so one mechanical revolution corresponds to
+Rotor position is measured on the physical system with a 5000-line incremental quadrature encoder mounted to the motor shaft. The encoder produces two square-wave channels, A and B, offset by a quarter cycle, and an index channel, Z, that pulses once per revolution \cite{dings_ek2_2026}. Processing every edge of both channels yields four counts per line, so one mechanical revolution corresponds to
 
 \begin{equation}
 	N_c = 4 N_{\mathrm{line}} = 4 \times 5000 = 20000
@@ -711,13 +733,13 @@ The simulation sample time is fixed at $T_s = \SI{5}{\nano\second}$ which is sig
 \subsection{Current Sensing}\label{sec:currentSensing}
 % TODO: Reference the ADC by part number and cite the specifications. 
 
-The phase currents are measured on the physical system with a shunt resistor in series with each winding. The voltage across the shunt resistor is amplified by an INA241 current-sense amplifier and digitized by a 16-bit ADC. To account for the winding current direction reversals, the amplifier output is offset to half of the ADC reference voltage, so that both current polarities fall within the input range of the ADC. One \texttt{ADC Emulator} subsystem, shown in Figure %TODO: Create and reference figure of the ADC Emulator subsystem
+The phase currents are measured on the physical system with a shunt resistor in series with each winding. The voltage across the shunt resistor is amplified by an INA241 current-sense amplifier and digitized by a 16-bit ADC\cite{ti_ina241_2023,adi_max11162_2017}. To account for the winding current direction reversals, the amplifier output is offset to half of the ADC reference voltage, so that both current polarities fall within the input range of the ADC. One \texttt{ADC Emulator} subsystem, shown in Figure %TODO: Create and reference figure of the ADC Emulator subsystem
 , is used for each phase. It receives the phase current $i_x$ from the stepper motor model and produces the 16-bit ADC reading through four operations.
 
 \begin{itemize}
 	\item \textbf{Shunt and amplifier gain.} A gain block multiplies the phase current by the product of the shunt resistance and the amplifier gain, $K_{cs} = R_{sh}\,G_{cs}$, converting current into the amplifier output voltage. The shunt resistor and amplifier are modeled as an ideal gain with no bandwidth limit, gain error, or offset error.
 	
-	\item \textbf{Amplifier offset.} A Sum block adds the constant offset $V_{\mathrm{off}} = V_{\mathrm{ref}}/2$, which models the reference voltage applied to the amplifier output as specified in the INA241 datasheet. On the PCB $V_{off}$ is referenced off of the $V_{ref}$, keeping the INA241 and ADC voltage linked. 
+	\item \textbf{Amplifier offset.} A Sum block adds the constant offset $V_{\mathrm{off}} = V_{\mathrm{ref}}/2$, which models the reference voltage applied to the amplifier output as specified in the INA241 datasheet \cite{ti_ina241_2023}. On the PCB $V_{off}$ is referenced off of the $V_{ref}$, keeping the INA241 and ADC voltage linked. 
 	%TODO: Reference ADC part number specifically. 
 	
 	\item \textbf{Voltage to ADC scaling.} A gain block converts the amplifier output voltage into ADC counts by multiplying by $K_{\mathrm{adc}} = 2^{N}/V_{\mathrm{ref}}$, where $N = 16$, the ADC resolution in bits.
@@ -752,7 +774,7 @@ positive current maps above mid-point, and negative current maps below it. The i
 	\label{eq:adc_range}
 \end{equation}
 
-Currents outside this range drive the amplifier and INA241 output beyond the input range of the ADC, and the reading clips at 0 or $2^{N}-1$. The resolution is more fine than the PWM current ripple of approximately \SI{89}{\milli\ampere} from Equation~\eqref{eq:rippleValue}, which spans roughly 1170 ADC counts. The ADC therefore resolves the ripple itself, and the measured current depends on the point in the PWM period at which the sample is taken.  To minimize the effect of the PWM ripple current, the ADC samples are aligned with the center point of the PWM output. The quantization error of at most one count is negligible in comparison to the ADC sample timing. 
+Currents outside this range drive the amplifier and INA241 output beyond the input range of the ADC, and the reading clips at 0 or $2^{N}-1$. The resolution is more fine than the PWM current ripple of approximately \SI{89}{\milli\ampere} from Equation~\eqref{eq:rippleValue}, which spans roughly 1170 ADC counts. The ADC therefore resolves the ripple itself, and the measured current depends on the point in the PWM period at which the sample is taken.  To minimize the effect of the PWM ripple current, the ADC samples are aligned with the center point of the PWM output \cite{blasko_sampling_1998}. The quantization error of at most one count is negligible in comparison to the ADC sample timing. 
 
 The physical PCB was designed with a current limit of $\SI{2.5}{\ampere}$, however the current Dings' Motion 23H065 stepper motor has an $i_q$ current limit of $\SI{4.243}{\ampere}$. This limitation is expanded upon in. %TODO Reference future works in conclusion chapter. 
 
@@ -801,13 +823,13 @@ The amplifier and ADC are modeled as ideal. Amplifier bandwidth, common-mode tra
 		\hline
 	\end{tabular}
 \end{table}
-\subsubsection{Load Cell Emulation}
+\subsubsection{Load Cell Emulation}\label{sec:loadCellModel}
 %TODO Write section!
 
 \section{Control System}\label{sec:controlSystem}
 
 The control system regulates the position of the stepper motor through
-field-oriented control, in which the phase currents are measured, transformed into the rotor-fixed $d$--$q$ frame, and regulated so that the motor produces torque only through the quadrature current. The controller is implemented in Simulink in fixed-point arithmetic to allow HDL code for the FPGA to be synthesized. Every input provided is in the form produced by the PCB model in Section \nameref{pcbModel}: unsigned 16-bit ADC readings for the phase currents and Boolean quadrature channels from the encoder. Every output is a Boolean PWM and direction signal for each H-Bridge, as described in Section~\ref{stepperMotorElectricalModel}.
+field-oriented control, in which the phase currents are measured, transformed into the rotor-fixed $d$--$q$ frame, and regulated so that the motor produces torque only through the quadrature current \cite{benchaib_discrete-time_2003,bernardi_performance_2022}. The controller is implemented in Simulink in fixed-point arithmetic to allow HDL code for the FPGA to be synthesized. Every input provided is in the form produced by the PCB model in Section \nameref{pcbModel}: unsigned 16-bit ADC readings for the phase currents and Boolean quadrature channels from the encoder. Every output is a Boolean PWM and direction signal for each H-Bridge, as described in Section~\ref{stepperMotorElectricalModel}.
 
 \subsection{Control Architecture}\label{sec:ctrlArchitecture}
 
@@ -914,7 +936,9 @@ where the modulo operation is implemented by the comparison and rollover logic r
 	\hat{\theta}_e[k] = \frac{2\pi}{N_c / N_r}\, \hat{n}_e[k],
 	\label{eq:enc_angles}
 \end{equation}
+
 %TODO: Clarify the zeroing process of the motor 
+
 with $N_c = 20000$ counts per mechanical revolution from Equation~\eqref{eq:enc_counts} and $N_c / N_r = 400$ counts per electrical revolution. Tracking the electrical count separately keeps the electrical angle within a single revolution without a modulo operation on the full position count, and is consistent with Equation~\eqref{eq:elec_angle} because $N_r \hat{\theta}_m$ and $\hat{\theta}_e$ differ only by whole electrical revolutions when both counters are zeroed together. The radians-per-count constants are stored with 64 fractional bits so that the conversion adds no error beyond the encoder resolution.
 
 The electrical angle is meaningful only if $\hat{n}_e = 0$ coincides with the alignment of the rotor $d$-axis with phase A as this is set as the zero position for the system to start from. An electrical angle off-set is applied to adjust the zero position such that phase A is always aligned with the $d$-axis to start. On the physical system the rotor is first aligned by energizing phase A, after which the zeroing input sets $\hat{n}_e = 0$.
@@ -955,7 +979,7 @@ angle,
 	\label{eq:park_measured}
 \end{equation}
 
-Because the motor has two phases separated by $90^\circ$, the phase currents are already orthogonal components, no Clarke transform is required before the Park rotation.
+Because the motor has two phases separated by $90^\circ$, the phase currents are already orthogonal components, no Clarke transform is required before the Park rotation \cite{lai_modelling_2018}.
 
 \subsection{Plant Models for Control Design}\label{sec:torque_b0}
 
@@ -966,7 +990,7 @@ Each ADRC is designed around a first-order model of the form
 	\label{eq:adrc_plant}
 \end{equation}
 
-where $y$ is the controlled output, $u$ is the control input, $b_0$ is the input gain, and $f$ is the total disturbance~\cite{han2009,gao2003}. The total disturbance collects every term in the true dynamics other than $b_0 u$, including external loads, coupling, parameter error, and unmodeled dynamics, and is estimated by an extended state observer. Only $b_0$ must be known in advance.
+where $y$ is the controlled output, $u$ is the control input, $b_0$ is the input gain, and $f$ is the total disturbance \cite{herbst_tuning_2023}. The total disturbance collects every term in the true dynamics other than $b_0 u$, including external loads, coupling, parameter error, and unmodeled dynamics, and is estimated by an extended state observer. Only $b_0$ must be known in advance.
 
 \subsubsection{Velocity Loop Input Gain}
 
@@ -1028,11 +1052,11 @@ Both axes take the form of Equation~\eqref{eq:adrc_plant} with the same input ga
 	\label{eq:bi}
 \end{equation}
 
-The winding resistance, the speed-dependent cross-coupling between the axes, and the back-EMF are all contained in the total disturbances $f_d$ and $f_q$. The current loops therefore do not require decoupling or back-EMF feedforward terms, which are normally required in field-oriented control and which would require accurate values of $R$ and $\psi_m$, for each motor. 
+The winding resistance, the speed-dependent cross-coupling between the axes, and the back-EMF are all contained in the total disturbances $f_d$ and $f_q$. The current loops therefore do not require decoupling or back-EMF feedforward terms, which are normally required in field-oriented control and which would require accurate values of $R$ and $\psi_m$, for each motor \cite{briz_analysis_2000}. 
 
 \subsection{Discrete-Time First-Order ADRC}\label{sec:mfpAdrc}
 
-Both the velocity loop and the current loops use the same discrete-time first-order ADRC, implemented in the minimum-footprint form of Herbst and Madonski~\cite{herbst2023}. This section derives the controller from the plant model of Equation~\eqref{eq:adrc_plant} and shows how the minimum-footprint form is obtained from it.
+Both the velocity loop and the current loops use the same discrete-time first-order ADRC, implemented in the minimum-footprint form of Herbst and Madonski \cite{herbst_tuning_2023}. This section derives the controller from the plant model of Equation~\eqref{eq:adrc_plant} and shows how the minimum-footprint form is obtained from it.
 
 \subsubsection{Extended State Observer and Control Law}
 
@@ -1088,11 +1112,7 @@ $z_{CL} = e^{-\omega_{CL} T_s}$ gives
 	\label{eq:k1}
 \end{equation}
 
-The design is therefore fully specified by four quantities: the input gain
-$b_0$, the closed-loop bandwidth $\omega_{CL}$, the observer bandwidth
-$\omega_{ESO} = k_{ESO}\,\omega_{CL}$, and the sample time $T_s$. This is the
-bandwidth parameterization of Gao~\cite{gao2003}, applied to the discrete
-poles~\cite{herbst2013}.
+The design is therefore fully specified by four quantities: the input gain $b_0$, the closed-loop bandwidth $\omega_{CL}$, the observer bandwidth $\omega_{ESO} = k_{ESO}\,\omega_{CL}$, and the sample time $T_s$. This is the bandwidth parameterization of Gao \cite{gao_scaling_2003}, applied to the discrete poles \cite{herbst_tuning_2023}.
 
 \subsubsection{Minimum-Footprint Implementation}
 
@@ -1165,7 +1185,7 @@ The integral action responsible for the zero at $z = 1$ resides in the feedback 
 	\label{eq:integral_condition}
 \end{equation}
 
-The coefficients of Equation~\eqref{eq:mfp_coeffs} satisfy this identity. When the control signal saturates, $u_{\mathrm{lim}}$ stops following $u$, the loop through $C_u(z)$ no longer integrates, and the controller is protected from integrator windup without any additional anti-windup logic~\cite{herbst2013}.
+The coefficients of Equation~\eqref{eq:mfp_coeffs} satisfy this identity. When the control signal saturates, $u_{\mathrm{lim}}$ stops following $u$, the loop through $C_u(z)$ no longer integrates, and the controller is protected from integrator windup without any additional anti-windup logic \cite{herbst_tuning_2023}.
 
 Because the observer absorbs modeling error into $f$, $b_0$ need not be exact. If the true input gain differs from $b_0$, the term $(b - b_0)\,u$ is estimated as part of the total disturbance. A value of $b_0$ larger than the true value reduces the effective loop gain, and a smaller value increases it, so $b_0$ is a robustness and tuning parameter rather than a quantity that must be identified precisely.
 
@@ -1308,3 +1328,115 @@ The integral condition of Equation~\eqref{eq:integral_condition} is more sensiti
 % Include plots of the data from Simulink 
 % Wrap up the final analysis showing that from iq_ref the estimated torque on the system can be calculated
 
+\section{Simulation Experiments}\label{sec:experiments}
+
+The experiments in this section verify in simulation that the controller in Section~\nameref{sec:controlSystem} regulates the motor as designed and that the quadrature current reference $i_q^{*}$ produced by the velocity ADRC provides an deterministic relationship to the load on the axis. 
+
+ Each experiment runs the complete closed-loop model, consisting of the stepper motor model, the PCB model in Section~\nameref{pcbModel}, the Stepper Motor Model in Section~\nameref{sec:stepperMotorModel} and the fixed-point controller, with the load applied through the ball screw and measured by the emulated load cell in Section~\nameref{sec:loadCellModel}.
+
+\subsection{Experimental Setup}\label{sec:expSetup}
+
+Torque load is applied to the stepper motor in a linear ramp modeling the linear section of a spring. This linear load is reflected over the ballscrew to introduce an additional torque disturbance on the stepper motor modeled as $T_L$ in Equation~\eqref{eq:speed_tf}. Simulation run time is set to $\SI{100}{\milli\second}$, unless noted in the specific results. A simulation run time of $\SI{100}{\milli\second}$ was selected to provide enough time for the motor to produce enough displacement to be indicative of expected applications. Control system parameters were set at the values listed in Table~\ref{tab:adrc_params} to provide consistency between experiments in the control system, only changing the parameters of the PCB system and applied torque load. The primary experiment was to reconstruct the estimated total load on the stepper motor, and compare the value to the true value in the stepper motor subsystem.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Simulation test cases.}
+	\vspace{4pt}
+	\label{tab:exp_cases}
+	\begin{tabular}{llll}
+		\hline
+		Test & Load & Command & Purpose \\
+		\hline
+		1    & None                     & Position step & Tracking performance \\
+		2--4 & Spring, $k_{s,1}$--$k_{s,3}$ & Position ramp and hold & Load estimation \\
+		5    & Spring and torque impulse & Position hold & Disturbance rejection \\
+		\hline
+	\end{tabular}
+\end{table}
+%TODO: Fill in the spring constants, ramp velocity, and impulse magnitude/duration.
+
+\subsection{Tracking Performance}\label{sec:expPerformance}
+
+%TODO: Figure with three stacked plots for Test 1: (a) theta*, theta_hat_m, and the ideal first-order response at K_Ptheta = 150 rad/s; (b) omega*_m and omega_hat_f; (c) i_q*, i_hat_q, and i_hat_d.
+Figure %TODO: Create and reference figure of the unloaded step response
+shows the response of the unloaded axis to a position step. %TODO: 2--3 sentences: the position follows the designed first-order response (or is velocity-limited by omega_max for large steps), the velocity follows omega*, i_d is held near zero, and i_q tracks i_q*. Note the steady-state position error relative to one encoder count.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Tracking performance of the unloaded axis.}
+	\vspace{4pt}
+	\label{tab:exp_performance}
+	\begin{tabular}{lll}
+		\hline
+		Metric & Design & Simulated \\
+		\hline
+		Position rise time (10--90\%)  & \SI{14.7}{\milli\second} & %TODO
+		\\
+		Position overshoot             & 0\%                      & %TODO
+		\\
+		Steady-state position error    & $< \SI{3.14e-4}{\radian}$ & %TODO
+		\\
+		RMS $i_d$                      & 0                        & %TODO
+		\\
+		RMS $i_q$ tracking error       & 0                        & %TODO
+		\\
+		\hline
+	\end{tabular}
+\end{table}
+% Design rise time is 2.2/K_Ptheta for an unsaturated first-order response; delete if the step saturates omega_max.
+
+\subsection{Load Estimation from the Current Reference}\label{sec:expLoad}
+
+When the axis moves at constant velocity or is held stationary, $\dot{\omega}_m = 0$ and the current loop tracks its reference, $i_q = i_q^{*}$. Equation~\eqref{eq:omega_dot} then gives
+\begin{equation}
+	i_q^{*} = \frac{T_L + B_m\,\omega_m}{K_m}.
+	\label{eq:iq_load}
+\end{equation}
+
+The velocity ADRC produces this current without any model of the load, since $T_L$ enters only through the total disturbance of Equation~\eqref{eq:f_omega}. Because the integral action of Equation~\eqref{eq:integral_condition} drives the velocity error to zero, $i_q^{*}$ settles to the current the motor physically requires, independent of the value chosen for $b_0$. Relating the load torque to the axial force through the ball screw, $T_L = \ell F / (2\pi\eta)$, gives the force estimate \cite{altintas_manufacturing_2012}
+
+\begin{equation}
+	\hat{F} = \frac{2\pi\eta}{\ell}\Big( K_m\, i_q^{*} - B_m\,\omega_m \Big).
+	\label{eq:force_estimate}
+\end{equation}
+
+%TODO: Match ell (screw lead) and eta (screw efficiency) to the notation of the mechanical model chapter.
+During the constant-velocity ramp the damping term is constant, so the rates of change of the force and the current reference are related by
+\begin{equation}
+	\frac{dF/dt}{di_q^{*}/dt} = \frac{2\pi\eta\,K_m}{\ell}.
+	\label{eq:slope_ratio}
+\end{equation}
+
+%TODO: Figure: i_q* (left axis) and load cell force F (right axis) versus time for Tests 2--4.
+Figure %TODO: Create and reference figure of i_q* and load cell force versus time
+shows $i_q^{*}$ and the load cell force for each spring. %TODO: 1--2 sentences: both rise linearly during the ramp and hold constant during the hold.
+%TODO: Figure: F_hat from Equation (force_estimate) versus measured F, all springs, with a linear fit and the ideal unity line.
+Figure %TODO: Create and reference figure of estimated versus measured force
+compares the estimate of Equation~\eqref{eq:force_estimate} with the load cell measurement, and Table~\ref{tab:exp_slopes} compares the measured slope ratio with Equation~\eqref{eq:slope_ratio}.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Measured and predicted slope ratios for each spring.}
+	\vspace{4pt}
+	\label{tab:exp_slopes}
+	\begin{tabular}{lllll}
+		\hline
+		$k_s$ & $dF/dt$ & $di_q^{*}/dt$ & Ratio, measured & Error vs.\ Eq.~\eqref{eq:slope_ratio} \\
+		\hline
+		%TODO
+		& & & & \\
+		& & & & \\
+		& & & & \\
+		\hline
+	\end{tabular}
+\end{table}
+
+%TODO: 2--3 sentences interpreting the result: the ratio matches 2*pi*eta*K_m/ell for every spring, so the force on the axis can be recovered from i_q* alone. Note where the estimate departs from the measurement (acceleration transients at the start/end of the ramp, where J*omega_dot is not zero) and the force resolution set by the current resolution of Equation~\eqref{eq:adc_range}.
+
+\subsection{Disturbance Rejection}\label{sec:expDisturbance}
+
+%TODO: Figure for Test 5: (a) theta_hat_m deviation from theta*, (b) i_q* and the applied disturbance torque divided by K_m.
+Figure %TODO: Create and reference figure of the torque impulse response
+shows the response to a torque impulse applied while the axis holds position against the spring. %TODO: 2--3 sentences: i_q* rises to cancel the disturbance within a time set by the observer bandwidth, the peak position deviation, and the recovery time. Note that the change in i_q* reflects the size of the disturbance, so transient loads are visible in the current reference as well as steady loads.
+
+%TODO: Optional closing sentence linking forward to the results/conclusion chapter.

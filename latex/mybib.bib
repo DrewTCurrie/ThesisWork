@@ -1,51 +1,549 @@
+% ---------------------------------------------------------------------
+%  Machining, CNC history, and machine tools  (Chapter 1)
+% ---------------------------------------------------------------------
 
-@article{desjardins_direct_2013,
-	title = {Direct numerical and large-eddy simulation of primary atomization in complex geometries},
-	volume = {23},
-	issn = {1044-5110},
-	language = {en},
-	number = {11},
-	urldate = {2014-05-30},
-	journal = {Atomization and Sprays},
-	author = {Desjardins, Olivier and McCaslin, Jeremy and Owkes, Mark and Brady, Peter},
-	year = {2013},
-	pages = {1001--1048},
+@book{altintas_manufacturing_2012,
+	title     = {Manufacturing Automation: Metal Cutting Mechanics, Machine Tool Vibrations, and {CNC} Design},
+	author    = {Altintas, Yusuf},
+	edition   = {2nd},
+	publisher = {Cambridge University Press},
+	address   = {Cambridge, UK},
+	year      = {2012},
+	isbn      = {978-1-107-00148-0},
 }
 
-@article{owkes_discontinuous_2013,
-	title = {A discontinuous {G}alerkin conservative level set scheme for interface capturing in multiphase flows},
-	volume = {249},
-	issn = {0021-9991},
-	number = {15},
-	urldate = {2014-09-16},
-	journal = {Journal of Computational Physics},
-	author = {Owkes, Mark and Desjardins, Olivier},
-	month = sep,
-	year = {2013},
-	pages = {275--302},
+@book{groover_fundamentals_2010,
+	title     = {Fundamentals of Modern Manufacturing: Materials, Processes, and Systems},
+	author    = {Groover, Mikell P.},
+	edition   = {4th},
+	publisher = {John Wiley \& Sons},
+	address   = {Hoboken, NJ},
+	year      = {2010},
+	isbn      = {978-0-470-46700-8},
 }
 
-@article{owkes_computational_2014,
-	title = {A computational framework for conservative, three-dimensional, unsplit, geometric transport with application to the volume-of-fluid ({VOF}) method},
-	volume = {270},
-	issn = {0021-9991},
-	number = {1},
-	urldate = {2014-05-06},
-	journal = {Journal of Computational Physics},
-	author = {Owkes, Mark and Desjardins, Olivier},
-	month = aug,
-	year = {2014},
-	pages = {587--612},
+@article{moriwaki_multi-functional_2008,
+	title   = {Multi-functional machine tool},
+	author  = {Moriwaki, Toshimichi},
+	journal = {CIRP Annals -- Manufacturing Technology},
+	volume  = {57},
+	number  = {2},
+	pages   = {736--749},
+	year    = {2008},
+	doi     = {10.1016/j.cirp.2008.09.004},
 }
 
-@article{owkes_mesh-decoupled_2015,
-	title = {A mesh-decoupled height function method for computing interface curvature},
-	volume = {281},
-	issn = {0021-9991},
-	urldate = {2014-10-30},
-	journal = {Journal of Computational Physics},
-	author = {Owkes, Mark and Desjardins, Olivier},
-	month = jan,
-	year = {2015},
-	pages = {285--300},
+@book{reintjes_numerical_1991,
+	title     = {Numerical Control: Making a New Technology},
+	author    = {Reintjes, J. Francis},
+	publisher = {Oxford University Press},
+	address   = {New York, NY},
+	year      = {1991},
+	isbn      = {978-0-19-506772-9},
+}
+
+@article{sheng_review_2026,
+	title   = {A review of the machining mechanisms in field-assisted cutting of brittle materials},
+	author  = {Sheng, Xuexiang and Zhu, Zhanchen and Liu, Changlin},
+	journal = {Micromachines},
+	volume  = {17},
+	number  = {3},
+	pages   = {361},
+	month   = mar,
+	year    = {2026},
+	doi     = {10.3390/mi17030361},
+}
+
+
+% ---------------------------------------------------------------------
+%  Tool condition monitoring and adaptive control  (Chapter 1)
+% ---------------------------------------------------------------------
+
+@article{wong_technical_2020,
+	title   = {Technical data-driven tool condition monitoring challenges for {CNC} milling: a review},
+	author  = {Wong, Shi Yuen and Chuah, Joon Huang and Yap, Hwa Jen},
+	journal = {The International Journal of Advanced Manufacturing Technology},
+	volume  = {107},
+	number  = {11},
+	pages   = {4837--4857},
+	month   = apr,
+	year    = {2020},
+	doi     = {10.1007/s00170-020-05303-z},
+}
+
+@article{srinivasa_prasad_condition_2013,
+	title   = {Condition monitoring of {CNC} machining using adaptive control},
+	author  = {Srinivasa Prasad, B. and Siva Prasad, D. and Sandeep, A. and Veeraiah, G.},
+	journal = {International Journal of Automation and Computing},
+	volume  = {10},
+	number  = {3},
+	pages   = {202--209},
+	month   = jun,
+	year    = {2013},
+	doi     = {10.1007/s11633-013-0713-1},
+}
+
+@inproceedings{cho_tool_2016,
+	title     = {A tool breakage detection system using load signals of spindle motors in {CNC} machines},
+	author    = {Cho, Hyeon Sung and Han, Ji Hyeong and Chi, Su Young and Yoo, Kwan Hee},
+	booktitle = {Proceedings of the 8th International Conference on Ubiquitous and Future Networks ({ICUFN})},
+	address   = {Vienna, Austria},
+	publisher = {IEEE},
+	pages     = {160--163},
+	month     = jul,
+	year      = {2016},
+	doi       = {10.1109/ICUFN.2016.7537007},
+}
+
+@article{nagaraj_tool_2025,
+	title   = {Tool condition monitoring in the milling of low- to high-yield-strength materials},
+	author  = {Nagaraj, Sohan and Diaz-Elsayed, Nancy},
+	journal = {Machines},
+	volume  = {13},
+	number  = {4},
+	pages   = {276},
+	month   = mar,
+	year    = {2025},
+	doi     = {10.3390/machines13040276},
+}
+
+
+% ---------------------------------------------------------------------
+%  Hybrid stepper motor modeling and field-oriented control
+% ---------------------------------------------------------------------
+
+@article{henke_modeling_2013,
+	title   = {Modeling of hybrid stepper motors for closed loop operation},
+	author  = {Henke, B. and Sawodny, O. and Schmidt, S. and Neumann, R.},
+	journal = {IFAC Proceedings Volumes},
+	volume  = {46},
+	number  = {5},
+	pages   = {177--183},
+	year    = {2013},
+	note    = {6th IFAC Symposium on Mechatronic Systems, Hangzhou, China},
+	doi     = {10.3182/20130410-3-CN-2034.00042},
+}
+
+@inproceedings{derammelaere_linear_2010,
+	title     = {A linear time-invariant model for a vector-controlled two-phase stepping motor},
+	author    = {Derammelaere, Stijn and Vervisch, Bram and De Belie, Frederik and Cottyn, Johannes and Van den Abeele, Griet and Cox, Peter and Stockman, Kurt and Vandevelde, Lieven},
+	booktitle = {Proceedings of the 5th {IET} International Conference on Power Electronics, Machines and Drives ({PEMD} 2010)},
+	address   = {Brighton, UK},
+	publisher = {IET},
+	pages     = {1--5},
+	month     = apr,
+	year      = {2010},
+	doi       = {10.1049/cp.2010.0149},
+}
+
+@inproceedings{benchaib_discrete-time_2003,
+	title     = {Discrete-time field-oriented control for {SM-PMSM} including voltage and current constraints},
+	author    = {Benchaib, A. and Poullain, S. and Thomas, J. L. and Alacoque, J. C.},
+	booktitle = {Proceedings of the {IEEE} International Electric Machines and Drives Conference ({IEMDC'03})},
+	volume    = {2},
+	pages     = {999--1005},
+	publisher = {IEEE},
+	address   = {Madison, WI},
+	year      = {2003},
+	doi       = {10.1109/IEMDC.2003.1210357},
+}
+
+@article{bernardi_performance_2022,
+	title   = {Performance analysis of current control strategies for hybrid stepper motors},
+	author  = {Bernardi, Fabio and Carfagna, Emilio and Migliazza, Giovanni and Buticchi, Giampaolo and Immovilli, Fabio and Lorenzani, Emilio},
+	journal = {IEEE Open Journal of the Industrial Electronics Society},
+	volume  = {3},
+	pages   = {460--472},
+	year    = {2022},
+	doi     = {10.1109/OJIES.2022.3185659},
+}
+
+
+% ---------------------------------------------------------------------
+%  FPGA-based motor control
+% ---------------------------------------------------------------------
+
+@article{lai_modelling_2018,
+	title   = {The modelling, simulation and {FPGA}-based implementation for stepper motor wide range speed closed-loop drive system design},
+	author  = {Lai, Chiu-Keng and Ciou, Jhang-Shan and Tsai, Chia-Che},
+	journal = {Machines},
+	volume  = {6},
+	number  = {4},
+	pages   = {56},
+	month   = nov,
+	year    = {2018},
+	doi     = {10.3390/machines6040056},
+}
+
+@article{ricci_simple_2018,
+	title   = {Simple torque control method for hybrid stepper motors implemented in {FPGA}},
+	author  = {Ricci, Stefano and Meacci, Valentino},
+	journal = {Electronics},
+	volume  = {7},
+	number  = {10},
+	pages   = {242},
+	month   = oct,
+	year    = {2018},
+	doi     = {10.3390/electronics7100242},
+}
+
+@mastersthesis{binfet_implementation_2026,
+	title  = {Implementation and Resource Analysis of {FPGA}-Based Multiphase Motor Control Architectures},
+	author = {Binfet, Caleb Alexander},
+	school = {Montana State University},
+	address = {Bozeman, MT},
+	month  = may,
+	year   = {2026},
+}
+
+@mastersthesis{nilsson_universal_2013,
+	title   = {Universal Embedded Motor Control},
+	author  = {Nilsson, Christoffer and Modrack, Daniel},
+	school  = {Chalmers University of Technology},
+	address = {G{\"o}teborg, Sweden},
+	month   = sep,
+	year    = {2013},
+}
+
+
+% ---------------------------------------------------------------------
+%  Control systems: ADRC and modeling
+% ---------------------------------------------------------------------
+
+@article{herbst_tuning_2023,
+	title   = {Tuning and implementation variants of discrete-time {ADRC}},
+	author  = {Herbst, Gernot and Madonski, Rafal},
+	journal = {Control Theory and Technology},
+	volume  = {21},
+	number  = {1},
+	pages   = {72--88},
+	year    = {2023},
+	doi     = {10.1007/s11768-023-00127-0},
+}
+
+@techreport{bruck_modelling_1988,
+	title       = {Modelling of Control Systems with {C++} and {PHIGS}},
+	author      = {Br{\"u}ck, Dag M.},
+	institution = {Department of Automatic Control, Lund Institute of Technology},
+	address     = {Lund, Sweden},
+	type        = {Technical Report},
+	number      = {TFRT-7400},
+	year        = {1988},
+}
+
+
+% ---------------------------------------------------------------------
+%  Hardware datasheets and catalogs
+% ---------------------------------------------------------------------
+
+@misc{dings_nema23_2026,
+	title        = {Rotary Stepper {NEMA} 23 Motors -- Standard \& Custom},
+	author       = {{DINGS' Motion USA}},
+	howpublished = {\url{https://www.dingsmotionusa.com/rotary-stepper-nema-23}},
+	year         = {2026},
+	note         = {Specifications for model 23H2065. Accessed: Nov. 1, 2026},
+}
+
+@manual{ti_ina241_2023,
+	title        = {{INA241x} --5 {V} to 110 {V}, Bidirectional, Ultra-Precise Current Sense Amplifier With Enhanced {PWM} Rejection},
+	author       = {{Texas Instruments}},
+	address      = {Dallas, TX},
+	note         = {Datasheet SBOSA30C, Mar. 2022, revised Oct. 2023},
+	month        = oct,
+	year         = {2023},
+	url          = {https://www.ti.com/lit/ds/symlink/ina241a.pdf},
+}
+
+@manual{thk_ball_screw,
+	title        = {Ball Screw General Catalog ({MDK/MBF/BIF/BNF})},
+	author       = {{THK Co., Ltd.}},
+	address      = {Tokyo, Japan},
+	year         = {n.d.},
+	note         = {Model BIF precision ball screw, unfinished shaft ends. Accessed: Nov. 1, 2026},
+}
+
+
+% =====================================================================
+%  ADDED SOURCES (second pass: filling citation gaps)
+% =====================================================================
+
+% ---------------------------------------------------------------------
+%  Machining monitoring, data use, and commercial systems
+% ---------------------------------------------------------------------
+
+@article{teti_advanced_2010,
+	title   = {Advanced monitoring of machining operations},
+	author  = {Teti, Roberto and Jemielniak, Krzysztof and O'Donnell, Garret and Dornfeld, David},
+	journal = {CIRP Annals -- Manufacturing Technology},
+	volume  = {59},
+	number  = {2},
+	pages   = {717--739},
+	year    = {2010},
+	doi     = {10.1016/j.cirp.2010.05.010},
+}
+
+@article{tao_data-driven_2018,
+	title   = {Data-driven smart manufacturing},
+	author  = {Tao, Fei and Qi, Qinglin and Liu, Ang and Kusiak, Andrew},
+	journal = {Journal of Manufacturing Systems},
+	volume  = {48},
+	pages   = {157--169},
+	year    = {2018},
+	doi     = {10.1016/j.jmsy.2018.01.006},
+}
+
+@misc{caron_tmac,
+	title        = {{TMAC} -- Machine Tool Monitoring System},
+	author       = {{Caron Engineering}},
+	howpublished = {\url{https://www.caroneng.com/products/tmac/}},
+	year         = {n.d.},
+	note         = {Accessed: Nov. 1, 2026},
+}
+
+@misc{cte_tmac_2020,
+	title        = {Tool Monitoring Adaptive Control System, {TMAC} Version 3.0},
+	author       = {{Cutting Tool Engineering}},
+	howpublished = {\url{https://ctemag.com/?p=102899}},
+	month        = sep,
+	year         = {2020},
+	note         = {Accessed: Nov. 1, 2026},
+}
+
+@misc{okuma_caron,
+	title        = {Partners in Technology: {Caron Engineering}},
+	author       = {{Okuma America Corporation}},
+	howpublished = {\url{https://www.okuma.com/partners/caron-engineering}},
+	year         = {n.d.},
+	note         = {Accessed: Nov. 1, 2026},
+}
+
+@book{oberg_machinerys_2020,
+	title     = {Machinery's Handbook},
+	author    = {Oberg, Erik and Jones, Franklin D. and Horton, Holbrook L. and Ryffel, Henry H. and McCauley, Christopher J.},
+	note      = {Edited by Laura Brengelman},
+	edition   = {32nd},
+	publisher = {Industrial Press},
+	address   = {South Norwalk, CT},
+	year      = {2020},
+}
+
+
+% ---------------------------------------------------------------------
+%  Sensorless (stall-detection) homing
+% ---------------------------------------------------------------------
+
+@manual{adi_tmc2209_2023,
+	title  = {{TMC2209} Datasheet: Power Driver for Stepper Motors},
+	author = {{Analog Devices (Trinamic)}},
+	note   = {Rev. 1.09},
+	year   = {2023},
+	url    = {https://www.analog.com/media/en/technical-documentation/data-sheets/TMC2209_datasheet_rev1.09.pdf},
+}
+
+@misc{voron_sensorless,
+	title        = {Configuring Sensorless Homing},
+	author       = {{Voron Design}},
+	howpublished = {\url{https://docs.vorondesign.com/tuning/sensorless.html}},
+	year         = {n.d.},
+	note         = {Voron Documentation. Accessed: Nov. 1, 2026},
+}
+
+
+% ---------------------------------------------------------------------
+%  High explosives: phase transformation and machining
+% ---------------------------------------------------------------------
+
+@article{levitas_coupled_2007,
+	title   = {Coupled phase transformation, chemical decomposition, and deformation in plastic-bonded explosive: Models},
+	author  = {Levitas, Valery I. and Henson, Bryan F. and Smilowitz, Laura B. and Zerkle, David K. and Asay, Blaine W.},
+	journal = {Journal of Applied Physics},
+	volume  = {102},
+	number  = {11},
+	pages   = {113502},
+	year    = {2007},
+	doi     = {10.1063/1.2817616},
+}
+
+@mastersthesis{woodrum_developing_2017,
+	title   = {Developing Lathing Parameters for {PBX} 9501},
+	author  = {Woodrum, Randall Brock},
+	school  = {Texas Tech University},
+	address = {Lubbock, TX},
+	month   = aug,
+	year    = {2017},
+	url     = {https://www.osti.gov/servlets/purl/1410981},
+}
+
+
+% ---------------------------------------------------------------------
+%  Friction, controls, and timing
+% ---------------------------------------------------------------------
+
+@article{armstrong_survey_1994,
+	title   = {A survey of models, analysis tools and compensation methods for the control of machines with friction},
+	author  = {Armstrong-H{\'e}louvry, Brian and Dupont, Pierre and Canudas de Wit, Carlos},
+	journal = {Automatica},
+	volume  = {30},
+	number  = {7},
+	pages   = {1083--1138},
+	year    = {1994},
+	doi     = {10.1016/0005-1098(94)90209-7},
+}
+
+@book{astrom_feedback_2021,
+	title     = {Feedback Systems: An Introduction for Scientists and Engineers},
+	author    = {{\AA}str{\"o}m, Karl Johan and Murray, Richard M.},
+	edition   = {2nd},
+	publisher = {Princeton University Press},
+	address   = {Princeton, NJ},
+	year      = {2021},
+	isbn      = {978-0-691-19398-4},
+}
+
+@book{franklin_digital_1998,
+	title     = {Digital Control of Dynamic Systems},
+	author    = {Franklin, Gene F. and Powell, J. David and Workman, Michael L.},
+	edition   = {3rd},
+	publisher = {Addison-Wesley},
+	address   = {Menlo Park, CA},
+	year      = {1998},
+	isbn      = {978-0-201-82054-6},
+}
+
+@article{cervin_how_2003,
+	title   = {How does control timing affect performance? Analysis and simulation of timing using {Jitterbug} and {TrueTime}},
+	author  = {Cervin, Anton and Henriksson, Dan and Lincoln, Bo and Eker, Johan and {\AA}rz{\'e}n, Karl-Erik},
+	journal = {IEEE Control Systems Magazine},
+	volume  = {23},
+	number  = {3},
+	pages   = {16--30},
+	year    = {2003},
+	doi     = {10.1109/MCS.2003.1200240},
+}
+
+@inproceedings{gao_scaling_2003,
+	title     = {Scaling and bandwidth-parameterization based controller tuning},
+	author    = {Gao, Zhiqiang},
+	booktitle = {Proceedings of the 2003 American Control Conference},
+	volume    = {6},
+	pages     = {4989--4996},
+	address   = {Denver, CO},
+	publisher = {IEEE},
+	year      = {2003},
+	doi       = {10.1109/ACC.2003.1242516},
+}
+
+@inproceedings{herbst_minimum_2021,
+	title     = {A minimum-footprint implementation of discrete-time {ADRC}},
+	author    = {Herbst, Gernot},
+	booktitle = {Proceedings of the 2021 European Control Conference ({ECC})},
+	address   = {Delft, Netherlands},
+	publisher = {IEEE},
+	pages     = {107--112},
+	year      = {2021},
+	doi       = {10.23919/ECC54610.2021.9655120},
+}
+
+
+% ---------------------------------------------------------------------
+%  Motor drives: current regulation and sampling
+% ---------------------------------------------------------------------
+
+@article{briz_analysis_2000,
+	title   = {Analysis and design of current regulators using complex vectors},
+	author  = {Briz, Fernando and Degner, Michael W. and Lorenz, Robert D.},
+	journal = {IEEE Transactions on Industry Applications},
+	volume  = {36},
+	number  = {3},
+	pages   = {817--825},
+	year    = {2000},
+	doi     = {10.1109/28.845057},
+}
+
+@article{blasko_sampling_1998,
+	title   = {Sampling of discontinuous voltage and current signals in electrical drives: a system approach},
+	author  = {Blasko, Vladimir and Kaura, Vikram and Niewiadomski, Walter},
+	journal = {IEEE Transactions on Industry Applications},
+	volume  = {34},
+	number  = {5},
+	pages   = {1123--1130},
+	year    = {1998},
+	doi     = {10.1109/28.720453},
+}
+
+
+% ---------------------------------------------------------------------
+%  FPGA hardware and design
+% ---------------------------------------------------------------------
+
+@book{snider_advanced_2023,
+	title     = {Advanced Digital System Design using {SoC} {FPGAs}: An Integrated Hardware/Software Approach},
+	author    = {Snider, Ross K.},
+	publisher = {Springer},
+	address   = {Cham, Switzerland},
+	year      = {2023},
+	doi       = {10.1007/978-3-031-15416-4},
+}
+
+@manual{amd_ug574,
+	title  = {{UltraScale} Architecture Configurable Logic Block User Guide},
+	author = {{Advanced Micro Devices (AMD)}},
+	note   = {UG574, v1.6},
+	year   = {2025},
+	url    = {https://docs.amd.com/r/en-US/ug574-ultrascale-clb},
+}
+
+@manual{amd_ds987,
+	title  = {Kria {K26} {SOM} Data Sheet},
+	author = {{Advanced Micro Devices (AMD)}},
+	note   = {DS987, v1.2},
+	month  = mar,
+	year   = {2022},
+}
+
+
+% ---------------------------------------------------------------------
+%  Additional hardware datasheets
+% ---------------------------------------------------------------------
+
+@manual{adi_max11162_2017,
+	title  = {{MAX11162}: 16-Bit, 500ksps, +5{V} Unipolar Input, {SAR} {ADC}, in Tiny 10-Pin {$\mu$MAX}},
+	author = {{Analog Devices (Maxim Integrated)}},
+	note   = {Datasheet, Rev. 2},
+	month  = mar,
+	year   = {2017},
+	url    = {https://www.analog.com/media/en/technical-documentation/data-sheets/MAX11162.pdf},
+}
+
+@misc{transducer_mlp,
+	title        = {Miniature Low Profile Load Cell, Universal / Tension or Compression ({MLP} Series)},
+	author       = {{Transducer Techniques}},
+	howpublished = {\url{https://www.transducertechniques.com/mlp-load-cell.aspx}},
+	year         = {n.d.},
+	note         = {Model MLP-50. Accessed: Nov. 1, 2026},
+}
+
+
+% ---------------------------------------------------------------------
+%  Added third pass
+% ---------------------------------------------------------------------
+
+@misc{dings_ek2_2026,
+	title        = {{EK2} Encoder -- Rotary Stepper {NEMA} 23 Motor Options},
+	author       = {{DINGS' Motion USA}},
+	howpublished = {\url{https://www.dingsmotionusa.com/rotary-stepper-nema-23}},
+	year         = {2026},
+	note         = {Incremental encoder option for size 23 stepper motors, single-ended and differential output. Accessed: Nov. 1, 2026},
+}
+
+% TODO: placeholder for Sam's thesis. Update the title (and month/year)
+% once it is published, and confirm the spelling of the surname
+% (Civello vs. Civiello).
+@mastersthesis{civiello_characterization_2026,
+	title   = {Something Manufacturing},
+	author  = {Civello, Samuel},
+	school  = {Montana State University},
+	address = {Bozeman, MT},
+	month   = aug,
+	year    = {2026},
 }

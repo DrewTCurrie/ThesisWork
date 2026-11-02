@@ -8,44 +8,44 @@ A level-1 auxiliary file: conclusion.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: appendixa.aux
 Database file #1: mybib.bib
-You've used 4 entries,
+You've used 36 entries,
             2773 wiz_defined-function locations,
-            624 strings with 5641 characters,
-and the built_in function-call counts, 2028 in all, are:
-= -- 195
-> -- 102
-< -- 3
-+ -- 34
-- -- 30
-* -- 176
-:= -- 314
-add.period$ -- 16
-call.type$ -- 4
-change.case$ -- 22
-chr.to.int$ -- 4
-cite$ -- 8
-duplicate$ -- 81
-empty$ -- 163
-format.name$ -- 40
-if$ -- 417
-int.to.chr$ -- 1
+            836 strings with 12203 characters,
+and the built_in function-call counts, 15481 in all, are:
+= -- 1438
+> -- 830
+< -- 26
++ -- 289
+- -- 252
+* -- 1232
+:= -- 2454
+add.period$ -- 146
+call.type$ -- 36
+change.case$ -- 187
+chr.to.int$ -- 35
+cite$ -- 72
+duplicate$ -- 704
+empty$ -- 1248
+format.name$ -- 298
+if$ -- 3218
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 32
-num.names$ -- 16
-pop$ -- 32
+missing$ -- 27
+newline$ -- 223
+num.names$ -- 144
+pop$ -- 349
 preamble$ -- 1
-purify$ -- 18
+purify$ -- 156
 quote$ -- 0
-skip$ -- 62
+skip$ -- 521
 stack$ -- 0
-substring$ -- 114
-swap$ -- 7
-text.length$ -- 0
+substring$ -- 450
+swap$ -- 76
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
+type$ -- 371
 warning$ -- 0
-while$ -- 20
+while$ -- 141
 width$ -- 0
-write$ -- 67
+write$ -- 550

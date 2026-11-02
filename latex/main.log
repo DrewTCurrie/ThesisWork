@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.8.28)  28 OCT 2026 18:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.8.28)  1 NOV 2026 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1627,7 +1627,16 @@ l.154 \begin{preliminary}
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (./main.lot)
+ (./main.lot
+
+Package tagpdf Warning: The rule between parent 'Link/pdf2' 
+(tagpdf)                and child 'Link/pdf2' is not allowed (struct 304)
+
+
+Package tagpdf Warning: The rule between parent 'Link/pdf2' 
+(tagpdf)                and child 'Link/pdf2' is not allowed (struct 308)
+
+)
 \tf@lot=\write5
 \openout5 = `main.lot'.
 
@@ -1724,152 +1733,34 @@ l.154 \begin{preliminary}
 
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-[18]) [19]
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17])
+[18]
 \openout2 = `theory.aux'.
 
  (./theory.tex
 *****************  Chapter 2. Field Oriented Control with Two-Phase Hybrid Step
 per Motor  *****************
-[20
+[19
 
 
 
 
-] [21] [22] [23]
+] [20]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 462)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 609)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 463)
+(tagpdf)                and child 'text/user' is not allowed (struct 610)
 
 
-Package tagpdf Warning: nested marked content found - mcid 445
+Package tagpdf Warning: nested marked content found - mcid 679
 
 
-Package tagpdf Warning: there is no mc to end at 446
+Package tagpdf Warning: there is no mc to end at 682
 
-[24] [25]
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 490)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 491)
-
-
-Package tagpdf Warning: nested marked content found - mcid 471
-
-
-Package tagpdf Warning: there is no mc to end at 472
-
-[26] [27]
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 513)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 514)
-
-
-Package tagpdf Warning: nested marked content found - mcid 489
-
-
-Package tagpdf Warning: there is no mc to end at 490
-
-[28] [29] [30]
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 564)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 565)
-
-
-Package tagpdf Warning: nested marked content found - mcid 535
-
-
-Package tagpdf Warning: there is no mc to end at 536
-
-
-Package natbib Warning: Citation `kenjo1994' on page 31 undefined on input line
- 296.
-
-
-Package natbib Warning: Citation `bodson1993' on page 31 undefined on input lin
-e 296.
-
-[31] [32] [33] [34] [35]
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 628)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 629)
-
-
-Package tagpdf Warning: nested marked content found - mcid 606
-
-
-Package tagpdf Warning: there is no mc to end at 607
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 632)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 633)
-
-
-Package tagpdf Warning: nested marked content found - mcid 608
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 634)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 635)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 636)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 637)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 638)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 639)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 640)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 641)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 642)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 643)
-
+[21] [22] [23]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct 644)
@@ -1879,353 +1770,34 @@ Package tagpdf Warning: The rule between parent 'text-unit/user'
 (tagpdf)                and child 'text/user' is not allowed (struct 645)
 
 
+Package tagpdf Warning: nested marked content found - mcid 715
+
+
+Package tagpdf Warning: there is no mc to end at 718
+
+[24] [25]
+
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 646)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 676)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 647)
+(tagpdf)                and child 'text/user' is not allowed (struct 677)
 
+
+Package tagpdf Warning: nested marked content found - mcid 747
+
+
+Package tagpdf Warning: there is no mc to end at 748
+
+[26]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 648)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 701)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 649)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 650)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 651)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 652)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 653)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 654)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 655)
-
-
-Package tagpdf Warning: there is no mc to end at 620
-
-[36] [37] [38] [39] [40]
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 731)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 732)
-
-
-Package tagpdf Warning: nested marked content found - mcid 702
-
-
-Package tagpdf Warning: there is no mc to end at 703
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 735)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 736)
-
-
-Package tagpdf Warning: nested marked content found - mcid 704
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 737)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 738)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 739)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 740)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 741)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 742)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 743)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 744)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 745)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 746)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 747)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 748)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 749)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 750)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 751)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 752)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 753)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 754)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 755)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 756)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 757)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 758)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 759)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 760)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 761)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 762)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 763)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 764)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 765)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 766)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 767)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 768)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 769)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 770)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 771)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 772)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 773)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 774)
-
-
-Package tagpdf Warning: there is no mc to end at 724
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 777)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 778)
-
-
-Package tagpdf Warning: nested marked content found - mcid 725
-
-
-Package tagpdf Warning: there is no mc to end at 726
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 781)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 782)
-
-
-Package tagpdf Warning: nested marked content found - mcid 727
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 783)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 784)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 785)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 786)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 787)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 788)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 789)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 790)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 791)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 792)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 793)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 794)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 795)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 796)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 797)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 798)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 799)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 800)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 801)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 802)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 803)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 804)
-
-
-Package tagpdf Warning: there is no mc to end at 739
-
-[41] [42] [43]
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 839)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 840)
+(tagpdf)                and child 'text/user' is not allowed (struct 702)
 
 
 Package tagpdf Warning: nested marked content found - mcid 767
@@ -2233,621 +1805,1131 @@ Package tagpdf Warning: nested marked content found - mcid 767
 
 Package tagpdf Warning: there is no mc to end at 768
 
-[44]
+[27] [28] [29] [30]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 858)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 752)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 859)
+(tagpdf)                and child 'text/user' is not allowed (struct 753)
 
 
-Package tagpdf Warning: nested marked content found - mcid 781
+Package tagpdf Warning: nested marked content found - mcid 818
 
 
-Package tagpdf Warning: there is no mc to end at 782
+Package tagpdf Warning: there is no mc to end at 819
 
+[31] [32] [33] [34]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 862)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 824)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 863)
+(tagpdf)                and child 'text/user' is not allowed (struct 825)
 
 
-Package tagpdf Warning: nested marked content found - mcid 783
+Package tagpdf Warning: nested marked content found - mcid 904
 
 
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 864)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 865)
+Package tagpdf Warning: there is no mc to end at 905
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 866)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 828)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 867)
+(tagpdf)                and child 'text/user' is not allowed (struct 829)
+
+
+Package tagpdf Warning: nested marked content found - mcid 906
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 868)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 830)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 869)
+(tagpdf)                and child 'text/user' is not allowed (struct 831)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 870)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 832)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 871)
+(tagpdf)                and child 'text/user' is not allowed (struct 833)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 872)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 834)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 873)
+(tagpdf)                and child 'text/user' is not allowed (struct 835)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 874)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 836)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 875)
+(tagpdf)                and child 'text/user' is not allowed (struct 837)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 876)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 838)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 877)
+(tagpdf)                and child 'text/user' is not allowed (struct 839)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 878)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 840)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 879)
+(tagpdf)                and child 'text/user' is not allowed (struct 841)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 880)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 842)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 881)
+(tagpdf)                and child 'text/user' is not allowed (struct 843)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 882)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 844)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 883)
+(tagpdf)                and child 'text/user' is not allowed (struct 845)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 884)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 846)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 885)
-
-
-Package tagpdf Warning: there is no mc to end at 795
+(tagpdf)                and child 'text/user' is not allowed (struct 847)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 888)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 848)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 889)
-
-
-Package tagpdf Warning: nested marked content found - mcid 796
-
-
-Package tagpdf Warning: there is no mc to end at 797
+(tagpdf)                and child 'text/user' is not allowed (struct 849)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 892)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 850)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 893)
+(tagpdf)                and child 'text/user' is not allowed (struct 851)
 
 
-Package tagpdf Warning: nested marked content found - mcid 798
+Package tagpdf Warning: there is no mc to end at 918
+
+[35] [36] [37] [38] [39]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 927)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 928)
+
+
+Package tagpdf Warning: nested marked content found - mcid 999
+
+
+Package tagpdf Warning: there is no mc to end at 1000
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 894)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 931)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 895)
+(tagpdf)                and child 'text/user' is not allowed (struct 932)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1001
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 896)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 933)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 897)
+(tagpdf)                and child 'text/user' is not allowed (struct 934)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 898)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 935)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 899)
+(tagpdf)                and child 'text/user' is not allowed (struct 936)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 900)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 937)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 901)
+(tagpdf)                and child 'text/user' is not allowed (struct 938)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 902)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 939)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 903)
+(tagpdf)                and child 'text/user' is not allowed (struct 940)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 904)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 941)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 905)
+(tagpdf)                and child 'text/user' is not allowed (struct 942)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 906)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 943)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 907)
+(tagpdf)                and child 'text/user' is not allowed (struct 944)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 908)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 945)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 909)
+(tagpdf)                and child 'text/user' is not allowed (struct 946)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 910)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 947)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 911)
+(tagpdf)                and child 'text/user' is not allowed (struct 948)
 
 
-Package tagpdf Warning: there is no mc to end at 808
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 949)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 950)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 951)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 952)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 953)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 954)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 955)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 956)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 957)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 958)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 959)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 960)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 961)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 962)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 963)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 964)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 965)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 966)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 967)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 968)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 969)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 970)
+
+
+Package tagpdf Warning: there is no mc to end at 1021
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 973)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 974)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1022
+
+
+Package tagpdf Warning: there is no mc to end at 1023
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 977)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 978)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1024
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 979)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 980)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 981)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 982)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 983)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 984)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 985)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 986)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 987)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 988)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 989)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 990)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 991)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 992)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 993)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 994)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 995)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 996)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 997)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 998)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct 999)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1000)
+
+
+Package tagpdf Warning: there is no mc to end at 1036
+
+[40] [41] [42]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1036)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1037)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1066
+
+
+Package tagpdf Warning: there is no mc to end at 1067
+
+[43] [44]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1055)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1056)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1082
+
+
+Package tagpdf Warning: there is no mc to end at 1083
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1059)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1060)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1084
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1061)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1062)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1063)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1064)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1065)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1066)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1067)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1068)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1069)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1070)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1071)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1072)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1073)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1074)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1075)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1076)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1077)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1078)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1079)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1080)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1081)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1082)
+
+
+Package tagpdf Warning: there is no mc to end at 1096
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1085)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1086)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1097
+
+
+Package tagpdf Warning: there is no mc to end at 1098
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1089)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1090)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1099
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1091)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1092)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1093)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1094)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1095)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1096)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1097)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1098)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1099)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1100)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1101)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1102)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1103)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1104)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1105)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1106)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1107)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1108)
+
+
+Package tagpdf Warning: there is no mc to end at 1109
 
 [45] [46] [47]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 950)
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1151)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 951)
+(tagpdf)                and child 'text/user' is not allowed (struct 1152)
 
 
-Package tagpdf Warning: nested marked content found - mcid 837
+Package tagpdf Warning: nested marked content found - mcid 1146
 
 
-Package tagpdf Warning: there is no mc to end at 838
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 954)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 955)
-
-
-Package tagpdf Warning: nested marked content found - mcid 839
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 956)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 957)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 958)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 959)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 960)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 961)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 962)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 963)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 964)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 965)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 966)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 967)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 968)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 969)
-
-
-Package tagpdf Warning: there is no mc to end at 847
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 972)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 973)
-
-
-Package tagpdf Warning: nested marked content found - mcid 848
-
-
-Package tagpdf Warning: there is no mc to end at 849
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 976)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 977)
-
-
-Package tagpdf Warning: nested marked content found - mcid 850
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 978)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 979)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 980)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 981)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 982)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 983)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 984)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 985)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 986)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 987)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 988)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 989)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 990)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 991)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 992)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 993)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 994)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 995)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 996)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 997)
-
-
-Package tagpdf Warning: The rule between parent 'text/user' 
-(tagpdf)                and child 'text-unit/user' is not allowed (struct 998)
-
-
-Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 999)
+Package tagpdf Warning: there is no mc to end at 1147
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1000)
+(tagpdf)                1155)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1001)
+(tagpdf)                and child 'text/user' is not allowed (struct 1156)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1148
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1002)
+(tagpdf)                1157)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1003)
+(tagpdf)                and child 'text/user' is not allowed (struct 1158)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1004)
+(tagpdf)                1159)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1005)
+(tagpdf)                and child 'text/user' is not allowed (struct 1160)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1006)
+(tagpdf)                1161)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1007)
+(tagpdf)                and child 'text/user' is not allowed (struct 1162)
 
 
-Package tagpdf Warning: there is no mc to end at 866
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1163)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1164)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1165)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1166)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1167)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1168)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1169)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1170)
+
+
+Package tagpdf Warning: there is no mc to end at 1156
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1173)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1174)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1157
+
+
+Package tagpdf Warning: there is no mc to end at 1158
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1177)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1178)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1159
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1179)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1180)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1181)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1182)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1183)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1184)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1185)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1186)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1187)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1188)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1189)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1190)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1191)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1192)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1193)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1194)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1195)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1196)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1197)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1198)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1199)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1200)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1201)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1202)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1203)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1204)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1205)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1206)
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1207)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1208)
+
+
+Package tagpdf Warning: there is no mc to end at 1175
 
 [48] [49]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1035)
+(tagpdf)                1238)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1036)
+(tagpdf)                and child 'text/user' is not allowed (struct 1239)
 
 
-Package tagpdf Warning: nested marked content found - mcid 888
+Package tagpdf Warning: nested marked content found - mcid 1202
 
 
-Package tagpdf Warning: there is no mc to end at 889
+Package tagpdf Warning: there is no mc to end at 1203
 
-[50] [51] [52] [53]
-
-Package natbib Warning: Citation `han2009' on page 54 undefined on input line 9
-69.
-
-
-Package natbib Warning: Citation `gao2003' on page 54 undefined on input line 9
-69.
-
-[54] [55]
-
-Package natbib Warning: Citation `herbst2023' on page 56 undefined on input lin
-e 1035.
-
-[56] [57]
-
-Package natbib Warning: Citation `gao2003' on page 58 undefined on input line 1
-094.
-
-
-Package natbib Warning: Citation `herbst2013' on page 58 undefined on input lin
-e 1095.
-
-
-Overfull \hbox (7.17096pt too wide) in paragraph at lines 1099--1102
+[50] [51] [52] [53] [54] [55] [56]
+Overfull \hbox (7.17096pt too wide) in paragraph at lines 1119--1122
 [][][][] [] []|   []   |   [][] \OT1/cmr/m/n/12 Elim-i-nat-ing the ob-server st
 ates from Equa-tions []
  []
 
-[58] [59]
-
-Package natbib Warning: Citation `herbst2013' on page 60 undefined on input lin
-e 1168.
-
-[60] [61]
+[57] [58] [59] [60]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1239)
+(tagpdf)                1451)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1240)
+(tagpdf)                and child 'text/user' is not allowed (struct 1452)
 
 
-Package tagpdf Warning: nested marked content found - mcid 1077
+Package tagpdf Warning: nested marked content found - mcid 1402
 
 
-Package tagpdf Warning: there is no mc to end at 1078
+Package tagpdf Warning: there is no mc to end at 1403
 
-[62] [63]
+[61] [62] [63]
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1278)
+(tagpdf)                1490)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1279)
+(tagpdf)                and child 'text/user' is not allowed (struct 1491)
 
 
-Package tagpdf Warning: nested marked content found - mcid 1108
+Package tagpdf Warning: nested marked content found - mcid 1437
 
 
-Package tagpdf Warning: there is no mc to end at 1109
+Package tagpdf Warning: there is no mc to end at 1438
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1282)
+(tagpdf)                1494)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1283)
+(tagpdf)                and child 'text/user' is not allowed (struct 1495)
 
 
-Package tagpdf Warning: nested marked content found - mcid 1110
+Package tagpdf Warning: nested marked content found - mcid 1439
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1284)
+(tagpdf)                1496)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1285)
+(tagpdf)                and child 'text/user' is not allowed (struct 1497)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1286)
+(tagpdf)                1498)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1287)
+(tagpdf)                and child 'text/user' is not allowed (struct 1499)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1288)
+(tagpdf)                1500)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1289)
+(tagpdf)                and child 'text/user' is not allowed (struct 1501)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1290)
+(tagpdf)                1502)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1291)
+(tagpdf)                and child 'text/user' is not allowed (struct 1503)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1292)
+(tagpdf)                1504)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1293)
+(tagpdf)                and child 'text/user' is not allowed (struct 1505)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1294)
+(tagpdf)                1506)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1295)
+(tagpdf)                and child 'text/user' is not allowed (struct 1507)
 
 
 Package tagpdf Warning: The rule between parent 'text/user' 
 (tagpdf)                and child 'text-unit/user' is not allowed (struct
-(tagpdf)                1296)
+(tagpdf)                1508)
 
 
 Package tagpdf Warning: The rule between parent 'text-unit/user' 
-(tagpdf)                and child 'text/user' is not allowed (struct 1297)
+(tagpdf)                and child 'text/user' is not allowed (struct 1509)
 
 
-Package tagpdf Warning: there is no mc to end at 1118
+Package tagpdf Warning: there is no mc to end at 1447
 
-[64]) [65]
+[64]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1533)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1534)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1471
+
+
+Package tagpdf Warning: there is no mc to end at 1472
+
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1543)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1544)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1476
+
+
+Package tagpdf Warning: there is no mc to end at 1477
+
+[65] [66]
+
+Package tagpdf Warning: The rule between parent 'text/user' 
+(tagpdf)                and child 'text-unit/user' is not allowed (struct
+(tagpdf)                1568)
+
+
+Package tagpdf Warning: The rule between parent 'text-unit/user' 
+(tagpdf)                and child 'text/user' is not allowed (struct 1569)
+
+
+Package tagpdf Warning: nested marked content found - mcid 1504
+
+
+Package tagpdf Warning: there is no mc to end at 1505
+
+) [67]
 \openout2 = `manuscript_option.aux'.
 
  (./manuscript_option.tex
@@ -2857,28 +2939,28 @@ ter  *****************
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 4.
 
-[66
+[68
 
 
 
 
-]) [67]
+]) [69]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 *****************  Chapter 4. Conclusion  *****************
-) [68
+[70
 
 
 
 
-]
+]) [71]
 ***************** References Cited******************
-(./main.bbl) [69
+(./main.bbl [72
 
 
 
-]
+] [73] [74]) [75]
 \openout2 = `appendixa.aux'.
 
  (./appendixa.tex
@@ -2895,71 +2977,46 @@ as been already used, duplicate ignored
 l.1 \chapter{Example Code}
                           \label{appendixa}
 LaTeX Info: Redefining \\ on input line 1.
- [70
+ [76
 
 
-]) [71
+]) [77
 
-]
-
-Package natbib Warning: There were undefined citations.
-
-(./main.aux (./introduction.aux) (./theory.aux) (./manuscript_option.aux)
-(./conclusion.aux) (./appendixa.aux))
-
-Package tagpdf Warning: something is wrong with the mcid--rerun
-
-
-Package tagpdf Warning: something is wrong with the mcid--rerun
-
-
-Package tagpdf Warning: something is wrong with the mcid--rerun
-
-
-Package tagpdf Warning: something is wrong with the mcid--rerun
-
-
-Package tagpdf Warning: something is wrong with the mcid--rerun
-
-
-Package tagpdf Warning: something is wrong with the mcid--rerun
-
-
-Package tagpdf Warning: something is wrong with the mcid--rerun
-
- ) 
+] (./main.aux
+(./introduction.aux) (./theory.aux) (./manuscript_option.aux) (./conclusion.aux
+) (./appendixa.aux)) ) 
 Here is how much of TeX's memory you used:
- 46876 strings out of 476034
- 1104125 string characters out of 5792864
+ 50778 strings out of 476034
+ 1232624 string characters out of 5792864
  1876388 words of memory out of 6000000
- 66307 multiletter control sequences out of 15000+600000
+ 70119 multiletter control sequences out of 15000+600000
  530963 words of font info for 77 fonts, out of 8000000 for 9000
  1137 hyphenation exceptions out of 8191
- 90i,15n,101p,2569b,4397s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/pdftex/pdftexspace.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-cm-super/sfrm1200.pfb>
-Output written on main.pdf (82 pages, 569419 bytes).
+ 90i,15n,101p,2197b,6342s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/pdftex/pdftexspace.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (88 pages, 643449 bytes).
 PDF statistics:
- 3895 PDF objects out of 4296 (max. 8388607)
- 3727 compressed objects within 38 object streams
- 199 named destinations out of 1000 (max. 500000)
- 11033 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 5200 PDF objects out of 6186 (max. 8388607)
+ 5013 compressed objects within 51 object streams
+ 244 named destinations out of 1000 (max. 500000)
+ 14985 words of extra memory for PDF output out of 17280 (max. 10000000)
 
