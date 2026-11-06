@@ -580,7 +580,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="2cmXZV-8p99e8jIgTKAT" name="Cascaded PID System">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+    <mxGraphModel dx="3325" dy="1430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -652,7 +652,7 @@
         <mxCell id="CYFC7D4ff7aMMxGhqPs1-12" parent="8_LO2OrBgeffw7Pmohi9-8" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;h1 style=&quot;margin-top: 0px;&quot; align=&quot;center&quot;&gt;Current&lt;/h1&gt;&lt;p align=&quot;center&quot;&gt;Current PID Controller&lt;/p&gt;" vertex="1">
           <mxGeometry height="80" width="160" x="20" as="geometry" />
         </mxCell>
-        <mxCell id="8_LO2OrBgeffw7Pmohi9-9" connectable="0" parent="1" style="group;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillColor=default;" value="" vertex="1">
+        <mxCell id="8_LO2OrBgeffw7Pmohi9-9" connectable="0" parent="1" style="group;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;fillColor=default;" value="" vertex="1">
           <mxGeometry height="80" width="200" x="120" y="80" as="geometry" />
         </mxCell>
         <mxCell id="CYFC7D4ff7aMMxGhqPs1-1" parent="8_LO2OrBgeffw7Pmohi9-9" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;rounded=1;roundedPerimeter=1;fillColor=#66C5CC;strokeWidth=2;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
@@ -673,7 +673,7 @@
         <mxCell id="8_LO2OrBgeffw7Pmohi9-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;strokeWidth=11;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;$$-$$&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="23.5" x="409" y="130" as="geometry" />
         </mxCell>
-        <mxCell id="8_LO2OrBgeffw7Pmohi9-15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;curved=0;dashed=1;dashPattern=8 8;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="8_LO2OrBgeffw7Pmohi9-12" value="">
+        <mxCell id="8_LO2OrBgeffw7Pmohi9-15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;curved=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="8_LO2OrBgeffw7Pmohi9-12" value="">
           <mxGeometry height="50" relative="1" width="50" x="-0.1749" as="geometry">
             <Array as="points">
               <mxPoint x="420" y="410" />
@@ -694,7 +694,7 @@
         <mxCell id="8_LO2OrBgeffw7Pmohi9-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;strokeWidth=11;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;$$-$$&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="23.5" x="878" y="189" as="geometry" />
         </mxCell>
-        <mxCell id="8_LO2OrBgeffw7Pmohi9-20" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;curved=0;strokeWidth=2;dashed=1;dashPattern=8 4 1 4;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="8_LO2OrBgeffw7Pmohi9-17" value="">
+        <mxCell id="8_LO2OrBgeffw7Pmohi9-20" edge="1" parent="1" style="endArrow=classic;html=1;rounded=1;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;curved=0;strokeWidth=2;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" target="8_LO2OrBgeffw7Pmohi9-17" value="">
           <mxGeometry height="50" relative="1" width="50" x="-0.0304" as="geometry">
             <Array as="points">
               <mxPoint x="890" y="410" />
@@ -899,7 +899,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Jo_s5T24S5xyTX2_SRSc" name="ADRC Block Diagram">
-    <mxGraphModel dx="3827" dy="1720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+    <mxGraphModel dx="3325" dy="1430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -4798,7 +4798,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="OvtmFSCehoHGuNFKiu-E" name="Simulink: PWM Generation">
-    <mxGraphModel dx="2475" dy="1430" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
