@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="16">
+<mxfile host="app.diagrams.net" pages="17">
   <diagram id="BWGX5MCaTqywcLs-2Vpv" name="Encoder Waveform">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
@@ -2987,7 +2987,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="bI1Iv9vtlZrLzPi7Btbq" name="Simulink: Complete Control System">
-    <mxGraphModel dx="3827" dy="1720" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -3340,6 +3340,23 @@
         </mxCell>
         <mxCell id="I_K8xn8pK_PkJx6BfM3b-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;strokeWidth=2;" value="\(\text{Load Cell ADC Code}\)" vertex="1">
           <mxGeometry height="30" width="37" x="-85" y="625" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="igo-MPmGb-LUPakExMxx" name="Simulink: Encoder Data Processing">
+    <mxGraphModel dx="822" dy="475" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9696BsaqV2W0lyy1-8iL-1" parent="1" style="shape=offPageConnector;whiteSpace=wrap;html=1;rotation=-90;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="110" width="30" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9696BsaqV2W0lyy1-8iL-2" parent="1" style="shape=offPageConnector;whiteSpace=wrap;html=1;rotation=-90;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="110" width="30" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9696BsaqV2W0lyy1-8iL-3" parent="1" style="shape=offPageConnector;whiteSpace=wrap;html=1;rotation=-90;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="110" width="30" x="80" y="200" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
