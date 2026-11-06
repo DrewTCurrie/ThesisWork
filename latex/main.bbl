@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -90,6 +90,16 @@ Fernando Briz, Michael~W. Degner, and Robert~D. Lorenz.
 \newblock \url{https://www.caroneng.com/products/tmac/}, n.d.
 \newblock Accessed: Nov. 1, 2026.
 
+\bibitem[Cervin et~al.(2003)Cervin, Henriksson, Lincoln, Eker, and
+  {\AA}rz{\'e}n]{cervin_how_2003}
+Anton Cervin, Dan Henriksson, Bo~Lincoln, Johan Eker, and Karl-Erik
+  {\AA}rz{\'e}n.
+\newblock How does control timing affect performance? analysis and simulation
+  of timing using {Jitterbug} and {TrueTime}.
+\newblock \emph{IEEE Control Systems Magazine}, 23\penalty0 (3):\penalty0
+  16--30, 2003.
+\newblock \doi{10.1109/MCS.2003.1200240}.
+
 \bibitem[Cho et~al.(2016)Cho, Han, Chi, and Yoo]{cho_tool_2016}
 Hyeon~Sung Cho, Ji~Hyeong Han, Su~Young Chi, and Kwan~Hee Yoo.
 \newblock A tool breakage detection system using load signals of spindle motors
@@ -136,6 +146,20 @@ Stijn Derammelaere, Bram Vervisch, Frederik De~Belie, Johannes Cottyn, Griet
   2026{\natexlab{b}}.
 \newblock Specifications for model 23H2065. Accessed: Nov. 1, 2026.
 
+\bibitem[Franklin et~al.(1998)Franklin, Powell, and
+  Workman]{franklin_digital_1998}
+Gene~F. Franklin, J.~David Powell, and Michael~L. Workman.
+\newblock \emph{Digital Control of Dynamic Systems}.
+\newblock Addison-Wesley, Menlo Park, CA, 3rd edition, 1998.
+\newblock ISBN 978-0-201-82054-6.
+
+\bibitem[Gao(2003)]{gao_scaling_2003}
+Zhiqiang Gao.
+\newblock Scaling and bandwidth-parameterization based controller tuning.
+\newblock In \emph{Proceedings of the 2003 American Control Conference},
+  volume~6, pages 4989--4996, Denver, CO, 2003. IEEE.
+\newblock \doi{10.1109/ACC.2003.1242516}.
+
 \bibitem[Groover(2010)]{groover_fundamentals_2010}
 Mikell~P. Groover.
 \newblock \emph{Fundamentals of Modern Manufacturing: Materials, Processes, and
@@ -151,6 +175,13 @@ B.~Henke, O.~Sawodny, S.~Schmidt, and R.~Neumann.
   2013.
 \newblock \doi{10.3182/20130410-3-CN-2034.00042}.
 \newblock 6th IFAC Symposium on Mechatronic Systems, Hangzhou, China.
+
+\bibitem[Herbst(2021)]{herbst_minimum_2021}
+Gernot Herbst.
+\newblock A minimum-footprint implementation of discrete-time {ADRC}.
+\newblock In \emph{Proceedings of the 2021 European Control Conference
+  ({ECC})}, pages 107--112, Delft, Netherlands, 2021. IEEE.
+\newblock \doi{10.23919/ECC54610.2021.9655120}.
 
 \bibitem[Herbst and Madonski(2023)]{herbst_tuning_2023}
 Gernot Herbst and Rafal Madonski.
@@ -191,7 +222,7 @@ Christoffer Nilsson and Daniel Modrack.
 Erik Oberg, Franklin~D. Jones, Holbrook~L. Horton, Henry~H. Ryffel, and
   Christopher~J. McCauley.
 \newblock \emph{Machinery's Handbook}.
-\newblock Industrial Press, South Norwalk, CT, 32nd edition, 2020.
+\newblock Industrial Press, South Norwalk, CT, 31st edition, 2020.
 \newblock Edited by Laura Brengelman.
 
 \bibitem[{Okuma America Corporation}(n.d.)]{okuma_caron}

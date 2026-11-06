@@ -1,0 +1,38 @@
+\chapter{Conclusion}\label{conclusion}
+% Outline 
+% 1. Related to the introduction, restate TMAC system limitations
+%	Show how the objective is met with the stepper motor quadrature
+%	current control system and can be related to total torque load
+%	cover how this work setup any future work on pressure or linear
+%	load based on the total torque on the system
+Through the use of existing systems, data can be collected that shows a correlation between machine axes power and current cutting conditions \cite{civiello_characterization_2026}. Prior work shows the limitations of the existing systems to resolve the data collected to current cutting conditions. Through the use of a high speed system that can monitor per motor disturbances, meaningful disturbances can be measured. A low-level hardware centric approach provides a direct relationship between the current required to move the axes and the load on the axes. This relationship sets the foundation from which future work on separating the no-load motor parameters from machining disturbances can be built. 
+
+% 2. Summarize what was developed, 
+%	- Stepper motor model 
+%	- Faithful recreation of the PCB in Simulink
+%	- Control system ready for the FPGA 
+%	- Control architecture designed for no position overshoot and 	minimum current solution to get the requried torque and only enough current for the torque load
+The present work concludes with a functional simulation of the desired control system and machine axis in a manner that is indicative of a physical system. Through this, the quadrature current in the stepper motor is related mathematically to the torque production. To achieve this modeling, a phase current based stepper motor model was designed that replicates the stepper motor on the physical system. A simulated model of the analog electronics on the physical PCB was designed following the expected signals of the actual PCB and FPGA. A complete cascaded control system was designed following the standard for machine control as shown in \cite{altintas_manufacturing_2012}. Through this the control system was designed to achieve no position overshoot, maintain steady state position and velocity as shown in Table~\ref{tab:exp_performance}, while providing a minimum quadrature current solution to the required torque of the motor. 
+
+% 3. Key results, load estimation, controller performance, disturbance rejcetion and handling, last impressions of the work/research
+
+Through the present work, the quadrature current reference was determined to provide the most direct relationship to the torque on the motor. This signal, the output of the velocity ADRC, has a higher signal-to-noise ratio making it an ideal choice of reference compared to the feedback quadrature current. The Active Disturbance Rejection Control system is able to handle anticipated disturbance loads and properly respond providing a reliable system to control a CNC machine axis. 
+
+% 4. System limitations
+%	- H-Bridge modeling limits
+%	- Ideal sensors
+% 	- Detent and Reluctance torque are omitted 
+%	- Limitation of the current measurement system (IE Clipping)
+
+The present work omits modeling some aspects of the PCB and stepper motor. These omissions include H-Bridge ringing, propagation delay, and latency along with stepper motor reluctance and detent torque. These effects are assumed to be small relative to the loads of interest, as stated in Section~\ref{sec:stepperMotorModel}, and the actual FPGA implementation of the ADRC system is expected to absorb these disturbances. The sensors are modeled as ideal, and the simulation models a revised current-sensing stage, the INA241A4 with a \SI{5}{\milli\ohm} shunt, rather than the as-built PCB, whose \SI{2.5}{\ampere} measurement limit is below the \SI{4.243}{\ampere} peak current of the motor.
+
+% 5. Future work 
+%	- PCB Revision with specifics to fix ADC limits on current 
+%	- FPGA depolyment and Linux integration
+%	- Motion profile integration for real use cases
+
+Future work to move forward on implementing the design on the physical system includes revising the current-sensing stage to the INA241A4 and \SI{5}{\milli\ohm} shunt modeled in this work, which removes the \SI{2.5}{\ampere} clipping, and reworking the low-pass filter to allow for filtering at higher than $\SI{50}{\kilo\hertz}$ without phase delay. This filtering would allow for the accurate sampling of the phase currents synchronized with PWM pulses to avoid sampling ripple current. Further work will need to implement an embedded Linux code to access the available FPGA fabric registers to control the control system and implement FPGA IO handling to connect the FPGA to the PCB. Once completed, work can begin on implementation of a high level motion profile system that can be paired with G-Code processing for integration into existing CNC Equipment. 
+
+% 6. Tie it all together with the big picture implecations, real-time force aware machining platform. 
+
+Through the use of Field Oriented Control on two-phase hybrid stepper motors, the quadrature current can be related to the torque load on the motor. Controlling the motor position and velocity through the quadrature current provides a reference signal of the minimum current required to generate motion and overcome the torque. This signal is directly proportional to the required torque by the torque constant $K_t$ of the stepper motor without the detent torque and with identical inductance per phase. 
