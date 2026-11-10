@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net">
+<mxfile host="app.diagrams.net" pages="2">
   <diagram name="Machine Diagram: Lathe Cutting" id="7jxorIsgraI13Ep0r0sI">
-    <mxGraphModel dx="2054" dy="1187" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,8 +10,8 @@
         <mxCell id="cKPVdGycZ7SSv6v3Je2L-37" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=105;points=[[0,0,0,0,15],[0,0.25,0,0,7.5],[0,0.5,0,0,0],[0,0.75,0,0,-7.5],[0,1,0,0,-15],[0.145,0,0,0,4.35],[0.145,1,0,0,-4.35],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.855,0,0,0,4.35],[0.855,1,0,0,-4.35],[1,0,0,0,15],[1,0.25,0,0,7.5],[1,0.5,0,0,0],[1,0.75,0,0,-7.5],[1,1,0,0,-15]];connectable=0;" value="" vertex="1">
           <mxGeometry height="200" width="160" x="431.76" y="204.59" as="geometry" />
         </mxCell>
-        <mxCell id="cKPVdGycZ7SSv6v3Je2L-39" parent="1" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;rotation=95;" value="" vertex="1">
-          <mxGeometry height="60" width="120" x="371" y="392" as="geometry" />
+        <mxCell id="cKPVdGycZ7SSv6v3Je2L-39" parent="1" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;size=10;rotation=105;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="365" y="397" as="geometry" />
         </mxCell>
         <mxCell id="cKPVdGycZ7SSv6v3Je2L-53" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;strokeColor=default;curved=1;curveGeometry=1;strokeWidth=3;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -54,11 +54,11 @@
         </mxCell>
         <mxCell id="cKPVdGycZ7SSv6v3Je2L-63" edge="1" parent="1" style="endArrow=classicThin;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0;entryY=1;entryDx=0;entryDy=0;strokeWidth=4;endSize=6;endFill=1;targetPerimeterSpacing=30;fixedPointSpacing=1;" target="cKPVdGycZ7SSv6v3Je2L-39" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="400" y="170" as="sourcePoint" />
+            <mxPoint x="410" y="170" as="sourcePoint" />
             <mxPoint x="372" y="398" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cKPVdGycZ7SSv6v3Je2L-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-95;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;Tangential Force&lt;/font&gt;" vertex="1">
+        <mxCell id="cKPVdGycZ7SSv6v3Je2L-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-90;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 14px;&quot;&gt;Tangential Force&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="355.00006046520986" y="189.59345874741163" as="geometry" />
         </mxCell>
         <mxCell id="cKPVdGycZ7SSv6v3Je2L-65" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0;entryY=1;entryDx=0;entryDy=0;strokeWidth=4;endSize=5;endFill=1;targetPerimeterSpacing=30;fixedPointSpacing=1;sourcePerimeterSpacing=0;" target="cKPVdGycZ7SSv6v3Je2L-39" value="">
@@ -85,11 +85,88 @@
         <mxCell id="cKPVdGycZ7SSv6v3Je2L-69" edge="1" parent="1" source="cKPVdGycZ7SSv6v3Je2L-39" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0;exitY=1;exitDx=0;exitDy=0;strokeWidth=4;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="310" y="340" as="sourcePoint" />
-            <mxPoint x="400" y="170" as="targetPoint" />
+            <mxPoint x="410" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cKPVdGycZ7SSv6v3Je2L-70" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-75;" value="&lt;font face=&quot;Times New Roman&quot; style=&quot;font-size: 15px;&quot;&gt;Cutting Tool&lt;/font&gt;" vertex="1">
-          <mxGeometry height="50" width="70" x="396" y="390" as="geometry" />
+          <mxGeometry height="50" width="70" x="390" y="402" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="AVywCWK-9P0kNo5ffD0H" name="Machine Diagram: Mill Cutting">
+    <mxGraphModel dx="275" dy="1259" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-11" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="80" y="320" as="sourcePoint" />
+            <mxPoint x="80" y="-40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-12" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="80" y="320" as="sourcePoint" />
+            <mxPoint x="310" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-13" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="310" y="320" as="sourcePoint" />
+            <mxPoint x="310" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-16" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.502;exitY=1.004;exitDx=0;exitDy=0;exitPerimeter=0;curved=1;curveGeometry=1;startArrow=none;startFill=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" x="-0.1003" as="geometry">
+            <Array as="points">
+              <mxPoint x="368.03" y="245" />
+            </Array>
+            <mxPoint x="325.0028729999999" y="248.94574500000022" as="sourcePoint" />
+            <mxPoint x="398.03" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-17" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="280" as="sourcePoint" />
+            <mxPoint x="90" y="-40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-18" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=-0.002;entryY=0.503;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;curveGeometry=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="290" />
+            </Array>
+            <mxPoint x="310" y="260" as="sourcePoint" />
+            <mxPoint x="89.41445099999999" y="117.26564699999972" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-38" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="90" y="280" as="sourcePoint" />
+            <mxPoint x="310" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-39" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="80" y="-40" as="sourcePoint" />
+            <mxPoint x="90" y="-40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-40" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="398.03" y="245" as="sourcePoint" />
+            <mxPoint x="398.03" y="215" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1kUQj_xJMG_9xSI1aQCQ-42" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;curved=1;curveGeometry=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="362.16999999999996" y="250.23000000000002" />
+            </Array>
+            <mxPoint x="398.42999999999995" y="244.3" as="sourcePoint" />
+            <mxPoint x="325.4" y="248.82" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
