@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="2">
+<mxfile host="app.diagrams.net" pages="3">
   <diagram name="Machine Diagram: Lathe Cutting" id="7jxorIsgraI13Ep0r0sI">
     <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -95,7 +95,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="AVywCWK-9P0kNo5ffD0H" name="Machine Diagram: Mill Cutting">
-    <mxGraphModel dx="988" dy="571" grid="0" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="0" tooltips="1" connect="0" arrows="0" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -144,6 +144,14 @@
         <mxCell id="8eIUFzC1QQgo9ZxBW_un-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=0;" value="&lt;font face=&quot;Times New Roman&quot;&gt;Direction of Rotation&lt;/font&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="195" y="119" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="4O9z7kNjVUzLUwcO-xq8" name="Machine Diagram: Load Waveform">
+    <mxGraphModel dx="822" dy="475" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
