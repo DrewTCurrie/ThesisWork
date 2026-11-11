@@ -406,7 +406,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_TImVyLhtXUtvqRFN9v9" name="Machine Diagram: Load Path Revised">
-    <mxGraphModel dx="304" dy="191" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1093" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -549,7 +549,7 @@
           <mxGeometry height="16" width="80" x="710" y="358" as="geometry" />
         </mxCell>
         <mxCell id="-jpX0dBxpMvyaliIuSQx-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Load path follows 1-7 from cutting edge to motor torque" vertex="1">
-          <mxGeometry height="30" width="175" x="220" y="462" as="geometry" />
+          <mxGeometry height="30" width="175" x="210" y="449" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
