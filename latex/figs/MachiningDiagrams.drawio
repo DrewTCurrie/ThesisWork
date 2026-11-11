@@ -1,16 +1,16 @@
 <mxfile host="app.diagrams.net" pages="10">
   <diagram name="Machine Diagram: Lathe Cutting" id="7jxorIsgraI13Ep0r0sI">
-    <mxGraphModel dx="1313" dy="824" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="0" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="NR_T0Kf1PO1atA-ayh8f-1" parent="1" style="shape=stencil(lVTLcoMwDPwarh4/IA7nND312B9wiVI8MbYH3KT9+xpMAbsDQ27SaqWVljgZO3W1sJBRrEUDGXvJKH0Tru6Rd2OUT330CAVKccjrkPMxFZ2FygXsLlopPhSESudac4OHvLixReoaWun6Kjtn7FQZrX2vNLqbAN8kpPYc/B2aMMIszPv5A45lAKyf1oCDdiwEdL7FDTdgJ+1QeV0XIYlCwfYpeP/0zSOgL0sJH/y77Wpa+GzNl2cOuRW9LX3UmDvMq0wq4zKELicrqRdcnu+mlhGTkb3MAq8zWbxpwdep+TGiHjY2TQ2IuZUyHSyNnn28SqXCb26qr5l8QKkG2rqTofG2+VRE8mcaaLnZkO7D8nif564GpaTtFuNJgZLPmhOEefS+y+h1l0v1XRIc8URiNmGUyCOJyI5kvA/S9+Kh8G/Fzr8=);whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;strokeWidth=2;rotation=105;" value="" vertex="1">
           <mxGeometry height="70" width="220" x="300" y="434" as="geometry" />
         </mxCell>
-        <mxCell id="cKPVdGycZ7SSv6v3Je2L-36" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=105;points=[[0,0,0,0,15],[0,0.25,0,0,7.5],[0,0.5,0,0,0],[0,0.75,0,0,-7.5],[0,1,0,0,-15],[0.145,0,0,0,4.35],[0.145,1,0,0,-4.35],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.855,0,0,0,4.35],[0.855,1,0,0,-4.35],[1,0,0,0,15],[1,0.25,0,0,7.5],[1,0.5,0,0,0],[1,0.75,0,0,-7.5],[1,1,0,0,-15]];connectable=0;" value="" vertex="1">
+        <mxCell id="cKPVdGycZ7SSv6v3Je2L-36" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=105;points=[[0,0,0,0,15],[0,0.25,0,0,7.5],[0,0.5,0,0,0],[0,0.75,0,0,-7.5],[0,1,0,0,-15],[0.145,0,0,0,4.35],[0.145,1,0,0,-4.35],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.855,0,0,0,4.35],[0.855,1,0,0,-4.35],[1,0,0,0,15],[1,0.25,0,0,7.5],[1,0.5,0,0,0],[1,0.75,0,0,-7.5],[1,1,0,0,-15]];connectable=0;fillColor=#F2F2F2;" value="" vertex="1">
           <mxGeometry height="350" width="220" x="160" y="60.00000000000001" as="geometry" />
         </mxCell>
-        <mxCell id="cKPVdGycZ7SSv6v3Je2L-37" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=105;points=[[0,0,0,0,15],[0,0.25,0,0,7.5],[0,0.5,0,0,0],[0,0.75,0,0,-7.5],[0,1,0,0,-15],[0.145,0,0,0,4.35],[0.145,1,0,0,-4.35],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.855,0,0,0,4.35],[0.855,1,0,0,-4.35],[1,0,0,0,15],[1,0.25,0,0,7.5],[1,0.5,0,0,0],[1,0.75,0,0,-7.5],[1,1,0,0,-15]];connectable=0;" value="" vertex="1">
+        <mxCell id="cKPVdGycZ7SSv6v3Je2L-37" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=105;points=[[0,0,0,0,15],[0,0.25,0,0,7.5],[0,0.5,0,0,0],[0,0.75,0,0,-7.5],[0,1,0,0,-15],[0.145,0,0,0,4.35],[0.145,1,0,0,-4.35],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.855,0,0,0,4.35],[0.855,1,0,0,-4.35],[1,0,0,0,15],[1,0.25,0,0,7.5],[1,0.5,0,0,0],[1,0.75,0,0,-7.5],[1,1,0,0,-15]];connectable=0;fillColor=#F2F2F2;" value="" vertex="1">
           <mxGeometry height="200" width="160" x="431.76" y="204.59" as="geometry" />
         </mxCell>
         <mxCell id="cKPVdGycZ7SSv6v3Je2L-53" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;strokeColor=default;curved=1;curveGeometry=1;strokeWidth=3;" value="">
@@ -148,7 +148,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="4O9z7kNjVUzLUwcO-xq8" name="Machine Diagram: Load Waveform">
-    <mxGraphModel dx="2037" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1943" dy="686" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -406,7 +406,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_TImVyLhtXUtvqRFN9v9" name="Machine Diagram: Load Path Revised">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="909" dy="571" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -555,7 +555,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Motor Diagram: DC Motor" id="6sxvCeg3BNad0G7s9wUc">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
+    <mxGraphModel dx="1313" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -674,7 +674,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Motor Diagram: BLDC Motor" id="Wg8ePdoWBvGpGip9LQkf">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
+    <mxGraphModel dx="1313" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -808,7 +808,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Motor Diagram: Stepper Motor" id="zCU7B-LVGiZXd2HRJF3_">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
+    <mxGraphModel dx="1576" dy="989" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -921,7 +921,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Motor Diagram: Stepper Motor FOC" id="i3HUum9Enumc7ky9g6G1">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
+    <mxGraphModel dx="1313" dy="824" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="840" pageHeight="630" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
